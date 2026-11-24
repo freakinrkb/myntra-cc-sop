@@ -1,0 +1,1060 @@
+Order not OFD on APD day
+
+1. Before 8:00 PM (on APD day)
+Inform the customer to wait till EOD.
+If the customer asks what EOD means → clarify that delivery will happen by 9:00 PM.
+
+2. After 8:00 PM (on APD day)
+If the order status = OFD (Out for Delivery)→ Inform the customer to wait for 24 hours.
+If the order status ≠ OFD( Non-OFD order)→ Inform the customer to wait for 72 hours.
+
+3. Post-APD Breach (after promised date has passed)
+If a customer reaches out after the APD breach → follow the BAU SOP of raising a delayed delivery task by referring to the AA article.
+
+Customer wants to collect the order from DC/WH: Inform customer that as per our policy, we deliver the products to the door step. Politely decline the request and inform we try to deliver the products on or before the delivery date.
+
+Incident Category: Delivery###Where is my Order?###Customer Awareness | Anxiety
+Level: Packet
+Queue: Outbound
+
+Article Number 01
+
+AA_Delayed Delivery - [L1, L1.5, SM]
+Published on 21/8/2026, 12:18 PM
+Note:
+-We are live with the Delayed Delivery Elixir flow for selected Pincodes. While creating a Delayed Delivery complaint, if you see that an Elixir ticket has been created, please follow the Elixir SOP.
+-If the Exchange is on hold, follow the respective on-hold SOP. Don't raise the delayed delivery task.
+-If the exchange is approved and the promised date is crossed, then raise a delayed delivery task.
+
+Exchange Order: If the exchange is put on hold irrespective of SDA visited the house or not or if the exchange if put on hold incorrectly - Please raise the respective on hold task.
+IMP update for Delayed Gift Orders During the BFF Event:
+When a customer contacts us regarding a delayed gift order during the Big Fashion Festival (BFF), please adhere to the following protocol:
+- Refrain from promising priority delivery. Do not commit to an expedited delivery timeline.
+- Follow the standard BAU SOP. Raise a task according to the BAU SOP and provide the customer with the designated Task TAT.
+- Fill the mandatory form. It is essential to fill out the Gift Order - Delayed Delivery Form for every such case, in addition to the steps mentioned above.
+Mandatory Check In cases where task already Exists):-
+Check if there is any Task raised on the packet ID.
+There may be a 'Delayed delivery' Task, but may have contacted for 'Disputing delivery' or vice versa.
+In both the cases, the ultimate objective is to ensure that the product gets delivered. Hence, if you notice that there already exists disputing/delayed Task on the Packet ID, follow up on the same Task, mention the new VOC in the Task & Incident Notes. No Additional Task is required.
+Note: Without OFD and With OFD (Needs to be followed only when the APD date has been breached)
+Without OFD
+Perform the following checks when a customer contacts CC without an OFD status
+1. Task available?
+> YES: Follow Task Followup SOP
+> NO: Apologize for the delay, raise a relevant task, update Note(s), and share the task TAT.
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+> Issue Type: Delivery###Where is my Order?###Delayed Delivery
+> SA Level: Packet ID
+Order not OFD on APD day:
+1. Before 8:00 PM (on APD day)
+Inform the customer to wait till EOD.
+If the customer asks what EOD means → clarify that delivery will happen by 9:00 PM.
+
+2. After 8:00 PM (on APD day)
+If the order status = OFD (Out for Delivery)→ Inform the customer to wait for 24 hours.
+If the order status ≠ OFD( Non-OFD order)→ Inform the customer to wait for 72 hours.
+
+3. Post-APD Breach (after APD has passed)
+If a customer reaches out after the APD breach → follow the BAU SOP of raising a delayed delivery task by referring to the AA article.
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Incident Category: Delivery###Where is my Order?###Customer Awareness | Anxiety
+Level: Packet
+Queue: Outbound
+Status: <DO NOT CHANGE>
+With OFD
+Perform the following checks when a customer contacts CC with an OFD status
+1. Task available?
+> YES: Follow Task Followup SOP
+> NO:
+- Apologize for the delay, Raise a task, update Note(s), and share the task TAT.
+- Inform the customer to wait until EoD as the shipment is OFD.
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+> Incident: Delivery###Where is my Order?###Delayed Delivery
+> SA Level: Packet ID
+.
+.
+IMPORTANT UPDATE:
+ChatBOT and/or IVR were creating incomplete & incorrectly marked Incidents in UNRESOLVED statuses without any Tasks mapped to them. This problem is currently resolved. However, if any CC-agent (L1/L1.5/HC/SM) comes across such incorrectly & incompletely created Incidents without Tasks then follow the below process to create new & correctly mapped (Tasked) Incidents.
+(a) Force Close the incorrect Incident in UNRESOLVED status
+(b) Change the status of the same incorrect Incident as RESOLVED
+(c) Create a correct Incident manually with the correct Task mapped and action on the same accordingly
+
+Missing only one probing: Packet condition
+
+Note: Task creation SOP garbage item and garbage product cases-
+
+>If a customer states that they received garbage items (such as polybags, papers, cotton, waste etc.) instead of the ordered product, treat this as a Full Missing Product case. Follow the Missing Component SOP. While raising the missing component task, ensure the Cx VOC is updated clearly.
+Example VOC: "Customer claims that papers were delivered, and the complete product is missing."
+
+>If a customer claims that they received an incorrect and usable / garbage product (for example, a torn towel,unusable cloth material etc), handle the case under the Wrong Product Received SOP.
+
+Good to Know Info:
+When is it considered Full/Complete Product Missing?
+-Product(s) received belong to the placed order, but the entire Item/Style ID is missing.
+-If a primary product is missing, and the customer received only accessories.
+Examples:
+-Customer did not receive a dress but received the paired belt.
+-Received only shoelace in the box, not shoes.
+-Received only a charger, not headphones/trimmer, etc.
+
+SOP Steps:
+Check: Customer contacted CC within 7 days of the delivery date.
+Yes: Follow task creation SOP.
+No:
+-Action: Decline the claim.
+-Verbiage: Use the verbiage provided under #001 in the Missing Component Verbiages document.
+-Incident Creation (Use Agent Assist screen):
+--Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###Return/Exchange serviceability/policy
+---SA Level: Item
+---Status: Resolved
+---Queue: <DO NOT CHANGE>
+
+TASK CREATION PROCESS SOP
+Mandatory Probings/Notes (Full Item Missing Case - Additional information shared by customer):
+> Packet Condition? - Package appeared tampered or damaged at the time of delivery. - If Tampered -> Was Myntra packet delivered in Open Condition Or was it re-sealed with cello tape Or adhesive?)
+Important Note:
+-Advise the customer not to create a Return/Exchange request while the complaint is worked upon.
+If needed Reassure them that they need not worry about the return/exchange window expiring. If the return/exchange period is nearing expiry or has already lapsed during the complaint resolution process. If the claim is approve, we will create the return request on their behalf.
+
+-If already created, advise to cancel & do not create new return/exchange requests while the validation is in progress.
+
+Incident Creation Details (IMPORTANT GUIDELINE: Use Agent Assist screen to Create Incident):
+Issue Type: Delivery###Where is my Order?###Missing component
+Task Selector Logic: Full
+SA Level: Item
+Status: Pending
+Queue: <DO NOT CHANGE>
+Information: Share the task TAT
+For partial item missing case, mandatory probing:-
+For partial item missing cases, ask if the delivered item has been used
+
+Note: Educate the customer not to create a return/exchange until the issue is resolved. If already created, guide the customer to cancel via App (self-serve)
+
+Two imp probing questions:
+1. Shipment drop off status
+2. OTP
+
+TASK CREATION DETAILS: [USE AGENT ASSIST SCREEN TO CREATE AN INCIDENT]
+- Issue Type: Delivery###Where is my Order?###Incorrectly Marked Delivered.
+- SA Level: Packet
+- Queue: DC
+- Ask the cx to share the screenshot for the UPI transaction over the call or chat. Wait for a few minutes for the attachment to get updated on SA [confirm with cx & refresh the SA incident].
+- Once received, validate the screenshot & create the IMD Task & share Task TAT
+- if the cx is unable to share the screenshot over call/chat in real time, use the script/template above and ask the cx to share it. Once shared, CC will get back to the cx with an acknowledgement within 24 hrs
+>please share the inapp under the Incident: Delivery###Where is my Order?###POD shared (SA Level: Packet).
+>Change the incident status to Customer Awaiting, so that cm can revert back with the ss.
+
+Check 1: Probe the customer if no delivery parcel has been received.
+> If not received: Proceed to Check 2
+> If received: Follow Missing Component SOP (Check at Item Level).
+Check 2: Check the mode of payment:
+>Complete COD:
+>Inform customer to place the fresh order & Inform that we will take feedback on a SDA
+-Incident: Other###I have feedback for you###Courier partner [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
+-SA Level: Packet
+>In case cx has used coupon & asking about the same - Inform customer that the coupons are one time usage, hence we will not be able to provide the same.
+>If cx says that he/she paid the SDA via UPI for a complete COD order as he wasn't available at the delivery address and asked the SDA to drop the packet at home/neighbour/security - Go to Check 3
+>Partial COD/Online/MC/LP: Go to Check 3
+.
+Check 3: Verify whether the customer has contacted us within 5 days from the date the order was marked as Delivered on SA (Delivered Date is considered as 0th Day).
+> If No:
+- Politely decline the request, educating the customer about the 5-day policy mentioned in the Disclaimer section under Terms of Use. Inform the customer who accepted the order as per "Shipment drop-off status" in SA and ask to check with them.
+After 5 days - Create an incident: Delivery###Where is my Order?###POD shared (SA Level: Packet). [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
+.
+> If Yes: Proceed to Check 4
+.
+Check 4: Check the "Shipment drop-off status" on the packet level and inform the customer accordingly. (Applicable for all including exchange order delivered by Ml, FKL, & EK logistics only). For other logistcs, do NOT perform this check refer to check 5 instead.
+[Delivered to the customer, Delivered to the neighbour, Delivered to domestic help, Delivered to Security Guard, Delivered to Family, Delivered to reception, Delivered to Friend, Delivered to others]
+
+Mock for reference
+- Action: As per the status, inform the customer who received the order and ask them to check with the respective person/place. When asking cx to check with others and cx disconnects - Tag it under [Delivery>>Where is my Order?>>Customer Awareness | Anxiety] (if the customer chooses to check and get back to us later)
+- SA Level: Packet [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
+.
+> Customer comes back stating that he/she received the order: Update the incident and close it. Incident Category: Delivery>>Where is my Order?>>Customer Awareness | Anxiety (SA Level: Packet).
+> Customer comes back stating he/she has still not received the order: Proceed to Check 5
+.
+Check 5: Check if OTP (Code) Verification was done at the time of Delivery on SA.
+> For ML: No OTP Verification, proceed to "No" (non-OTP delivery) path.
+> For 3PL/FKL/EK_E2E:
+- If the remarks section under Shipment History mentions 'Code Verified Delivery', proceed to the "Yes" (OTP/Code Verified Delivery) path.
+- If the OTP Field on SA is blank, consider it as a Non-OTP Based Delivery and proceed to the "No" (non-OTP delivery) path.
+.
+> If Yes (It is OTP/Code Verified Delivery): Probe the customer if any OTP was shared with SDA.
+_
+>> Scenario 1: It is OTP Verified on SA + SDA did not ask for OTP but the customer still shared it proactively.
+- Action/Information: Guide the customer not to share OTP with SDA until the package is handed over at the doorstep.
+- Politely decline as OTP was proactively shared.
+- Create an incident: Delivery###Where is my Order?###POD shared (SA Level: Packet). [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
+_
+>> Scenario 2: It is OTP Verified on SA + SDA asked for OTP proactively and the customer has shared the same.
+- Action: Mandatorily probe the reason SDA asked for OTP and update in notes.
+- Raise a Task and share Task TAT. [Refer to the <TASK CREATION SOP> for more info]
+- Guide the customer not to share OTP until the package is handed over at the doorstep.
+- Update clear reason SDA stated for seeking OTP in notes.
+.
+> If No (OTP was NOT shared to SDA/non-OTP delivery):
+- Action: Raise the Task and share the Task TAT. [Refer to the <TASK CREATION SOP> for more info]
+Task Creation SOP:
+1. If the order is Online/Partial COD: create IMD Task & share Task TAT
+2. If the order is complete COD( and customer had informed that he had paid through UPI):
+> For L1 Inbound & Chat:
+> For email team:
+- If email champions gets a INC where cx has shared the screenshot of UPI txn, validate:
+* The UPI amount
+* The screenshot having the UPI amt mentioned
+* The order being complete COD
+- once validated, create the IMD Task & close the Incident where cx shared the screenshot & share IMD Task TAT with the cx
+.
+): Return Cancellation || Order Cancellation
+
+Article Number: 290
+
+AA_Faster/Scheduled Delivery - Post Order - [L1 (C,E,IB),HC,SM,L1.5]
+Published on 16/3/2026, 5:03 PM
+Scenario: WIP/Packed/Shipped:
+.
+Information: Inform that we do not have a faster/scheduled delivery service yet. Re-assure the customer that we will deliver the product on or before the Promised Date.
+Incident/Task Categories:
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Enquired Scheduled delivery: Delivery###I want Delivery at specific time###Scheduled/Quicker Delivery Not Available
+Level: Packet
+
+AA_Order Status Update - Packed to Delivered - [L1 (C,E,IB),HC,SM,L1.5]
+
+IMPORTANT GUIDELINE: [Use Agent Assist screen to Create Incident]
+Incident Category: Return/Exchange###I do not agree with your Pick up attempt###No Pick Up Attempt
+SA Level: Return
+
+First find whether it's myntra attribute or customer attribute??????
+
+If Customer attribute as cx to wait for next attempt and tag it under AA_Time taken for pickup - Global (All LOBs)
+
+If myntra attribute: Raise task and share task tat
+
+Please inform the customer that we will try to reattempt within the next 24 hours and do not assure the same and will follow up until the task TAT
+
+For 3PL Logistics always tell cx not to share any OTP until SDA comes at doorstep
+* Pick-ups assigned to ML/FKL/Ekart are not OTP based/verified.
+
+NDR PROCESSES FOLLOW BELOW SOP
+Action: Action: Raise the task & Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
+- For L1(IB/Chat): Do a warm transfer/chat transfer to L1.5/TL respectively in case the customer doesn't agree to the TAT & the customer "insists" to transfer the call only then escalates it further.
+- If the champion finds any of the following reasons mentioned under 'Pickup Details', then inform the customers on NDR communication:
+1. Customer refused
+2. Customer not reachable
+3. Out of Delivery Area
+4. Incorrect Contact Number
+- NDR Script: Within 24 hours of the pickup remarks being updated, you should receive a call, SMS or email through which you can choose the relevant option to confirm a reattempt on the pickup.
+
+Incident Category: Return/Exchange###Pickup/Exchange serviceability/policy###Return/Exchang
+
+1.
+Scenario: Pick up Promise is today/ Pick up Promise is not crossed + Return is OFP + No status update post OFP
+> Check if OFP entry has crossed 1 day (> 1 day)?
+
+1. No - OFP entry has NOT crossed 1 day (> 1 day)
+
+Customer reaches CC before 8 PM to know the pick up status:
+Information: Inform the customer to wait until 8 PM
+Customer reaches CC after 8 PM to know the pick up status:
+Information: Request the customer to wait for 24 hours and reach out to CC if the pick up is still unsuccessful.
+
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
+Incident Category: Return/Exchange - Where is my pickup? - Time taken for Pickup
+SA Level: Return
+
+1. Yes - PFP entry has crossed 1 day (> 1 day) + Customer has come post 24 hours + still not update
+IMPORTANT GUIDELINE: [Use Agent Assist screen to Create Incident]
+Action/Information: Raise the task & Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
+ Incident Category: Return/Exchange###I do not agree with your Pick up attempt###No Pick Up Attempt
+
+Queue: Outbond
+Status: Pending
+SA Level: Return
+
+Please find the script.
+
+Pickup was not OTP-verified
+> Action:
+> Create a new RID [if a new & Active RID does NOT exist already] and raise the Disputing PIckup Task by selecting 'Create Incident' button on the Agent Assist screen
+> Share the Task TAT with cx
+> For L1(IB/Chat): Do a warm transfer/chat transfer to L1.5/TL respectively in case the customer doesn't agree to the TAT & the customer "insist" only then escalate it further.
+> If the champion finds any of the following reasons mentioned under 'Pickup Details', then inform the customers on NDR communication:
+>Customer refused
+>Customer not reachable
+>Out of Delivery Area
+>Incorrect Contact Number
+> NDR Script: Within 24 hours of the pick-up remarks being updated, you should receive a call, SMS or email through which you can choose the relevant option to confirm reattempt on the pick up.
+_
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Return/Exchange###I do not agree with your Pick up attempt###No Pick Up Attempt
+
+Queue: Outbound
+Status: Pending
+SA Level: Return
+
+Action: Action: Raise the task & Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
+
+Scenario 1: Customer claims item has been picked, but as per SA, pick up has failed
+Raise task & share task TAT
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
+
+Scenario 2: Customer claims item has been picked, but as per SA status is "Out for Pickup" & no further updates are available:
+Check if 24 hours have crossed from the time the product was physically picked from the customer:
+Yes: Raise task & share task TAT
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
+No: Request customer to wait for 24 hours, from the time the item was physically picked, for the status to be updated as 'Picked Up'. Inform that once marked as picked up, refund will be initiated.
+For QC and Refund Refer 0002 for TAT related info.
+[IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
+Issue Type: Refund###Return - refund pending###Time Taken for Refund
+Scenario 3: Customer claims that the product is picked but RID is on hold & not picked up as per SA.
+Raise task & share task TAT
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
+
+Scenario 1: Customer claims item has been picked, but as per SA status is "Out for Pickup" & no further updates are available:
+Check if 48 hours have crossed from the time the product was physically picked from the customer:
+Yes: Raise task & share task TAT
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
+No: Request customer to wait for 48 hours, from the time the product was physically picked, for the status to be updated as 'Picked Up'. Educate customer on the QC TAT for refund initiation. Refer 0002 for TAT related info.
+Sample script: "Generally from the time the product is picked, it takes 'x' days for the item to reach the warehouse & for the QC to be conducted. Post successful QC, refund will be initiated".
+[IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
+Issue Type: Refund###Return - refund pending###Time Taken for Refund
+Scenario 2: As per SA item has been picked, customer is inquiring on refund status.
+Check if within QC TAT from the time the product was updated as picked. Refer 0002 for TAT related info.
+Yes: Educate customer on the QC TAT for refund initiation
+[IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
+Issue Type: Refund###Return - refund pending###Time Taken for Refund
+No: As per SA logs depending on whether the item has reached WH or not, raise the below task & share task TAT
+Reached WH:
+[IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
+Issue Type: Refund###Picked up - refund pending###WH/DC status update pending
+Not Reached WH
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
+Scenario 3: Customer claims item has been picked, but as per SA, pick up has failed
+Raise task & share task TAT
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
+
+This process is to be followed when customer claims that the item has been picked up, but the RID appears as Declined on SA
+Action:
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Refund###Picked Up-Refund Pending###Picked up return id declined
+SA Level: Return
+Selector Logistics: Parent_All Logistics
+Queue: Outbound
+Status: Pending
+Information: Share the task TAT
+
+Scenario 1: Extra Myntra Item Picked-Up with actual return
+Action/Information:
+1. Raise the task & share the Task TAT. Also, capture the below details in the INC/Task notes.
+2. Acknowledge the cx-concern regarding the extra Myntra item being picked up. Assure the cx about the complaint being registered and share Task TAT for an update. Also inform the cx to check the items before handing them over to the pickup agent in the future
+3. AWB, if available (For 3PL, probe the tracking number on the pick up confirmation message)
+4. Collect the RID against which the product was picked & Item ID of the product picked
+5. Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact..
+.
+Information:
+I understand your concern regarding the Extra Myntra item being handed over to the pickup agent. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+______________________________________________________________________________
+.
+Scenario 2: Exchange product handed over instead of Actual Return item
+Action: Raise the task and share the Task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+Information:
+I understand your concern regarding the Exchange item being handed over to the pickup agent instead of the actual return item. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact..
+.
+_______________________________________________________________________________
+.
+Scenario 3: Main Item Picked-Up + Exchange Item Not Delivered + Exchange Order Status is updated as RTO/Shipped
+Acton: Raise a task and share the task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+Information:
+I understand your concern regarding the main item has been picked up, the exchange item has not been delivered, and the exchange order status is updated as RTO/Shipped. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT) Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+.
+The Incident/Task category is same across all the three scenarios
+Issue Type: Refund###Picked Up-Refund Pending###Wrong/Extra/Non Ret item picked up
+.
+Note: While selecting the option in the slector logic, check for the return mode at the return details and Select the Option. Based on the seclection the task will get raised/mapped accordindly.
+.
+Queue: Outbound
+Status: Pending
+SA Level: Return/Item
+.
+________________________________________________________________________________
+.
+Scenario 4: Return product handed over at the time of Exchange Delivery
+Acton: Raise a task and share the task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+Information:
+I understand that you did not intend to hand over the item you were planning to return. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+.
+Issue Type: Refund###Picked Up-Refund Pending###Wrong/Extra/Non Ret item picked up
+Queue: Outbound
+Status: Pending
+SA Level: Return/Item
+
+Success:
+
+Within tat- Tat provide or else share ref number
+> Within TAT
+Case A: [ARN NOT available]
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+- Action: Share the Refund TAT. Update relevant Notes.
+- Issue Type: Refund###Return - refund pending###Refunded-TAT Provided
+- SA Level: Return
+_
+Case B: [ARN available]
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+- Action: Share the Refund TAT & the ARN number. Update relevant Notes.
+- Issue type: Refund###Return - refund pending###Refunded-Shared Bank ref#
+- SA Level: Return
+
+Outside tat- share reference number or generate that number
+- Issue type: Refund###Return -refund pending###Refunded- ARN Number required
+- SA Level: Return
+
+Pending:
+Within TAT- Provide 104 hrs----
+Issue type: Refund###Return - refund pending###Refunded-TAT Provided IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+- SA Level: Return
+
+Outside TAT: Auto task creation failed
+ Issue Type: Refund###Return - refund pending###Auto task - Creation Failed IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+- Task selector logic: As per the Refund Instrument
+- Communication: Share task TAT
+- SA Level: Return
+
+Failure:
+ Within TAT: 24 hrs
+- Issue Type: Refund###Return - refund pending###Time Taken for Refund
+- SA Level: Return
+
+Outside TAT - auto task creation failed
+- Issue Type: Refund###Return - refund pending###Auto task - Creation Failed
+- Refund Instrument: Select as per the payment mode of the order
+- SA Level: Return
+
+CHECK 1: Within 48 hours or Post 48 hours?
+_
+> Within 48 hrs
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Refund###Order not processed/Multiple Debits/POS###Order-Declined- Payment not received
+SA Level: Order
+Communication: Inform the customer that within 48 hours the order will be declined, meanwhile, you can place a fresh order.
+_
+> Outside 48 hrs
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue type: Refund###Return - refund pending###Auto task - Creation Failed
+SA Level: Item
+Task Selector Logic: [as per the refund instrument] (Select DEBIT_CARD for UPI payments)
+Communication: Share task TAT with the customer and ask to place a fresh order.
+_
+Note:
+- Whenever you get the preprocessed orders, the order will not be successful and will be declined within 48 hours.
+- If you find the exchange order is preprocessed, ask the customer to place a fresh order, as the preprocessed order will not be successful.
+- Once the order is declined, please follow the declined order process.
+
+Go to order level and check payment details first
+Check the payment instrument and check transaction type and transaction status
+AA_Declined Orders | [D=Success & V=Failure] - Global (All LOBs
+AA_Declined Orders | [D=Success/V=Not Executed] - Global (All LOBs)
+AA_Declined Orders | [D=3DS-Redirect] - Global (All LOBs)
+AA_Declined Orders | [D/V=<Fail/Fail> or <Success/Pending> or <no-clarity/pps log>] - Global (All LOBs)
+AA_Declined Orders | [D=Fail & V=Void Not executed] - Global (All LOBs)
+AA_Declined Orders | [D/V=Success] - Global (All LOBs)
+
+Below image is just for the reference
+
+Go to the order level of declined order and check in the payment details tab:
+
+> Within TAT
+Case A: [ARN NOT available]
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+- Action: Share the Refund TAT. Update relevant Notes.
+- Issue Type: Refund###Return - refund pending###Refunded-TAT Provided
+- SA Level: Return
+_
+Case B: [ARN available]
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+- Action: Share the Refund TAT & the ARN number. Update relevant Notes.
+- Issue type: Refund###Return - refund pending###Refunded-Shared Bank ref#
+- SA Level: Return
+_
+> Outside TAT
+- Refer Article: AA_OR [PPS_Success] <CC/DC/UPI> RID - outside TAT (L1/L1.5/Highcare) (Check at Return Level)
+- SA Level- Return
+ If ARN is available, share the refund TAT and ARN
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+- Action: Share the Refund TAT & the ARN number. Update relevant Notes.
+- Issue type: Refund###Return - refund pending###Refunded-Shared Bank ref#
+- SA Level: Return
+If the reference number is not updated, please raise the task.
+_
+- Action/Information: Create a task, update the notes in IN/Task, & share the Task TAT with the customer.
+_
+Click on the following link for the ARN process and SOP
+_
+- Issue type: Refund###Return -refund pending###Refunded- ARN Number required
+- SA Level: Return
+
+Scenario 1.1: If you are unable to raise the above mentioned task.
+Action: Fill the form along with the error screenshot.
+- Issue type: Refund###Return -refund pending###Refunded- ARN Number required
+
+Check if customer has contacted within 104 hours from the Transaction Time:
+[Return level → Refund Details tab → Refer Issue Refund to calculate the Transaction Time. DO NOT REFER TO TRANSACTION DATE. Click here for screenshot]
+_
+> Within 104 hours
+_
+- Info: Inform customer that we are validating the refund status with our payment partners & advise to wait for 104 hours
+- Issue type: Refund###Return - refund pending###Refunded-TAT Provided IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+- SA Level: Return
+
+Outside 104 hours
+Check if the task Refund###Return - refund pending###Auto task - Creation Failed is already raised for the order.
+Yes: Refer article AA_Refund Tasks follow-up SOP - [L1 (C,E,IB),HC,SM,L1.5]
+No: Raise the below task and share task TAT
+- Issue Type: Refund###Return - refund pending###Auto task - Creation Failed IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+- Task selector logic: As per the Refund Instrument
+- Communication: Share task TAT
+- SA Level: Return
+NOTE: Clearly document the Transaction Status in the notes while handling refund-related cases. (For instance, TX_pending/No PPS)
+
+
+Within tat
+Within 24 hours of the Refund Transaction Date in the PPS Log
+_
+Action/Information:
+- Auto task should be raised for: Tx_Failure || TX_Not_Attempted || No PPS log
+- Create the below Incident, update Note(s), & request the customer to wait 24 hours.
+[IMPORTANT GUIDELINE: Use Agent Assist screen to Create Incident]
+- Issue Type: Refund###Return - refund pending###Time Taken for Refund
+- SA Level: Return
+NOTE: Agents have to mention the transaction status (for instance, TX_pending/No PPS) in the notes while handling refund-related cases.
+Outside Tat
+
+Outside 24 hours of the Refund Transaction Date in the PPS Log
+- Check if the Auto PPS - Refund task has been raised.
+.
+> No:
+- Action/Information: Create the below task, update Note(s), & share the Task TAT with the cx
+- Issue Type: Refund###Return - refund pending###Auto task - Creation Failed
+- Refund Instrument: Select as per the payment mode of the order
+- SA Level: Return
+NOTE: Agents have to mention the transaction status (for instance, TX_pending/No PPS) in the notes while handling refund-related cases.
+
+  ARN Dispute Handling
+Action/Information:
+- Apologize for the hassle caused to the cx
+- Probe the customer to understand if he/she is referring to the same account from which the amount was debited (Use Payment log for your reference)
+- Check if the customer is referring to the transaction from the sale date to the current date.
+- Check if the customer has contacted the bank support team and not the bank/branch.
+- In case, the bank support team is unable to locate the refund with the reference number provided, request the customer to dispute the transaction with the bsnk support team as 'Refund Not Processed'.
+- Bank support team will be printed on the flip side of the debit/credit card issued
+IMPORTANT GUIDELINE: [use Agent Assist screen to create an Incident]
+Issue type: Refund###Return - refund pending###Disputing-Refund/Bank ref#/UTR
+SA Level: Return
+
+Note:
+- If a customer still disputes then ask TL/TC to reopen the ARN number required task's incident and move that incident to ED.
+- Please do not reopen the ARN task, change the incident status to pending and incident queue to Escalation.
+If Ref number was already available and ARN task was not raised champ should ask TL to change the queue "Disputing-Refund/Bank ref#/UTR" incident to escalation and status as pending.
+Communication: L1 can inform the customer that we have taken the complaint and the customer will get a callback within 24-48 hours.
+
+WRONG :
+Proactive cx: Guide Steps, if cx unable to create return ask for images and create return
+Reactive: auto task
+
+Steps to Create a Return on App:
+- Profile > Orders > Go to the item level of the product that the customer wants to return > Click  on return >Select a different product that was delivered > Select sub-reason as "Received a completely different product" > Upload Images > Select refund method > Click on Done.
+- Once the RID is created an auto task will be generated in the system.
+If cx doesn't want to create a return on the call then follow this- The customer will be notified about the ticket creation and will provide a resolution within 48 hours.
+
+SEALTAG:
+Proactive cx :Guide steps, if cx unable to create return complain raise tat shared, ret/exc-how do return this item-seal tag missing
+PRICE TAG':
+Proactive cx: Guide Steps, if cx unable to create return complain raise tat shared-ret/exc-how do return this item-price tag missing
+
+Guided Return Creation on-call help:
+1. Open the Myntra App > Profile > Orders > Go to the relevant item > Click on return > Select Primary and Secondary reasons.
+- For example:
+> Primary Reason: Size fit Issue || Secondary Reason: I did not like the fit || In 'Any other issues' section: select <Seal tag Missing> <Price tag missing>
+Return Reasons -Click Here
+Click Here for In-App template and Scripts.
+[IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue type: Return/Exchange###How do I return/exchange this item?###Incorrect Reason selected while Return creation
+SA Level: item
+
+Tagloop missing Or Tagloop Wrong/Mismatch
+Reactive:
+
+> Check A: Customer's Maturity -
+Early/New - [Follow Action A]
+Mature- Move to Check B
+
+> Check B: Customer Cohort
+A1 → Proceed to Check C
+A2 or A3 → [Follow Action A]
+
+> Check C: Customer belong to a flagged pincode?
+Yes →Follow below SOP and raise task and share task tat
+Issue Type: Return/Exchange - Why is my return rejected/put on hold? - Tag Loop Missing
+SA Level: Return
+Task: RETURN - Return/Exchange Request - Tag Loop Missing
+
+No → Approval
+
+>Check the Exception Log on SA --> Profile> Exception logs> ROH Complaints Approved
+>Count total ROH approvals for respective category:
+>If ≤ 3:
+-Approve the claim.
+-Task is already available, close the task. If task is unavailable, raise respective task for documentation & close it.
+-RID on Hold or RID Created - Approve it
+-RID not created - Create return & approve.
+-Share pickup TAT & refund TAT. Refer DT 0002.
+>If >3 → Raise the respective task & share task TAT
+
+AA_Defective Post Usage [BPC] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Wearables, SAFARI trolleys & Backpacks] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Nike] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]
+
+AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]
+
+Other Products
+Important: It is important that the care tips mentioned on PDP are followed so that the product lasts for long. If not, the product will be prone to develop defects post usage
+
+Check 1: Verify how the defect occurred & if the caretips were followed.
+
+Scenario 1: Due to customer's attribute (Rough usage, Care tips on PDP not followed)
+Information: The defect occurred because the care tips on the PDP were not followed, so we can't accommodate the request
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
+Queue: Inbound
+Status: Resolved
+SA Level: Item, Return
+
+Scenario 2: The issue is genuine, not due to customer error, within warranty, and Images available highlighting the defects
+Action: Raise a task. Provide the INC ID where cx has shared the images in the task notes.
+Information: Share the task TAT
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Return/Exchange###How do I return/exchange this item?###Defective Post Usage
+Queue: Outbound
+Status: Pending
+SA Level: Item, Return
+
+Scenario 3: The issue is genuine, not due to customer error, within warranty, and Images not available
+Probe: Request customer to share the clear images of the product highlighting the defect.
+Information: Share the acknowledgement TAT of 24 - 48 hours
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
+Queue: Inbound
+Status: Awaiting Customer information
+SA Level: Item, Return
+
+Note:
+>If 'Adidas' or 'Reebok', Images of the 'Tongue Label' ( for footwear ) and 'Factory Label'( for apparel ) is mandatory
+>If 'Vogue, Ray-Ban, Oakley Brand sunglasses', request customer to share 2/3 images of the product highlighting the defect and one image of the left side of the temple.
+
+Scenario 4: The issue is genuine, not due to customer error and outside warranty / The issue is genuine, not due to customer error and Exclusively 'No Warranty' mentioned on the PDP
+Information: Decline the claim
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
+Queue: Inbound
+Status: Resolved
+SA Level: Item, Return
+
+UPR/DPR - Return is not created/created incorrect return/return on-hold/non returnable - ALL LOBs (Including L2)
+
+WRONG :
+Proactive cx: Guide Steps, if cx unable to create return ask for images and create return
+Reactive: auto task
+
+When guiding cx to create return tag: Return/Exchange###How do I return/exchange this item?###Incorrect Reason selected while Return creation
+Level: Item
+
+When Asking cx to share images tag: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
+Level: Item
+
+Within Window :-
+Redirect the customer to create a return in the "My-Order" section.
+ Note: If the customer needs assistance in creating a return, stay on the call and help them complete the return process.
+Steps to Create a Return on App:
+- Profile > Orders > Go to the item level of the product that the customer wants to return > Click   on return >Select a different product that was delivered > Select sub-reason as "Received a completely different product" > Upload Images > Select refund method > Click on Done.
+- Once the RID is created an auto task will be generated in the system.
+ If cx doesn't want to create a return on the call then follow this- The customer will be notified about the ticket creation and will provide a resolution within 48 hours.
+If customer creates the return on call and the task is generated:-
+Champ need to communicate an exact task TAT timeline from the moment complaint is raised ,
+ Example:- If the task TAT is showing as 21st Aug'26 6.15 PM, then mention the exact tat with the time to the customer
+Issue Type: Return/Exchange###How do I return/exchange this item?###Incorrect Reason selected while Return creation
+
+Outside Window:-
+Request Images from Customer (if NOT available already) follow the mentioned steps
+Check with Cx if product/ product images are available
+* Yes- Request Cx to share images on call.
+    * Action - Send communication requesting the customer to share clear images - Help Text.
+        * PPMP Product: C Agent Assist screen to Create Incident]
+    * Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
+* After Receiving Images from Customer: (Do NOT select the 'Create Incident' button in Agent Assist)
+    * Create a return by selecting the following reason and sub-reason:
+    * Reason for return: A different product was delivered, DPWD, 9
+    * Subreason: Different: product was delivered, DPD, 7
+    * An auto task will be generated.
+    * Share Task TAT once the auto task is created.
+    * In task notes, add the incident ID where the customer has shared images.
+* No- Cx informs that the product is not handy
+    * Request the customer to share the following images: Send communication requesting the customer to share clear images - Help Text.
+        * PPMP Product: Complete product images and collar tag image.
+        * Non-PPMP Product: Complete product images and barcode images.
+    * IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+    * Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
+    * While requesting the images, inform the customer that we will provide the resolution within 48 hours after receiving the images.
+After Receiving Images from Customer: (Do NOT select the 'Create Incident' button in Agent Assist)
+* Create a return by selecting the following reason and sub-reason:
+    * Reason for return: A different product was delivered, DPWD, 9
+    * Subreason: Different: product was delivered, DPD, 7
+    * An auto task will be generated.
+    * Share 24 hours once the auto task is created.
+    * In task notes, add the incident ID where the customer has shared images.
+        * Note:- Champ need to communicate an exact TAT (For WPR auto task) from the moment complaint is raised.
+        * Example:- If the task TAT is showing as 21st Aug 6:15PM then we need to mentioned the exact TAT to the customer.
+Outside the exception window:
+Information: Politely Decline
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
+
+Cx Unable to create Return:-
+Scenario 1: Non-Returnable OR No return/ Exchange coupon is used
+Scenario 2: Return window is breached -Customer had created return/exchange within policy
+Scenario 3: Customer claims unable to create Return due to technical issues
+
+Request Images from Customer (if NOT available already):
+Request the customer to share the following images:
+- PPMP Product: Complete product images and collar tag image.
+- Non-PPMP Product: Complete product images and barcode images.
+Send communication requesting the customer to share clear images - Help Text.
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
+While requesting the images, inform the customer that we will provide the resolution within 48 hours after receiving the images.
+
+After Receiving Images from Customer: (Do NOT select the 'Create Incident' button in Agent Assist)
+Create a return by selecting the following reason and sub-reason:
+- Reason for return: A different product was delivered, DPWD, 9
+- Subreason: Different: product was delivered, DPD, 7
+An auto task will be generated.
+Share Task TAT once the auto task is created.
+In task notes, add the incident ID where the customer has shared images.
+Note:- Champ need to communicate an exact TAT timeline (For WPR auto task) from the moment complaint is raised.
+Example:- If the task TAT is showing as 21st Aug'26 6.15 PM, then mention the exact tat with the time to the customer
+
+Invoice interchange Case:- Follow WPR SOP
+
+* We will only entertain Reinvestigation requests within 5 days from the date of Parent Task Decline. (Beyond 5 Days it is a Hard Decline for IMD cases)
+* We will only entertain Reinvestigation requests within 7 days from the date of Parent Task Decline. (Beyond 7 Days it is a Hard Decline for Missing Component and ROH cases)
+
+AA_Re-investigation Incorrectly Marked Delivered - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Reinvestigation Missing Component - [L1 (C,E,IB),HC,SM,L1.5]
+AA_USED P.R. [Re-investigation] new_IMVT - [L1 (C,E,IB),HC,SM,L1.5]
+AA_WRONG P.R. [Re-investigation] new_IMVT - [L1 (C,E,IB),HC,SM,L1.5]
+AA_DAMAGED P.R. [Re-investigation] new_IMVT - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Pice Tag Missing [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Seal Tag/Tag Loop [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective post usage [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Open Box Delivery [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Customer Initiated/Requested Order Cancellation - No-Incident Found - [L1 (C,E,IB),HC,SM,L1.5]
+
+Cx calling for the first time for the cancellation of any order
+
+Fill the form
+Click on this: Form link
+
+Check 1: Check the order status:
+
+Packed/Processing status:
+Fill out the form and share 24 hours TAT for order cancellation. Here's the response for V4 , for the old response sheet click G-Sheet.
+Issue Type: Cancel###I want to cancel my order###Order cancellation Request
+SA level: Item/Packet
+
+Order in Shipped status:
+Raise the below task and share 24 hours TAT [Note: DO NOT share task TAT]
+Issue Type: Cancel###I want to cancel my order###Customer Refused - Order not cancelled
+SA level: Packet
+
+Order is Packed but at Item level Cancellation Reason is updated - [refer SS for sample]
+Scenario A: Customer has initiated cancellation but now wants to receive the order.
+Information: Inform the customer that the order cannot be delivered and the cancellation is in progress in our system and the same cannot be reversed. Request customer to place a fresh order.
+Action: Fill the cancellation form and share 24 hours TAT.
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Cancel###I want to cancel my order###Order cancellation Request
+SA level: Packet
+Scenario B: Customer has initiated cancellation and has now contacted CC stating the order is still not cancelled.
+Process: Fill Out the cancellation form and share 24 hours TAT.
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Cancel###I want to cancel my order###Order cancellation Request
+SA level: Packet
+AA_Customer Initiated/Requested Order Cancellation - Incident Found - [L1 (C,E,IB),HC,SM,L1.5]
+
+> Action:
+- Update Note(s) on the Incident/Task
+> Incident/Task:
+- Within 24 hours TAT: Share the TAT
+- Outside TAT: Share the extended TAT (48 hours). If the extended TAT is crossed then request for another 24 hours TAT
+
+AA_Return Cancellation Complaint - [L1 (C,E,IB),HC,SM,L1.5]
+
+Scenario 1: Return is in Queued Status + 24 hours breached since return creations
+Action/Information: Raise the Task and share the Task TAT
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Incident Category: Return/Exchange###Cancel my Return/Exchange###Unable to Cancel Return
+SA Level: Return
+.
+Good to Know Information (only for cc):
+- As the logistics are not yet assigned in Queued RID, the task will move to the Outbound Team.
+- Further Analysts team will perform bulk action, decline the return, and create a new return against them
+.
+Scenario 2: Return assigned to 3PL + On Hold + customer wants to cancel the return
+Action/information: Refer to scenario 3
+
+Scenario 3: Return in LPI Status + Not On Hold + Neither we nor the cx can cancel the return
+> Action/Information: Raise the Task and share the Task TAT
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Incident Category: Return/Exchange###Cancel my Return/Exchange###Unable to Cancel Return
+SA Level: Return
+Scenario 4: Return in RFR + Neither we nor the cx can cancel the return
+> Action/Information: Raise the Task and share the Task TAT.
+[IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
+Incident Category: Return/Exchange###Cancel my Return/Exchange###Unable to Cancel Return
+SA Level: Return
+.
+Note:
+Please follow the return cancellation request Policy article (Check at the Return level) for the remaining scenarios:
+> Return is in Queued Status + 24 hours NOT breached since return creations
+> Return assigned to ML/FKL + On Hold + customer wants to cancel the return
+> Self Ship return is already Shipped by the customer + customer wants to cancel the return
+> Self Ship return NOT yet Shipped by the customer + customer wants to cancel the return
+
+ Issue Type: Account###OTP SA Authentication Failure###Unable to verify. [USE THE "Create Incident" BUTTON ON THE AGENT ASSIST SCREEN]
+- SA Level: Non-Registered [probe for the regd. contact number of the account that the cx is referring to]
+
+OTP Authentication at L1-Inbound/Call, HighCare inbound
+
+AA_Ret/Exc creation on SA - Outside Window - [ALL LOBs]
+
+No Exception given
+-Customer is requesting for return:
+Information: As an exception, We have registered your request for return creation and you will receive an update through Email/InApp once the return is created within 72 hours. Please educate the customer to initiate the Return/Exchange within the designated Return/Exchange window in the future.
+
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Where is my pickup?###Return/exchange period crossed
+SA Level: Item.
+Task Selector Logic: Return post return window
+
+ow
+AA_Seal tag missing Pro-active (for return) [All customers A1, A2 & A3 ] - (L1(C,E,IB,HC,SM,L1.5)
+
+Returnable Product and Single Issue with the product
+
+> Guide customer to create return using self-serve option on the call proactively
+> If the customer prefers not to create the return on the call, provide them with the necessary information (check below). Instruct the customer to select the Primary and secondary reason followed by the Seal tag issue. Inform the customer that once the return is created, they will receive an update within 24 hours.
+> (For SM): Send out a help-tect via InApp and respond to cx on SM to check the InApp for guided help
+.
+Guided Return Creation on-call help:
+1. Open the Myntra App > Profile > Orders > Go to the relevant item > Click on return > Select Primary and Secondary reasons.
+- For example:
+> Primary Reason: Size fit Issue || Secondary Reason: I did not like the fit || In 'Any other issues' section: select <Seal tag Missing>
+>Return Reasons -Click Here
+> Click Here for In-App template and Scripts
+.
+[IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue type: Return/Exchange###How do I return/exchange this item?###Incorrect Reason selected while Return creation
+SA Level: item
+
+Tagloop missing Or Tagloop Wrong/Mismatch
+Reactive:
+
+> Check A: Customer's Maturity -
+Early/New - [Follow Action A]
+Mature- Move to Check B
+
+> Check B: Customer Cohort
+A1 → Proceed to Check C
+A2 or A3 → [Follow Action A]
+
+> Check C: Customer belong to a flagged pincode?
+Yes →Follow below SOP and raise task and share task tat
+Issue Type: Return/Exchange - Why is my return rejected/put on hold? - Tag Loop Missing
+SA Level: Return
+Task: RETURN - Return/Exchange Request - Tag Loop Missing
+
+No → Approval
+
+>Check the Exception Log on SA --> Profile> Exception logs> ROH Complaints Approved
+>Count total ROH approvals for respective category:
+>If ≤ 3:
+-Approve the claim.
+-Task is already available, close the task. If task is unavailable, raise respective task for documentation & close it.
+-RID on Hold or RID Created - Approve it
+-RID not created - Create return & approve.
+-Share pickup TAT & refund TAT. Refer DT 0002.
+>If >3 → Raise the respective task & share task TAT
+
+AA_Defective Post Usage [BPC] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Wearables, SAFARI trolleys & Backpacks] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Nike] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]
+
+AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]
+
+Other Products
+_
+Important: It is important that the care tips mentioned on PDP are followed so that the product lasts for long. If not, the product will be prone to develop defects post usage
+_
+Check 1: Verify how the defect occurred & if the caretips were followed.
+_
+Scenario 1: Due to customer's attribute (Rough usage, Care tips on PDP not followed)
+_
+Information: The defect occurred because the care tips on the PDP were not followed, so we can't accommodate the request
+_
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
+Queue: Inbound
+Status: Resolved
+SA Level: Item, Return
+_
+Scenario 2: The issue is genuine, not due to customer error, within warranty, and Images available highlighting the defects
+_
+Action: Raise a task. Provide the INC ID where cx has shared the images in the task notes.
+Information: Share the task TAT
+_
+IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
+Issue Type: Return/Exchange###How do I return/exchange this item?###Defective Post Usage
+Queue: Outbound
+Status: Pending
+SA Level: Item, Return
+_
+Scenario 3: The issue is genuine, not due to customer error, within warranty, and Images not available
+_
+Probe: Request customer to share the clear images of the product highlighting the defect.
+Information: Share the acknowledgement TAT of 24 - 48 hours
+_
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
+Queue: Inbound
+Status: Awaiting Customer information
+SA Level: Item, Return
+_
+Note:
+>If 'Adidas' or 'Reebok', Images of the 'Tongue Label' ( for footwear ) and 'Factory Label'( for apparel ) is mandatory
+>If 'Vogue, Ray-Ban, Oakley Brand sunglasses', request customer to share 2/3 images of the product highlighting the defect and one image of the left side of the temple.
+_
+Scenario 4: The issue is genuine, not due to customer error and outside warranty / The issue is genuine, not due to customer error and Exclusively 'No Warranty' mentioned on the PDP
+_
+Information: Decline the claim
+_
+IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
+Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
+Queue: Inbound
+Status: Resolved
+SA Level: Item, Return
+
+topics fro top to bottmo
+Document tabs
+
+🚚
+DELIVERY CONCERN
+
+😀
+Customer anxiety
+
+😡
+Delay
+
+🙄
+Full missing
+
+👿
+Disputing delivery
+
+🤔
+IMD
+
+🚛
+Faster/Scedule delivery
+
+😱
+Order Status
+
+🛻
+RETURN CONCERN
+
+⌛
+AA_Time taken for pickup
+
+🤬
+Disputing pickup
+
+😑
+Declined RID - Cx disputing
+
+🤷
+FKL Picked up QC pending FKL
+
+3PL QC Pending
+
+😲
+RID Declined
+
+🫳
+Extra/Wrong Item picked
+
+💸
+REFUND CONCERN
+
+💸
+Refund Simplified
+
+Pre Processed
+
+Declined orders
+
+Success Return within
+
+OR Return Outside
+
+OR Return Pending
+
+Ret pending outside
+
+Ret refund fail
+
+Refund- Search void
+
+AA_ARN Dispute (Return
+
+ROH
+
+WPR Exchange
+
+WPR Return
+
+😡
+Reinvestigation
+
+😭
+Order Cancellation
+
+Return Cancellation
+
+SA Authentication
+
+Return Window
+
+Tagloop
+
+Defective post usage
+
+UPR
+
+Order Address chang
