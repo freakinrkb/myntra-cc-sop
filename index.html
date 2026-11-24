@@ -3,144 +3,304 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#0b0f14" />
-<meta name="description" content="Myntra CC SOP Knowledge Base - Delivery, Return & Refund concerns, organized by topic." />
-<title>Myntra CC SOP Knowledge Base</title>
+<meta name="theme-color" content="#f7f8fa" />
+<meta name="description" content="Myntra CC SOP Operating System - Delivery, Return & Refund agent workflows." />
+<title>Myntra CC SOP OS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <style>
 :root{
-  --bg:#070a10;--bg2:#0d1219;--card:rgba(22,28,37,.55);--card2:rgba(28,35,48,.6);--border:rgba(255,255,255,.08);--text:#eaf0f6;--muted:#8b96a8;--accent:#ff6b35;--accent2:#ffb347;--blue:#5aa9ff;--green:#4ade80;--red:#ff6b7a;--purple:#c084fc;--pink:#f472b6;
-  --radius:18px;--shadow:0 20px 60px rgba(0,0,0,.45);--blur:blur(18px) saturate(140%);
+  --bg:#f7f8fa;--bg2:#ffffff;--surface:#ffffff;--surface2:#f1f3f7;--border:#e3e6ec;--border2:#d6dae2;--text:#0f172a;--text2:#334155;--muted:#64748b;--accent:#6366f1;--accent2:#8b5cf6;--accent-soft:#eef2ff;--blue:#2563eb;--green:#16a34a;--red:#dc2626;--amber:#d97706;--pink:#db2777;
+  --radius:12px;--radius-lg:16px;--shadow:0 1px 2px rgba(15,23,42,.04),0 4px 12px rgba(15,23,42,.06);--shadow-lg:0 8px 24px rgba(15,23,42,.10);
+  --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+[data-theme="dark"]{
+  --bg:#0b1020;--bg2:#111827;--surface:#151d2e;--surface2:#1e293b;--border:#2a3446;--border2:#3b4660;--text:#e5e7eb;--text2:#cbd5e1;--muted:#94a3b8;--accent:#818cf8;--accent2:#a78bfa;--accent-soft:#1e293b;--blue:#60a5fa;--green:#4ade80;--red:#f87171;--amber:#fbbf24;--pink:#f472b6;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.35);--shadow-lg:0 8px 24px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:15px;overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;font-size:14px;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-code,kbd{font-family:'JetBrains Mono',monospace;font-size:.85em;background:rgba(0,0,0,.35);padding:2px 7px;border-radius:7px;border:1px solid var(--border)}
-pre{background:rgba(0,0,0,.4);border:1px solid var(--border);border-radius:12px;padding:14px;overflow:auto;font-family:'JetBrains Mono',monospace;font-size:.85em;line-height:1.5}
-h1,h2,h3,h4{margin:0 0 .6em;font-weight:700;letter-spacing:-.02em}
-h1{font-size:2.6rem}
-h2.section-title{font-size:1.45rem;margin-top:0;padding-bottom:.5em;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6em;flex-wrap:wrap}
-h3{font-size:1.12rem;color:var(--accent2);margin-top:1.2em}
-h4{font-size:1rem;color:var(--blue)}
-p{margin:.6em 0}
-ul,ol{margin:.6em 0;padding-left:1.4em}
-li{margin:.3em 0}
-.tag{display:inline-block;font-size:.7rem;padding:3px 10px;border-radius:999px;border:1px solid var(--border);color:var(--muted);margin:2px;backdrop-filter:blur(6px)}
-.tag.cat-delivery{color:#ffb347;border-color:#ff6b3566;background:#ff6b351f}
-.tag.cat-return{color:#5aa9ff;border-color:#5aa9ff66;background:#5aa9ff1f}
-.tag.cat-refund{color:#4ade80;border-color:#4ade8066;background:#4ade801f}
-.tag.cat-general{color:#c084fc;border-color:#c084fc66;background:#c084fc1f}
-.card{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:16px 0;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
-.card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.16);box-shadow:0 24px 70px rgba(0,0,0,.55)}
-.card.soft{background:var(--card2)}
-.callout{border-left:3px solid var(--accent);background:rgba(255,107,53,.08);padding:12px 16px;border-radius:10px;margin:10px 0;backdrop-filter:blur(8px)}
-.callout.info{border-color:var(--blue);background:rgba(90,169,255,.08)}
-.callout.warn{border-color:var(--red);background:rgba(255,107,122,.08)}
-.callout.good{border-color:var(--green);background:rgba(74,222,128,.08)}
-.kv{display:grid;grid-template-columns:150px 1fr;gap:6px 12px;margin:8px 0}
-.kv dt{color:var(--muted);font-weight:600}
-.kv dd{margin:0}
-.divider{height:1px;background:var(--border);margin:24px 0}
-.bg-blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35;animation:float 18s ease-in-out infinite}
-.blob.b1{width:420px;height:420px;background:var(--accent);top:-80px;left:-60px}
-.blob.b2{width:520px;height:520px;background:var(--blue);bottom:-120px;right:-80px;animation-delay:-6s}
-.blob.b3{width:360px;height:360px;background:var(--purple);top:40%;left:45%;animation-delay:-12s}
-@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.1)}66%{transform:translate(-30px,40px) scale(.95)}}
-.app{display:grid;grid-template-columns:290px 1fr;min-height:100vh}
-.sidebar{position:sticky;top:0;height:100vh;overflow:auto;padding:22px 16px;border-right:1px solid var(--border);background:rgba(13,18,25,.6);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
-.sidebar h1{font-size:1.15rem;margin-bottom:4px}
-.sidebar .sub{color:var(--muted);font-size:.8rem;margin-bottom:16px}
-.search{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(0,0,0,.35);color:var(--text);font-size:.9rem;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
-.search:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,107,53,.2)}
-.nav-group{margin-bottom:14px}
-.nav-group h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 6px;padding-left:8px}
-.nav-group a{display:block;padding:7px 11px;border-radius:10px;font-size:.85rem;color:var(--text);transition:background .2s,transform .2s;margin-bottom:2px}
-.nav-group a:hover{background:rgba(255,255,255,.06);transform:translateX(3px)}
-.nav-group a.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 6px 18px rgba(255,107,53,.35)}
-.nav-group a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:8px;vertical-align:middle}
-.dot.delivery{background:var(--accent)}
-.dot.return{background:var(--blue)}
-.dot.refund{background:var(--green)}
-.main{padding:28px 36px 90px;max-width:1180px}
-.hero{background:linear-gradient(135deg,rgba(255,107,53,.18),rgba(90,169,255,.18),rgba(192,132,252,.18));border:1px solid var(--border);border-radius:24px;padding:34px;margin-bottom:26px;backdrop-filter:var(--blur);position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.06),transparent 60%);pointer-events:none}
-.hero h1{background:linear-gradient(135deg,var(--accent),var(--accent2),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--muted);max-width:760px}
-.stats{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
-.stat{background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:14px;padding:12px 18px;backdrop-filter:blur(8px)}
-.stat b{display:block;font-size:1.5rem;background:linear-gradient(135deg,var(--accent2),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat span{font-size:.75rem;color:var(--muted)}
-.section{scroll-margin-top:24px}
-.topic{margin-bottom:34px;opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.topic.in{opacity:1;transform:translateY(0)}
-.hidden{display:none!important}
-mark{background:rgba(255,107,53,.55);color:#fff;border-radius:4px;padding:0 3px}
-.copybtn{float:right;font-size:.7rem;padding:5px 10px;border-radius:8px;border:1px solid var(--border);background:rgba(0,0,0,.3);color:var(--muted);cursor:pointer;backdrop-filter:blur(6px);transition:all .2s}
-.copybtn:hover{color:var(--text);border-color:var(--accent);transform:scale(1.05)}
-.source{background:rgba(0,0,0,.4);border:1px dashed var(--border);border-radius:12px;padding:14px;white-space:pre-wrap;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.5;color:var(--muted);max-height:420px;overflow:auto}
-details{background:rgba(0,0,0,.25);border:1px solid var(--border);border-radius:12px;padding:12px 16px;margin:10px 0;backdrop-filter:blur(6px)}
-details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
-.footer{color:var(--muted);font-size:.8rem;margin-top:40px;padding-top:20px;border-top:1px solid var(--border)}
-#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--blue));z-index:100;transition:width .1s linear;box-shadow:0 0 12px var(--accent)}
-#topBtn{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;border:1px solid var(--border);background:rgba(13,18,25,.7);backdrop-filter:var(--blur);color:var(--text);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow);transition:transform .2s,opacity .2s;z-index:50}
-#topBtn.show{display:flex}
-#topBtn:hover{transform:translateY(-4px);border-color:var(--accent)}
-#palette{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);z-index:200;display:none;align-items:flex-start;justify-content:center;padding-top:12vh}
-#palette.open{display:flex}
-#paletteBox{width:min(640px,92vw);background:rgba(13,18,25,.85);backdrop-filter:var(--blur);border:1px solid var(--border);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden}
-#paletteInput{width:100%;padding:16px 18px;border:none;background:transparent;color:var(--text);font-size:1.05rem;border-bottom:1px solid var(--border)}
-#paletteInput:focus{outline:none}
-#paletteResults{max-height:50vh;overflow:auto;padding:8px}
-#paletteResults a{display:block;padding:10px 14px;border-radius:10px;color:var(--text);transition:background .15s}
-#paletteResults a:hover,#paletteResults a.active{background:rgba(255,107,53,.15)}
-#paletteResults .cat{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-#paletteHint{padding:8px 18px;font-size:.72rem;color:var(--muted);border-top:1px solid var(--border)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.chip{padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:rgba(0,0,0,.3);color:var(--muted);cursor:pointer;font-size:.82rem;transition:all .2s;backdrop-filter:blur(6px)}
-.chip:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
-.chip.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;box-shadow:0 6px 18px rgba(255,107,53,.3)}
-.topic{position:relative}
-.topic::before{content:'';position:absolute;inset:-1px;border-radius:20px;padding:1px;background:linear-gradient(135deg,transparent,rgba(255,107,53,.0),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;transition:background .4s}
-.topic:hover::before{background:linear-gradient(135deg,rgba(255,107,53,.4),rgba(90,169,255,.4),rgba(192,132,252,.4))}
-@media(max-width:900px){
-  .app{grid-template-columns:1fr}
-  .sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border)}
-  .main{padding:20px 16px 70px}
-  .hero h1{font-size:1.9rem}
-}
-@media(prefers-reduced-motion:reduce){
-  .blob,.topic{animation:none!important;transition:none!important}
-}
-</style>
+code,kbd{font-family:var(--mono);font-size:.82em;background:var(--surface2);padding:2px 6px;border-radius:6px;border:1px solid var(--border);color:var(--text)}
+pre{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;overflow:auto;font-family:var(--mono);font-size:.82em;line-height:1.5;margin:10px 0}
+h1,h2,h3,h4{margin:0 0 .5em;font-weight:600;letter-spacing:-.015em;color:var(--text)}
+h1{font-size:1.9rem}
+h2{font-size:1.35rem}
+h3{font-size:1.05rem;color:var(--accent);margin-top:1.1em}
+h4{font-size:.95rem;color:var(--blue)}
+p{margin:.5em 0;color:var(--text2)}
+ul,ol{margin:.5em 0;padding-left:1.3em;color:var(--text2)}
+li{margin:.25em 0}
+.tag{display:inline-block;font-size:.68rem;padding:2px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted);margin:2px;background:var(--surface2)}
+.tag.cat-delivery{color:#b45309;border-color:#fde68a;background:#fffbeb}
+.tag.cat-return{color:#1d4ed8;border-color:#bfdbfe;background:#eff6ff}
+.tag.cat-refund{color:#15803d;border-color:#bbf7d0;background:#f0fdf4}
+.tag.cat-general{color:#7c3aed;border-color:#ddd6fe;background:#f5f3ff}
+[data-theme="dark"] .tag.cat-delivery{color:#fbbf24;border-color:#78350f;background:#451a03}
+[data-theme="dark"] .tag.cat-return{color:#93c5fd;border-color:#1e3a8a;background:#172554}
+[data-theme="dark"] .tag.cat-refund{color:#86efac;border-color:#14532d;background:#052e16}
+[data-theme="dark"] .tag.cat-general{color:#c4b5fd;border-color:#4c1d95;background:#2e1065}
 
+/* Shell */
+.shell{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;overflow:auto;padding:18px 14px;border-right:1px solid var(--border);background:var(--bg2);display:flex;flex-direction:column}
+.sidebar.collapsed{width:72px}
+.sidebar .brand{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding:0 6px}
+.brand .logo{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;flex-shrink:0}
+.brand .name{font-weight:600;font-size:.95rem}
+.brand .sub{font-size:.72rem;color:var(--muted)}
+.nav-section{margin-bottom:16px}
+.nav-section h5{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px;padding:0 8px;font-weight:600}
+.nav-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;font-size:.88rem;color:var(--text2);cursor:pointer;transition:background .15s,color .15s;user-select:none}
+.nav-item:hover{background:var(--surface2);color:var(--text)}
+.nav-item.active{background:var(--accent-soft);color:var(--accent);font-weight:500}
+.nav-item .icon{width:16px;height:16px;flex-shrink:0}
+.nav-item .count{margin-left:auto;font-size:.7rem;color:var(--muted);background:var(--surface2);padding:1px 7px;border-radius:999px}
+.nav-item.active .count{background:var(--accent);color:#fff}
+.nav-bottom{margin-top:auto;padding-top:12px;border-top:1px solid var(--border)}
+.collapse-btn{width:100%;padding:8px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;font-size:.8rem;display:flex;align-items:center;justify-content:center;gap:6px}
+.collapse-btn:hover{color:var(--text)}
+
+/* Topbar */
+.topbar{position:sticky;top:0;z-index:40;background:rgba(247,248,250,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;gap:14px}
+[data-theme="dark"] .topbar{background:rgba(11,16,32,.85)}
+.topbar .breadcrumb{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+.topbar .breadcrumb b{color:var(--text);font-weight:500}
+.topbar .search-trigger{flex:1;max-width:420px;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;font-size:.85rem;transition:border-color .2s}
+.topbar .search-trigger:hover{border-color:var(--accent)}
+.topbar .search-trigger kbd{margin-left:auto;font-size:.7rem}
+.topbar .actions{display:flex;align-items:center;gap:8px}
+.icon-btn{width:34px;height:34px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.icon-btn:hover{color:var(--accent);border-color:var(--accent)}
+
+/* Main */
+.main{padding:24px 32px 60px;max-width:1100px}
+.view{display:none}
+.view.active{display:block}
+
+/* Dashboard */
+.dash-hero{margin-bottom:24px}
+.dash-hero h1{font-size:1.6rem;margin-bottom:4px}
+.dash-hero p{color:var(--muted);max-width:640px;margin:0}
+.dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.cat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;cursor:pointer;transition:all .2s;box-shadow:var(--shadow)}
+.cat-card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:var(--shadow-lg)}
+.cat-card .icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.cat-card.delivery .icon{background:#fff7ed;color:#ea580c}
+.cat-card.return .icon{background:#eff6ff;color:#2563eb}
+.cat-card.refund .icon{background:#f0fdf4;color:#16a34a}
+[data-theme="dark"] .cat-card.delivery .icon{background:#431407;color:#fb923c}
+[data-theme="dark"] .cat-card.return .icon{background:#172554;color:#60a5fa}
+[data-theme="dark"] .cat-card.refund .icon{background:#052e16;color:#4ade80}
+.cat-card h3{margin:0 0 4px;font-size:1.05rem;color:var(--text)}
+.cat-card .count{font-size:1.6rem;font-weight:700;color:var(--accent)}
+.cat-card .desc{font-size:.82rem;color:var(--muted);margin-top:6px}
+.section-title{font-size:1.1rem;font-weight:600;margin:24px 0 12px;display:flex;align-items:center;gap:8px}
+.section-title .sub{font-size:.8rem;color:var(--muted);font-weight:400}
+.frequent-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.freq-item{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:all .15s}
+.freq-item:hover{border-color:var(--accent);background:var(--accent-soft)}
+.freq-item .fi-icon{width:30px;height:30px;border-radius:8px;background:var(--surface2);display:flex;align-items:center;justify-content:center;color:var(--muted);flex-shrink:0}
+.freq-item .fi-title{font-size:.88rem;font-weight:500;color:var(--text)}
+.freq-item .fi-cat{font-size:.72rem;color:var(--muted)}
+.quick-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.qa-btn{padding:9px 14px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;font-size:.85rem;display:flex;align-items:center;gap:6px;transition:all .15s}
+.qa-btn:hover{border-color:var(--accent);color:var(--accent)}
+.policy-list{display:grid;gap:8px}
+.policy-item{padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;font-size:.85rem;color:var(--text2)}
+
+/* SOP detail */
+.sop-header{margin-bottom:18px}
+.sop-header .crumbs{font-size:.8rem;color:var(--muted);margin-bottom:8px}
+.sop-header h1{font-size:1.5rem;margin-bottom:6px}
+.sop-header .meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.sop-actions{display:flex;gap:8px;margin-bottom:16px}
+.btn{padding:8px 14px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;font-size:.85rem;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.primary:hover{opacity:.9}
+.sop-body .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:14px 0;box-shadow:var(--shadow)}
+.sop-body .topic{display:none}
+.sop-body .topic.active{display:block}
+.toc{position:sticky;top:80px;align-self:start;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;font-size:.8rem;max-height:calc(100vh-120px);overflow:auto}
+.toc h5{margin:0 0 8px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.toc a{display:block;padding:4px 6px;color:var(--text2);border-radius:6px;margin-bottom:2px}
+.toc a:hover{background:var(--surface2);color:var(--text)}
+.layout-sop{display:grid;grid-template-columns:1fr 220px;gap:24px}
+@media(max-width:900px){.layout-sop{grid-template-columns:1fr}.toc{display:none}}
+
+/* All SOPs list */
+.all-list{display:grid;gap:8px}
+.all-item{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:all .15s}
+.all-item:hover{border-color:var(--accent)}
+.all-item .ai-title{font-weight:500;font-size:.9rem}
+.all-item .ai-cat{font-size:.72rem;color:var(--muted)}
+
+/* Search palette */
+#palette{position:fixed;inset:0;background:rgba(15,23,42,.45);backdrop-filter:blur(4px);z-index:200;display:none;align-items:flex-start;justify-content:center;padding-top:8vh}
+#palette.open{display:flex}
+#paletteBox{width:min(680px,94vw);background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden}
+#paletteInput{width:100%;padding:16px 18px;border:none;background:transparent;color:var(--text);font-size:1rem;border-bottom:1px solid var(--border)}
+#paletteInput:focus{outline:none}
+#paletteResults{max-height:55vh;overflow:auto;padding:8px}
+#paletteResults a{display:block;padding:10px 14px;border-radius:10px;color:var(--text);transition:background .15s}
+#paletteResults a:hover,#paletteResults a.active{background:var(--accent-soft)}
+#paletteResults .pr-title{font-weight:500;font-size:.9rem}
+#paletteResults .pr-cat{font-size:.72rem;color:var(--muted)}
+#paletteResults .pr-preview{font-size:.78rem;color:var(--muted);margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#paletteHint{padding:8px 18px;font-size:.72rem;color:var(--muted);border-top:1px solid var(--border)}
+
+/* Toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.85rem;opacity:0;transition:all .25s;z-index:300;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* Reading progress */
+#readProgress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:60;transition:width .1s linear}
+
+/* Responsive */
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  .sidebar{position:fixed;left:0;top:0;bottom:0;z-index:50;transform:translateX(-100%);transition:transform .25s}
+  .sidebar.open{transform:translateX(0)}
+  .main{padding:18px 16px 50px}
+  .dash-grid{grid-template-columns:1fr}
+  .frequent-list{grid-template-columns:1fr}
+  .topbar .search-trigger{max-width:none}
+}
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+
+.dt{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;margin:10px 0}
+.dt-q{font-weight:600;color:var(--text);margin:8px 0 6px;font-size:.92rem}
+.dt-branches{display:grid;gap:8px;margin-left:12px;border-left:2px solid var(--border);padding-left:12px}
+.dt-branch{position:relative}
+.dt-label{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--muted);margin-bottom:4px;font-weight:600}
+.dt-label.yes{background:#dcfce7;color:#15803d;border-color:#bbf7d0}
+.dt-label.no{background:#fee2e2;color:#dc2626;border-color:#fecaca}
+[data-theme="dark"] .dt-label.yes{background:#052e16;color:#86efac;border-color:#14532d}
+[data-theme="dark"] .dt-label.no{background:#450a0a;color:#fca5a5;border-color:#7f1d1d}
+.dt-outcome{background:var(--accent-soft);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:.85rem;color:var(--text);margin-top:4px}
+</style>
 </head>
 <body>
-<div class="bg-blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
-<div id="progress"></div>
-<div class="app>
-<aside class="sidebar">
-  <h1>📋 Myntra CC SOP</h1>
-  <div class="sub">Knowledge base · Delivery / Return / Refund</div>
-  <input class="search" id="search" placeholder="Search topics, scripts, SOP…" />
-  <div id="nav"></div>
-</aside>
-<main class="main">
-  <div class="hero">
-    <h1>Myntra Customer Care SOP</h1>
-    <p>Informative reference for Delivery, Return &amp; Refund concerns. Organized by the topic taxonomy. Use the sidebar to jump, or search anything.</p>
-    <div class="stats">
-      <div class="stat"><b id="statTopics">0</b><span>Topics</span></div>
-      <div class="stat"><b id="statSections">0</b><span>Sections</span></div>
-      <div class="stat"><b>3</b><span>Categories</span></div>
+<div id="readProgress"></div>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo">M</div>
+      <div>
+        <div class="name">Myntra CC SOP</div>
+        <div class="sub">Agent Operating System</div>
+      </div>
     </div>
-  </div>
+    <div class="nav-section">
+      <h5>Workspace</h5>
+      <div class="nav-item active" data-route="/dashboard"><i data-lucide="layout-dashboard" class="icon"></i>Overview</div>
+      <div class="nav-item" data-route="/all"><i data-lucide="book-open" class="icon"></i>All SOPs<span class="count" id="navAllCount">0</span></div>
+      <div class="nav-item" data-route="/recent"><i data-lucide="clock" class="icon"></i>Recently Viewed<span class="count" id="navRecentCount">0</span></div>
+      <div class="nav-item" data-route="/bookmarks"><i data-lucide="bookmark" class="icon"></i>Bookmarked<span class="count" id="navBmCount">0</span></div>
+    </div>
+    <div class="nav-section">
+      <h5>Categories</h5>
+      <div class="nav-item" data-route="/cat/delivery"><i data-lucide="truck" class="icon"></i>Delivery<span class="count" id="navDel">0</span></div>
+      <div class="nav-item" data-route="/cat/return"><i data-lucide="rotate-ccw" class="icon"></i>Return & Exchange<span class="count" id="navRet">0</span></div>
+      <div class="nav-item" data-route="/cat/refund"><i data-lucide="wallet" class="icon"></i>Refund<span class="count" id="navRef">0</span></div>
+    </div>
+    <div class="nav-bottom">
+      <button class="collapse-btn" id="collapseBtn"><i data-lucide="panel-left-close" class="icon"></i> Collapse</button>
+    </div>
+  </aside>
 
-  <section class="topic" id="intro">
+  <div>
+    <div class="topbar">
+      <button class="icon-btn" id="menuBtn" style="display:none"><i data-lucide="menu"></i></button>
+      <div class="breadcrumb" id="breadcrumb">Overview</div>
+      <div class="search-trigger" id="searchTrigger"><i data-lucide="search" style="width:16px;height:16px"></i> Search SOPs, scripts, incidents… <kbd>⌘K</kbd></div>
+      <div class="actions">
+        <button class="icon-btn" id="themeBtn" title="Toggle theme"><i data-lucide="moon"></i></button>
+      </div>
+    </div>
+
+    <main class="main">
+      <!-- Dashboard view -->
+      <div class="view active" id="viewDashboard">
+        <div class="dash-hero">
+          <h1>Myntra CC SOP Operating System</h1>
+          <p>Find the right SOP in seconds. Follow documented workflows, copy scripts, and navigate between related scenarios — all from one place.</p>
+        </div>
+        <div class="quick-actions">
+          <button class="qa-btn" data-route="/all"><i data-lucide="list"></i> Browse all SOPs</button>
+          <button class="qa-btn" data-route="/recent"><i data-lucide="clock"></i> Recent</button>
+          <button class="qa-btn" data-route="/bookmarks"><i data-lucide="bookmark"></i> Bookmarks</button>
+          <button class="qa-btn" id="focusSearch"><i data-lucide="search"></i> Search (⌘K)</button>
+        </div>
+        <div class="dash-grid" id="catCards"></div>
+
+        <h2 class="section-title">Frequently accessed <span class="sub">common workflows</span></h2>
+        <div class="frequent-list" id="freqList"></div>
+
+        <h2 class="section-title">Important policy reminders <span class="sub">extracted from SOPs</span></h2>
+        <div class="policy-list">
+          <div class="policy-item">Do not promise priority/expedited delivery for delayed gift orders during BFF. Follow BAU SOP and fill the Gift Order - Delayed Delivery Form.</div>
+          <div class="policy-item">Never share OTP with SDA until the package is handed over at the doorstep. Politely decline if OTP was proactively shared.</div>
+          <div class="policy-item">Missing component claims must be raised within 7 days of delivery date; beyond that, decline per policy.</div>
+          <div class="policy-item">IMD requests are entertained within 5 days from the delivered date (delivered date = 0th day).</div>
+          <div class="policy-item">Reinvestigation requests: 5 days for IMD, 7 days for Missing Component & ROH after parent task decline.</div>
+          <div class="policy-item">Do not create Return/Exchange requests while a missing-component complaint is being worked upon.</div>
+        </div>
+      </div>
+
+      <!-- All SOPs view -->
+      <div class="view" id="viewAll">
+        <h1 style="font-size:1.5rem;margin-bottom:6px">All SOPs</h1>
+        <p style="color:var(--muted);margin-bottom:16px">Browse every documented topic.</p>
+        <div class="all-list" id="allList"></div>
+      </div>
+
+      <!-- Recent view -->
+      <div class="view" id="viewRecent">
+        <h1 style="font-size:1.5rem;margin-bottom:6px">Recently Viewed</h1>
+        <p style="color:var(--muted);margin-bottom:16px">Your last opened SOPs.</p>
+        <div class="all-list" id="recentList"></div>
+      </div>
+
+      <!-- Bookmarks view -->
+      <div class="view" id="viewBookmarks">
+        <h1 style="font-size:1.5rem;margin-bottom:6px">Bookmarked SOPs</h1>
+        <p style="color:var(--muted);margin-bottom:16px">Your saved topics.</p>
+        <div class="all-list" id="bookmarkList"></div>
+      </div>
+
+      <!-- Category view -->
+      <div class="view" id="viewCat">
+        <h1 style="font-size:1.5rem;margin-bottom:6px" id="catTitle">Category</h1>
+        <p style="color:var(--muted);margin-bottom:16px">Topics in this category.</p>
+        <div class="all-list" id="catList"></div>
+      </div>
+
+      <!-- SOP detail view -->
+      <div class="view" id="viewSop">
+        <div class="layout-sop">
+          <div>
+            <div class="sop-header" id="sopHeader"></div>
+            <div class="sop-body" id="sopBody"></div>
+          </div>
+          <aside class="toc" id="toc"><h5>On this page</h5></aside>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- SOP content store (hidden) -->
+<div id="sopStore" style="display:none">
+<section class="topic" id="intro">
     <h2 class="section-title">📖 How to use</h2>
     <div class="card">
       <p>This site reorganizes the raw SOP notes into the topic taxonomy (listed at the bottom of the original notes). Each topic has the relevant SOP steps, scripts, incident categories and task creation details. A <strong>Complete Source Notes</strong> section at the end preserves the original text verbatim.</p>
@@ -152,16 +312,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <div class="chips" id="chips">
-    <div class="chip active" data-filter="all">All topics</div>
-    <div class="chip" data-filter="delivery">🚚 Delivery</div>
-    <div class="chip" data-filter="return">🛻 Return</div>
-    <div class="chip" data-filter="refund">💸 Refund</div>
-  </div>
-
-  <!-- ============ DELIVERY ============ -->
-  <section class="topic" id="del-customer-anxiety" data-cat="delivery">
+<section class="topic" id="del-customer-anxiety" data-cat="delivery">
     <h2 class="section-title"><span class="tag cat-delivery">Delivery</span> Customer anxiety</h2>
     <div class="card">
       <h3>Incident mapping</h3>
@@ -175,10 +326,29 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <section class="topic" id="del-delay" data-cat="delivery">
+<section class="topic" id="del-delay" data-cat="delivery">
     <h2 class="section-title"><span class="tag cat-delivery">Delivery</span> Delay</h2>
     <div class="card">
+      <h3>Decision workflow (guided)</h3>
+      <div class="dt">
+        <div class="dt-q">Is today the promised delivery date (APD)?</div>
+        <div class="dt-branches">
+          <div class="dt-branch"><span class="dt-label yes">YES</span>
+            <div class="dt-q">What time is it?</div>
+            <div class="dt-branches">
+              <div class="dt-branch"><span class="dt-label yes">Before 8 PM</span><div class="dt-outcome">Inform cx to wait till EOD. If asked, EOD = by 9:00 PM.</div></div>
+              <div class="dt-branch"><span class="dt-label">After 8 PM</span>
+                <div class="dt-q">Is order status OFD?</div>
+                <div class="dt-branches">
+                  <div class="dt-branch"><span class="dt-label yes">YES (OFD)</span><div class="dt-outcome">Inform cx to wait 24 hours.</div></div>
+                  <div class="dt-branch"><span class="dt-label no">NO (Non-OFD)</span><div class="dt-outcome">Inform cx to wait 72 hours.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dt-branch"><span class="dt-label no">NO (APD breached)</span><div class="dt-outcome">Follow BAU SOP: raise delayed delivery task via AA article. Check existing tasks on packet ID first.</div></div>
+        </div>
+      </div>
       <h3>Article: AA_Delayed Delivery (Article 01)</h3>
       <p>Published 21/8/2026. Covers L1, L1.5, SM. Live with Delayed Delivery Elixir flow for selected pincodes — if an Elixir ticket is created, follow Elixir SOP. If exchange is on hold, follow on-hold SOP (don't raise delayed delivery task). If exchange approved and promised date crossed → raise delayed delivery task.</p>
       <h3>Order not OFD on APD day</h3>
@@ -211,8 +381,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <p>If exchange is put on hold (irrespective of SDA visited or incorrectly) → raise respective on-hold task. If exchange approved and promised date crossed → raise delayed delivery task.</p>
     </div>
   </section>
-
-  <section class="topic" id="del-full-missing" data-cat="delivery">
+<section class="topic" id="del-full-missing" data-cat="delivery">
     <h2 class="section-title"><span class="tag cat-delivery">Delivery</span> Full missing</h2>
     <div class="card">
       <h3>When is it Full/Complete Product Missing?</h3>
@@ -240,8 +409,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <div class="callout info">Advise customer not to create Return/Exchange while complaint is worked upon; reassure about return/exchange window. If already created, advise to cancel.</div>
     </div>
   </section>
-
-  <section class="topic" id="del-disputing-delivery" data-cat="delivery">
+<section class="topic" id="del-disputing-delivery" data-cat="delivery">
     <h2 class="section-title"><span class="tag cat-delivery">Delivery</span> Disputing delivery</h2>
     <div class="card">
       <h3>Scenario: customer disputes delivery (IMD flow entry)</h3>
@@ -254,8 +422,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <section class="topic" id="del-imd" data-cat="delivery">
+<section class="topic" id="del-imd" data-cat="delivery">
     <h2 class="section-title"><span class="tag cat-delivery">Delivery</span> IMD</h2>
     <div class="card">
       <h3>Incorrectly Marked Delivered — Check sequence</h3>
@@ -296,8 +463,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <p>1. Shipment drop off status · 2. OTP</p>
     </div>
   </section>
-
-  <section class="topic" id="del-faster" data-cat="delivery">
+<section class="topic" id="del-faster" data-cat="delivery">
     <h2 class="section-title"><span class="tag cat-delivery">Delivery</span> Faster/Scedule delivery</h2>
     <div class="card">
       <h3>AA_Faster/Scheduled Delivery - Post Order (L1 C,E,IB, HC, SM, L1.5)</h3>
@@ -308,8 +474,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <div class="kv"><dt>Issue Type</dt><dd>Delivery###I want Delivery at specific time###Scheduled/Quicker Delivery Not Available</dd><dt>Level</dt><dd>Packet</dd></div>
     </div>
   </section>
-
-  <section class="topic" id="del-order-status" data-cat="delivery">
+<section class="topic" id="del-order-status" data-cat="delivery">
     <h2 class="section-title"><span class="tag cat-delivery">Delivery</span> Order Status</h2>
     <div class="card">
       <h3>AA_Order Status Update - Packed to Delivered</h3>
@@ -319,9 +484,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <div class="callout info">Always update REDIAL Attempt Notes in incident with reason &amp; summary when major actions already completed before drop.</div>
     </div>
   </section>
-
-  <!-- ============ RETURN ============ -->
-  <section class="topic" id="ret-time-taken-pickup" data-cat="return">
+<section class="topic" id="ret-time-taken-pickup" data-cat="return">
     <h2 class="section-title"><span class="tag cat-return">Return</span> AA_Time taken for pickup</h2>
     <div class="card">
       <h3>Pick up promise is today / not crossed + Return is OFP + no status update post OFP</h3>
@@ -340,8 +503,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <section class="topic" id="ret-disputing-pickup" data-cat="return">
+<section class="topic" id="ret-disputing-pickup" data-cat="return">
     <h2 class="section-title"><span class="tag cat-return">Return</span> Disputing pickup</h2>
     <div class="card">
       <h3>First determine: myntra attribute or customer attribute?</h3>
@@ -365,44 +527,37 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <section class="topic" id="ret-declined-rid" data-cat="return">
+<section class="topic" id="ret-declined-rid" data-cat="return">
     <h2 class="section-title"><span class="tag cat-return">Return</span> Declined RID - Cx disputing</h2>
     <div class="card">
       <p>When RID appears Declined on SA and cx disputes: raise task &amp; share TAT. Incident: <code>Refund###Picked Up-Refund Pending###Picked up return id declined</code>, SA Level: Return. Capture AWB/tracking, RID, item ID in notes. Inform cx to check items before handing over in future.</p>
     </div>
   </section>
-
-  <section class="topic" id="ret-fkl-qc" data-cat="return">
+<section class="topic" id="ret-fkl-qc" data-cat="return">
     <h2 class="section-title"><span class="tag cat-return">Return</span> FKL Picked up QC pending FKL</h2>
     <div class="card">
       <p>For FKL-picked items pending QC: if within QC TAT educate cx; if outside TAT raise task depending on whether item reached WH. Reached WH → <code>Refund###Picked up - refund pending###WH/DC status update pending</code>. Not reached WH → <code>Refund###Picked up - refund pending###Picked up QC pending/Status not updated</code>.</p>
     </div>
   </section>
-
-  <section class="topic" id="ret-3pl-qc" data-cat="return">
+<section class="topic" id="ret-3pl-qc" data-cat="return">
     <h2 class="section-title"><span class="tag cat-return">Return</span> 3PL QC Pending</h2>
     <div class="card">
       <p>For 3PL logistics, always tell cx not to share any OTP until SDA comes at doorstep. * Pick-ups assigned to ML/FKL/Ekart are not OTP based/verified. Follow same QC-pending task creation as above based on WH reach status.</p>
     </div>
   </section>
-
-  <section class="topic" id="ret-rid-declined" data-cat="return">
+<section class="topic" id="ret-rid-declined" data-cat="return">
     <h2 class="section-title"><span class="tag cat-return">Return</span> RID Declined</h2>
     <div class="card">
       <p>Covered under Disputing pickup / Declined RID. Raise task &amp; share TAT; Incident: <code>Refund###Picked Up-Refund Pending###Picked up return id declined</code>.</p>
     </div>
   </section>
-
-  <section class="topic" id="ret-extra-wrong" data-cat="return">
+<section class="topic" id="ret-extra-wrong" data-cat="return">
     <h2 class="section-title"><span class="tag cat-return">Return</span> Extra/Wrong Item picked</h2>
     <div class="card">
       <p>See Disputing pickup → Extra/Wrong/Non-return item picked. Raise task &amp; share TAT; Incident: <code>Refund###Picked Up-Refund Pending###Wrong/Extra/Non Ret item picked up</code>. Note: while selecting option in selector logic, check return mode at return details and select option accordingly.</p>
     </div>
   </section>
-
-  <!-- ============ REFUND ============ -->
-  <section class="topic" id="ref-refund-simplified" data-cat="refund">
+<section class="topic" id="ref-refund-simplified" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Refund Simplified</h2>
     <div class="card">
       <h3>Success (refund processed)</h3>
@@ -426,8 +581,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <p>Apologize; probe if same account debited; check transaction range sale date to current; check if bank support team contacted (not bank/branch); if bank support unable to locate refund with ref number → request cx to dispute transaction with bank support as 'Refund Not Processed'. Bank support team printed on flip side of card. Incident <code>Refund###Return - refund pending###Disputing-Refund/Bank ref#/UTR</code>, SA Level Return. If still disputes → ask TL/TC to reopen ARN task incident, move to ED pending.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-preprocessed" data-cat="refund">
+<section class="topic" id="ref-preprocessed" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Pre Processed</h2>
     <div class="card">
       <h3>Declined Orders | D=Success &amp; V=Failure etc.</h3>
@@ -440,64 +594,55 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <div class="callout info">Preprocessed orders will not be successful and declined within 48 hours. If exchange order preprocessed, ask cx to place fresh order. Once declined follow declined order process.</div>
     </div>
   </section>
-
-  <section class="topic" id="ref-declined-orders" data-cat="refund">
+<section class="topic" id="ref-declined-orders" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Declined orders</h2>
     <div class="card">
       <p>See Pre Processed. Declined order refund flows: within TAT share TAT; outside TAT refer AA_OR [PPS_Success] articles. If ARN available share TAT &amp; ARN; if not raise <code>Refund###Return -refund pending###Refunded- ARN Number required</code>.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-success-within" data-cat="refund">
+<section class="topic" id="ref-success-within" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Success Return within</h2>
     <div class="card">
       <p>Refund successful within TAT. Case A ARN not available → share Refund TAT. Case B ARN available → share Refund TAT &amp; ARN number. Incident as per above.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-or-outside" data-cat="refund">
+<section class="topic" id="ref-or-outside" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> OR Return Outside</h2>
     <div class="card">
       <p>Refund outside TAT (OR Return Outside). Refer AA_OR [PPS_Success] &lt;CC/DC/UPI&gt; RID - outside TAT (L1/L1.5/Highcare) (Check at Return Level). If ARN available share TAT &amp; ARN; else raise task <code>Refund###Return -refund pending###Refunded- ARN Number required</code>.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-or-pending" data-cat="refund">
+<section class="topic" id="ref-or-pending" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> OR Return Pending</h2>
     <div class="card">
       <p>Pending refund for OR return. Check if contacted within 104 hours from Transaction Time (Return level → Refund Details → Issue Refund to calculate Transaction Time). Within 104h → validate with partners, wait. Outside → raise auto task creation failed if not already raised.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-ret-pending-outside" data-cat="refund">
+<section class="topic" id="ref-ret-pending-outside" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Ret pending outside</h2>
     <div class="card">
       <p>Return refund pending outside TAT. Follow failure/pending flow; raise appropriate task &amp; share TAT.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-ret-refund-fail" data-cat="refund">
+<section class="topic" id="ref-ret-refund-fail" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Ret refund fail</h2>
     <div class="card">
       <p>Refund failed. Within TAT 24h → Incident Time Taken for Refund. Outside TAT → auto task creation failed with refund instrument as per payment mode.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-search-void" data-cat="refund">
+<section class="topic" id="ref-search-void" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Refund- Search void</h2>
     <div class="card">
       <p>Search void refund cases handled via refund simplified flow; check payment logs and PPS status, document transaction status in notes (TX_pending/No PPS).</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-arn-dispute" data-cat="refund">
+<section class="topic" id="ref-arn-dispute" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> AA_ARN Dispute (Return</h2>
     <div class="card">
       <p>See Refund Simplified → ARN Dispute Handling. If cx still disputes, ask TL/TC to reopen ARN task incident and move to ED pending. L1 can inform cx of callback within 24-48 hours.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-roh" data-cat="refund">
+<section class="topic" id="ref-roh" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> ROH</h2>
     <div class="card">
       <h3>Wrong Product Received (ROH / exchange on hold)</h3>
@@ -517,22 +662,19 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <h3>Invoice interchange case → follow WPR SOP.</h3>
     </div>
   </section>
-
-  <section class="topic" id="ref-wpr-exchange" data-cat="refund">
+<section class="topic" id="ref-wpr-exchange" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> WPR Exchange</h2>
     <div class="card">
       <p>Wrong Product Received exchange flow: guide cx to create exchange proactively selecting WPR reason (Primary: Different product (Not what I ordered); Secondary: Received a completely different product; upload images). If on hold follow exchange on-hold SOP. If not on hold yet but wrong reason → cancel &amp; recreate with valid reason if in stock &amp; serviceable.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-wpr-return" data-cat="refund">
+<section class="topic" id="ref-wpr-return" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> WPR Return</h2>
     <div class="card">
       <p>Wrong Product Received return: guide cx to create return (Primary: Different product (Not what I ordered); Secondary: Received a completely different product). If cx unable, collect images and create return with DPWD/DPD reasons; auto task generated; share TAT.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-reinvestigation" data-cat="refund">
+<section class="topic" id="ref-reinvestigation" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Reinvestigation</h2>
     <div class="card">
       <ul>
@@ -541,8 +683,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <section class="topic" id="ref-order-cancellation" data-cat="refund">
+<section class="topic" id="ref-order-cancellation" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Order Cancellation</h2>
     <div class="card">
       <h3>Cx calling first time for cancellation</h3>
@@ -556,8 +697,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <p>Update notes. Within 24h TAT share TAT; outside 24h share extended TAT 48h; if extended crossed request another 24h.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-return-cancellation" data-cat="refund">
+<section class="topic" id="ref-return-cancellation" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Return Cancellation</h2>
     <div class="card">
       <h3>AA_Return Cancellation Complaint</h3>
@@ -570,15 +710,13 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <p>Other scenarios follow return cancellation request policy article (queued &lt;24h, ML/FKL on hold, self-ship shipped/not shipped).</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-sa-auth" data-cat="refund">
+<section class="topic" id="ref-sa-auth" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> SA Authentication</h2>
     <div class="card">
       <p>OTP SA Authentication Failure → Unable to verify. Incident <code>Account###OTP SA Authentication Failure###Unable to verify</code>, SA Level: Non-Registered (probe regd. contact number). OTP authentication at L1-Inbound/Call, HighCare inbound.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-return-window" data-cat="refund">
+<section class="topic" id="ref-return-window" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Return Window</h2>
     <div class="card">
       <h3>AA_Ret/Exc creation on SA - Outside Window - All LOBs</h3>
@@ -588,8 +726,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <p>Returnable product single issue: guide cx to create return via self-serve. If cx prefers not, provide info; instruct primary/secondary reason + seal tag issue. Once created, update within 24h. Incident <code>Return/Exchange###How do I return/exchange this item?###Incorrect Reason selected while Return creation</code>, SA Level: item.</p>
     </div>
   </section>
-
-  <section class="topic" id="ref-tagloop" data-cat="refund">
+<section class="topic" id="ref-tagloop" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Tagloop</h2>
     <div class="card">
       <h3>Tagloop missing / wrong / mismatch</h3>
@@ -600,8 +737,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <section class="topic" id="ref-defective" data-cat="refund">
+<section class="topic" id="ref-defective" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Defective post usage</h2>
     <div class="card">
       <h3>AA_Defective Post Usage [Other] &amp; variants (BPC, Wearables/SAFARI, Nike)</h3>
@@ -615,8 +751,7 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       <div class="callout info">Adidas/Reebok: tongue label (footwear) &amp; factory label (apparel) images mandatory. Vogue/Ray-Ban/Oakley sunglasses: 2/3 defect images + left temple image.</div>
     </div>
   </section>
-
-  <section class="topic" id="ref-upr" data-cat="refund">
+<section class="topic" id="ref-upr" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> UPR</h2>
     <div class="card">
       <h3>UPR/DPR - Return not created / incorrect return / on-hold / non-returnable - ALL LOBs</h3>
@@ -630,34 +765,19 @@ details summary{cursor:pointer;font-weight:600;color:var(--accent2)}
       </ul>
     </div>
   </section>
-
-  <section class="topic" id="ref-order-address" data-cat="refund">
+<section class="topic" id="ref-order-address" data-cat="refund">
     <h2 class="section-title"><span class="tag cat-refund">Refund</span> Order Address chang</h2>
     <div class="card">
       <p>Order address change requests handled under cancellation/serviceability policy. If order packed/shipped, address cannot be changed; advise cx to cancel (if packed) or refuse delivery &amp; reorder. Raise task per cancellation SOP.</p>
     </div>
   </section>
-
-  <!-- ============ SOURCE NOTES ============ -->
-  <section class="topic" id="source-notes" data-cat="general">
+<section class="topic" id="source-notes" data-cat="general">
     <h2 class="section-title">📜 Complete Source Notes (verbatim)</h2>
     <div class="card">
       <p>The original notes in full, for traceability. Use the search box to find anything.</p>
       <details open>
         <summary>Expand / collapse full source</summary>
-        <div class="source" id="sourceText">LOADING</div>
-      </details>
-    </div>
-  </section>
-
-  <div class="footer">
-    Myntra CC SOP Knowledge Base · Built from provided notes · Topics per bottom taxonomy.
-  </div>
-</main>
-</div>
-
-<script>
-const SOURCE = `Order not OFD on APD day
+        <div class="source" id="sourceText">Order not OFD on APD day
 
 1. Before 8:00 PM (on APD day)
 Inform the customer to wait till EOD.
@@ -682,7 +802,7 @@ AA_Delayed Delivery - [L1, L1.5, SM]
 Published on 21/8/2026, 12:18 PM
 Note:
 -We are live with the Delayed Delivery Elixir flow for selected Pincodes. While creating a Delayed Delivery complaint, if you see that an Elixir ticket has been created, please follow the Elixir SOP.
--If the Exchange is on hold, follow the respective on-hold SOP. Don't raise the delayed delivery task.
+-If the Exchange is on hold, follow the respective on-hold SOP. Don&#x27;t raise the delayed delivery task.
 -If the exchange is approved and the promised date is crossed, then raise a delayed delivery task.
 
 Exchange Order: If the exchange is put on hold irrespective of SDA visited the house or not or if the exchange if put on hold incorrectly - Please raise the respective on hold task.
@@ -693,17 +813,17 @@ When a customer contacts us regarding a delayed gift order during the Big Fashio
 - Fill the mandatory form. It is essential to fill out the Gift Order - Delayed Delivery Form for every such case, in addition to the steps mentioned above.
 Mandatory Check In cases where task already Exists):-
 Check if there is any Task raised on the packet ID.
-There may be a 'Delayed delivery' Task, but may have contacted for 'Disputing delivery' or vice versa.
-In both the cases, the ultimate objective is to ensure that the product gets delivered. Hence, if you notice that there already exists disputing/delayed Task on the Packet ID, follow up on the same Task, mention the new VOC in the Task & Incident Notes. No Additional Task is required.
+There may be a &#x27;Delayed delivery&#x27; Task, but may have contacted for &#x27;Disputing delivery&#x27; or vice versa.
+In both the cases, the ultimate objective is to ensure that the product gets delivered. Hence, if you notice that there already exists disputing/delayed Task on the Packet ID, follow up on the same Task, mention the new VOC in the Task &amp; Incident Notes. No Additional Task is required.
 Note: Without OFD and With OFD (Needs to be followed only when the APD date has been breached)
 Without OFD
 Perform the following checks when a customer contacts CC without an OFD status
 1. Task available?
-> YES: Follow Task Followup SOP
-> NO: Apologize for the delay, raise a relevant task, update Note(s), and share the task TAT.
+&gt; YES: Follow Task Followup SOP
+&gt; NO: Apologize for the delay, raise a relevant task, update Note(s), and share the task TAT.
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
-> Issue Type: Delivery###Where is my Order?###Delayed Delivery
-> SA Level: Packet ID
+&gt; Issue Type: Delivery###Where is my Order?###Delayed Delivery
+&gt; SA Level: Packet ID
 Order not OFD on APD day:
 1. Before 8:00 PM (on APD day)
 Inform the customer to wait till EOD.
@@ -719,21 +839,21 @@ IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident
 Incident Category: Delivery###Where is my Order?###Customer Awareness | Anxiety
 Level: Packet
 Queue: Outbound
-Status: <DO NOT CHANGE>
+Status: &lt;DO NOT CHANGE&gt;
 With OFD
 Perform the following checks when a customer contacts CC with an OFD status
 1. Task available?
-> YES: Follow Task Followup SOP
-> NO:
+&gt; YES: Follow Task Followup SOP
+&gt; NO:
 - Apologize for the delay, Raise a task, update Note(s), and share the task TAT.
 - Inform the customer to wait until EoD as the shipment is OFD.
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
-> Incident: Delivery###Where is my Order?###Delayed Delivery
-> SA Level: Packet ID
+&gt; Incident: Delivery###Where is my Order?###Delayed Delivery
+&gt; SA Level: Packet ID
 .
 .
 IMPORTANT UPDATE:
-ChatBOT and/or IVR were creating incomplete & incorrectly marked Incidents in UNRESOLVED statuses without any Tasks mapped to them. This problem is currently resolved. However, if any CC-agent (L1/L1.5/HC/SM) comes across such incorrectly & incompletely created Incidents without Tasks then follow the below process to create new & correctly mapped (Tasked) Incidents.
+ChatBOT and/or IVR were creating incomplete &amp; incorrectly marked Incidents in UNRESOLVED statuses without any Tasks mapped to them. This problem is currently resolved. However, if any CC-agent (L1/L1.5/HC/SM) comes across such incorrectly &amp; incompletely created Incidents without Tasks then follow the below process to create new &amp; correctly mapped (Tasked) Incidents.
 (a) Force Close the incorrect Incident in UNRESOLVED status
 (b) Change the status of the same incorrect Incident as RESOLVED
 (c) Create a correct Incident manually with the correct Task mapped and action on the same accordingly
@@ -742,10 +862,10 @@ Missing only one probing: Packet condition
 
 Note: Task creation SOP garbage item and garbage product cases-
 
->If a customer states that they received garbage items (such as polybags, papers, cotton, waste etc.) instead of the ordered product, treat this as a Full Missing Product case. Follow the Missing Component SOP. While raising the missing component task, ensure the Cx VOC is updated clearly.
-Example VOC: "Customer claims that papers were delivered, and the complete product is missing."
+&gt;If a customer states that they received garbage items (such as polybags, papers, cotton, waste etc.) instead of the ordered product, treat this as a Full Missing Product case. Follow the Missing Component SOP. While raising the missing component task, ensure the Cx VOC is updated clearly.
+Example VOC: &quot;Customer claims that papers were delivered, and the complete product is missing.&quot;
 
->If a customer claims that they received an incorrect and usable / garbage product (for example, a torn towel,unusable cloth material etc), handle the case under the Wrong Product Received SOP.
+&gt;If a customer claims that they received an incorrect and usable / garbage product (for example, a torn towel,unusable cloth material etc), handle the case under the Wrong Product Received SOP.
 
 Good to Know Info:
 When is it considered Full/Complete Product Missing?
@@ -766,23 +886,23 @@ No:
 --Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###Return/Exchange serviceability/policy
 ---SA Level: Item
 ---Status: Resolved
----Queue: <DO NOT CHANGE>
+---Queue: &lt;DO NOT CHANGE&gt;
 
 TASK CREATION PROCESS SOP
 Mandatory Probings/Notes (Full Item Missing Case - Additional information shared by customer):
-> Packet Condition? - Package appeared tampered or damaged at the time of delivery. - If Tampered -> Was Myntra packet delivered in Open Condition Or was it re-sealed with cello tape Or adhesive?)
+&gt; Packet Condition? - Package appeared tampered or damaged at the time of delivery. - If Tampered -&gt; Was Myntra packet delivered in Open Condition Or was it re-sealed with cello tape Or adhesive?)
 Important Note:
 -Advise the customer not to create a Return/Exchange request while the complaint is worked upon.
 If needed Reassure them that they need not worry about the return/exchange window expiring. If the return/exchange period is nearing expiry or has already lapsed during the complaint resolution process. If the claim is approve, we will create the return request on their behalf.
 
--If already created, advise to cancel & do not create new return/exchange requests while the validation is in progress.
+-If already created, advise to cancel &amp; do not create new return/exchange requests while the validation is in progress.
 
 Incident Creation Details (IMPORTANT GUIDELINE: Use Agent Assist screen to Create Incident):
 Issue Type: Delivery###Where is my Order?###Missing component
 Task Selector Logic: Full
 SA Level: Item
 Status: Pending
-Queue: <DO NOT CHANGE>
+Queue: &lt;DO NOT CHANGE&gt;
 Information: Share the task TAT
 For partial item missing case, mandatory probing:-
 For partial item missing cases, ask if the delivered item has been used
@@ -797,72 +917,72 @@ TASK CREATION DETAILS: [USE AGENT ASSIST SCREEN TO CREATE AN INCIDENT]
 - Issue Type: Delivery###Where is my Order?###Incorrectly Marked Delivered.
 - SA Level: Packet
 - Queue: DC
-- Ask the cx to share the screenshot for the UPI transaction over the call or chat. Wait for a few minutes for the attachment to get updated on SA [confirm with cx & refresh the SA incident].
-- Once received, validate the screenshot & create the IMD Task & share Task TAT
+- Ask the cx to share the screenshot for the UPI transaction over the call or chat. Wait for a few minutes for the attachment to get updated on SA [confirm with cx &amp; refresh the SA incident].
+- Once received, validate the screenshot &amp; create the IMD Task &amp; share Task TAT
 - if the cx is unable to share the screenshot over call/chat in real time, use the script/template above and ask the cx to share it. Once shared, CC will get back to the cx with an acknowledgement within 24 hrs
->please share the inapp under the Incident: Delivery###Where is my Order?###POD shared (SA Level: Packet).
->Change the incident status to Customer Awaiting, so that cm can revert back with the ss.
+&gt;please share the inapp under the Incident: Delivery###Where is my Order?###POD shared (SA Level: Packet).
+&gt;Change the incident status to Customer Awaiting, so that cm can revert back with the ss.
 
 Check 1: Probe the customer if no delivery parcel has been received.
-> If not received: Proceed to Check 2
-> If received: Follow Missing Component SOP (Check at Item Level).
+&gt; If not received: Proceed to Check 2
+&gt; If received: Follow Missing Component SOP (Check at Item Level).
 Check 2: Check the mode of payment:
->Complete COD:
->Inform customer to place the fresh order & Inform that we will take feedback on a SDA
+&gt;Complete COD:
+&gt;Inform customer to place the fresh order &amp; Inform that we will take feedback on a SDA
 -Incident: Other###I have feedback for you###Courier partner [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
 -SA Level: Packet
->In case cx has used coupon & asking about the same - Inform customer that the coupons are one time usage, hence we will not be able to provide the same.
->If cx says that he/she paid the SDA via UPI for a complete COD order as he wasn't available at the delivery address and asked the SDA to drop the packet at home/neighbour/security - Go to Check 3
->Partial COD/Online/MC/LP: Go to Check 3
+&gt;In case cx has used coupon &amp; asking about the same - Inform customer that the coupons are one time usage, hence we will not be able to provide the same.
+&gt;If cx says that he/she paid the SDA via UPI for a complete COD order as he wasn&#x27;t available at the delivery address and asked the SDA to drop the packet at home/neighbour/security - Go to Check 3
+&gt;Partial COD/Online/MC/LP: Go to Check 3
 .
 Check 3: Verify whether the customer has contacted us within 5 days from the date the order was marked as Delivered on SA (Delivered Date is considered as 0th Day).
-> If No:
-- Politely decline the request, educating the customer about the 5-day policy mentioned in the Disclaimer section under Terms of Use. Inform the customer who accepted the order as per "Shipment drop-off status" in SA and ask to check with them.
+&gt; If No:
+- Politely decline the request, educating the customer about the 5-day policy mentioned in the Disclaimer section under Terms of Use. Inform the customer who accepted the order as per &quot;Shipment drop-off status&quot; in SA and ask to check with them.
 After 5 days - Create an incident: Delivery###Where is my Order?###POD shared (SA Level: Packet). [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
 .
-> If Yes: Proceed to Check 4
+&gt; If Yes: Proceed to Check 4
 .
-Check 4: Check the "Shipment drop-off status" on the packet level and inform the customer accordingly. (Applicable for all including exchange order delivered by Ml, FKL, & EK logistics only). For other logistcs, do NOT perform this check refer to check 5 instead.
+Check 4: Check the &quot;Shipment drop-off status&quot; on the packet level and inform the customer accordingly. (Applicable for all including exchange order delivered by Ml, FKL, &amp; EK logistics only). For other logistcs, do NOT perform this check refer to check 5 instead.
 [Delivered to the customer, Delivered to the neighbour, Delivered to domestic help, Delivered to Security Guard, Delivered to Family, Delivered to reception, Delivered to Friend, Delivered to others]
 
 Mock for reference
-- Action: As per the status, inform the customer who received the order and ask them to check with the respective person/place. When asking cx to check with others and cx disconnects - Tag it under [Delivery>>Where is my Order?>>Customer Awareness | Anxiety] (if the customer chooses to check and get back to us later)
+- Action: As per the status, inform the customer who received the order and ask them to check with the respective person/place. When asking cx to check with others and cx disconnects - Tag it under [Delivery&gt;&gt;Where is my Order?&gt;&gt;Customer Awareness | Anxiety] (if the customer chooses to check and get back to us later)
 - SA Level: Packet [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
 .
-> Customer comes back stating that he/she received the order: Update the incident and close it. Incident Category: Delivery>>Where is my Order?>>Customer Awareness | Anxiety (SA Level: Packet).
-> Customer comes back stating he/she has still not received the order: Proceed to Check 5
+&gt; Customer comes back stating that he/she received the order: Update the incident and close it. Incident Category: Delivery&gt;&gt;Where is my Order?&gt;&gt;Customer Awareness | Anxiety (SA Level: Packet).
+&gt; Customer comes back stating he/she has still not received the order: Proceed to Check 5
 .
 Check 5: Check if OTP (Code) Verification was done at the time of Delivery on SA.
-> For ML: No OTP Verification, proceed to "No" (non-OTP delivery) path.
-> For 3PL/FKL/EK_E2E:
-- If the remarks section under Shipment History mentions 'Code Verified Delivery', proceed to the "Yes" (OTP/Code Verified Delivery) path.
-- If the OTP Field on SA is blank, consider it as a Non-OTP Based Delivery and proceed to the "No" (non-OTP delivery) path.
+&gt; For ML: No OTP Verification, proceed to &quot;No&quot; (non-OTP delivery) path.
+&gt; For 3PL/FKL/EK_E2E:
+- If the remarks section under Shipment History mentions &#x27;Code Verified Delivery&#x27;, proceed to the &quot;Yes&quot; (OTP/Code Verified Delivery) path.
+- If the OTP Field on SA is blank, consider it as a Non-OTP Based Delivery and proceed to the &quot;No&quot; (non-OTP delivery) path.
 .
-> If Yes (It is OTP/Code Verified Delivery): Probe the customer if any OTP was shared with SDA.
+&gt; If Yes (It is OTP/Code Verified Delivery): Probe the customer if any OTP was shared with SDA.
 _
->> Scenario 1: It is OTP Verified on SA + SDA did not ask for OTP but the customer still shared it proactively.
+&gt;&gt; Scenario 1: It is OTP Verified on SA + SDA did not ask for OTP but the customer still shared it proactively.
 - Action/Information: Guide the customer not to share OTP with SDA until the package is handed over at the doorstep.
 - Politely decline as OTP was proactively shared.
 - Create an incident: Delivery###Where is my Order?###POD shared (SA Level: Packet). [USE CREATE INCIDENT BUTTON ON SMART ASSIST SCREEN]
 _
->> Scenario 2: It is OTP Verified on SA + SDA asked for OTP proactively and the customer has shared the same.
+&gt;&gt; Scenario 2: It is OTP Verified on SA + SDA asked for OTP proactively and the customer has shared the same.
 - Action: Mandatorily probe the reason SDA asked for OTP and update in notes.
-- Raise a Task and share Task TAT. [Refer to the <TASK CREATION SOP> for more info]
+- Raise a Task and share Task TAT. [Refer to the &lt;TASK CREATION SOP&gt; for more info]
 - Guide the customer not to share OTP until the package is handed over at the doorstep.
 - Update clear reason SDA stated for seeking OTP in notes.
 .
-> If No (OTP was NOT shared to SDA/non-OTP delivery):
-- Action: Raise the Task and share the Task TAT. [Refer to the <TASK CREATION SOP> for more info]
+&gt; If No (OTP was NOT shared to SDA/non-OTP delivery):
+- Action: Raise the Task and share the Task TAT. [Refer to the &lt;TASK CREATION SOP&gt; for more info]
 Task Creation SOP:
-1. If the order is Online/Partial COD: create IMD Task & share Task TAT
+1. If the order is Online/Partial COD: create IMD Task &amp; share Task TAT
 2. If the order is complete COD( and customer had informed that he had paid through UPI):
-> For L1 Inbound & Chat:
-> For email team:
+&gt; For L1 Inbound &amp; Chat:
+&gt; For email team:
 - If email champions gets a INC where cx has shared the screenshot of UPI txn, validate:
 * The UPI amount
 * The screenshot having the UPI amt mentioned
 * The order being complete COD
-- once validated, create the IMD Task & close the Incident where cx shared the screenshot & share IMD Task TAT with the cx
+- once validated, create the IMD Task &amp; close the Incident where cx shared the screenshot &amp; share IMD Task TAT with the cx
 .
 ): Return Cancellation || Order Cancellation
 
@@ -884,7 +1004,7 @@ IMPORTANT GUIDELINE: [Use Agent Assist screen to Create Incident]
 Incident Category: Return/Exchange###I do not agree with your Pick up attempt###No Pick Up Attempt
 SA Level: Return
 
-First find whether it's myntra attribute or customer attribute??????
+First find whether it&#x27;s myntra attribute or customer attribute??????
 
 If Customer attribute as cx to wait for next attempt and tag it under AA_Time taken for pickup - Global (All LOBs)
 
@@ -896,9 +1016,9 @@ For 3PL Logistics always tell cx not to share any OTP until SDA comes at doorste
 * Pick-ups assigned to ML/FKL/Ekart are not OTP based/verified.
 
 NDR PROCESSES FOLLOW BELOW SOP
-Action: Action: Raise the task & Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
-- For L1(IB/Chat): Do a warm transfer/chat transfer to L1.5/TL respectively in case the customer doesn't agree to the TAT & the customer "insists" to transfer the call only then escalates it further.
-- If the champion finds any of the following reasons mentioned under 'Pickup Details', then inform the customers on NDR communication:
+Action: Action: Raise the task &amp; Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
+- For L1(IB/Chat): Do a warm transfer/chat transfer to L1.5/TL respectively in case the customer doesn&#x27;t agree to the TAT &amp; the customer &quot;insists&quot; to transfer the call only then escalates it further.
+- If the champion finds any of the following reasons mentioned under &#x27;Pickup Details&#x27;, then inform the customers on NDR communication:
 1. Customer refused
 2. Customer not reachable
 3. Out of Delivery Area
@@ -909,9 +1029,9 @@ Incident Category: Return/Exchange###Pickup/Exchange serviceability/policy###Ret
 
 1.
 Scenario: Pick up Promise is today/ Pick up Promise is not crossed + Return is OFP + No status update post OFP
-> Check if OFP entry has crossed 1 day (> 1 day)?
+&gt; Check if OFP entry has crossed 1 day (&gt; 1 day)?
 
-1. No - OFP entry has NOT crossed 1 day (> 1 day)
+1. No - OFP entry has NOT crossed 1 day (&gt; 1 day)
 
 Customer reaches CC before 8 PM to know the pick up status:
 Information: Inform the customer to wait until 8 PM
@@ -922,9 +1042,9 @@ IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident
 Incident Category: Return/Exchange - Where is my pickup? - Time taken for Pickup
 SA Level: Return
 
-1. Yes - PFP entry has crossed 1 day (> 1 day) + Customer has come post 24 hours + still not update
+1. Yes - PFP entry has crossed 1 day (&gt; 1 day) + Customer has come post 24 hours + still not update
 IMPORTANT GUIDELINE: [Use Agent Assist screen to Create Incident]
-Action/Information: Raise the task & Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
+Action/Information: Raise the task &amp; Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
  Incident Category: Return/Exchange###I do not agree with your Pick up attempt###No Pick Up Attempt
 
 Queue: Outbond
@@ -934,16 +1054,16 @@ SA Level: Return
 Please find the script.
 
 Pickup was not OTP-verified
-> Action:
-> Create a new RID [if a new & Active RID does NOT exist already] and raise the Disputing PIckup Task by selecting 'Create Incident' button on the Agent Assist screen
-> Share the Task TAT with cx
-> For L1(IB/Chat): Do a warm transfer/chat transfer to L1.5/TL respectively in case the customer doesn't agree to the TAT & the customer "insist" only then escalate it further.
-> If the champion finds any of the following reasons mentioned under 'Pickup Details', then inform the customers on NDR communication:
->Customer refused
->Customer not reachable
->Out of Delivery Area
->Incorrect Contact Number
-> NDR Script: Within 24 hours of the pick-up remarks being updated, you should receive a call, SMS or email through which you can choose the relevant option to confirm reattempt on the pick up.
+&gt; Action:
+&gt; Create a new RID [if a new &amp; Active RID does NOT exist already] and raise the Disputing PIckup Task by selecting &#x27;Create Incident&#x27; button on the Agent Assist screen
+&gt; Share the Task TAT with cx
+&gt; For L1(IB/Chat): Do a warm transfer/chat transfer to L1.5/TL respectively in case the customer doesn&#x27;t agree to the TAT &amp; the customer &quot;insist&quot; only then escalate it further.
+&gt; If the champion finds any of the following reasons mentioned under &#x27;Pickup Details&#x27;, then inform the customers on NDR communication:
+&gt;Customer refused
+&gt;Customer not reachable
+&gt;Out of Delivery Area
+&gt;Incorrect Contact Number
+&gt; NDR Script: Within 24 hours of the pick-up remarks being updated, you should receive a call, SMS or email through which you can choose the relevant option to confirm reattempt on the pick up.
 _
 IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 Issue Type: Return/Exchange###I do not agree with your Pick up attempt###No Pick Up Attempt
@@ -952,34 +1072,34 @@ Queue: Outbound
 Status: Pending
 SA Level: Return
 
-Action: Action: Raise the task & Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
+Action: Action: Raise the task &amp; Share the Task TAT with cx. Capture Old return ID, the creation date of old RID and new RID in task/INC notes (In case there are any previous RIDs)
 
 Scenario 1: Customer claims item has been picked, but as per SA, pick up has failed
-Raise task & share task TAT
+Raise task &amp; share task TAT
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
 Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
 
-Scenario 2: Customer claims item has been picked, but as per SA status is "Out for Pickup" & no further updates are available:
+Scenario 2: Customer claims item has been picked, but as per SA status is &quot;Out for Pickup&quot; &amp; no further updates are available:
 Check if 24 hours have crossed from the time the product was physically picked from the customer:
-Yes: Raise task & share task TAT
+Yes: Raise task &amp; share task TAT
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
 Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
-No: Request customer to wait for 24 hours, from the time the item was physically picked, for the status to be updated as 'Picked Up'. Inform that once marked as picked up, refund will be initiated.
+No: Request customer to wait for 24 hours, from the time the item was physically picked, for the status to be updated as &#x27;Picked Up&#x27;. Inform that once marked as picked up, refund will be initiated.
 For QC and Refund Refer 0002 for TAT related info.
 [IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
 Issue Type: Refund###Return - refund pending###Time Taken for Refund
-Scenario 3: Customer claims that the product is picked but RID is on hold & not picked up as per SA.
-Raise task & share task TAT
+Scenario 3: Customer claims that the product is picked but RID is on hold &amp; not picked up as per SA.
+Raise task &amp; share task TAT
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
 Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
 
-Scenario 1: Customer claims item has been picked, but as per SA status is "Out for Pickup" & no further updates are available:
+Scenario 1: Customer claims item has been picked, but as per SA status is &quot;Out for Pickup&quot; &amp; no further updates are available:
 Check if 48 hours have crossed from the time the product was physically picked from the customer:
-Yes: Raise task & share task TAT
+Yes: Raise task &amp; share task TAT
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
 Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
-No: Request customer to wait for 48 hours, from the time the product was physically picked, for the status to be updated as 'Picked Up'. Educate customer on the QC TAT for refund initiation. Refer 0002 for TAT related info.
-Sample script: "Generally from the time the product is picked, it takes 'x' days for the item to reach the warehouse & for the QC to be conducted. Post successful QC, refund will be initiated".
+No: Request customer to wait for 48 hours, from the time the product was physically picked, for the status to be updated as &#x27;Picked Up&#x27;. Educate customer on the QC TAT for refund initiation. Refer 0002 for TAT related info.
+Sample script: &quot;Generally from the time the product is picked, it takes &#x27;x&#x27; days for the item to reach the warehouse &amp; for the QC to be conducted. Post successful QC, refund will be initiated&quot;.
 [IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
 Issue Type: Refund###Return - refund pending###Time Taken for Refund
 Scenario 2: As per SA item has been picked, customer is inquiring on refund status.
@@ -987,7 +1107,7 @@ Check if within QC TAT from the time the product was updated as picked. Refer 00
 Yes: Educate customer on the QC TAT for refund initiation
 [IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
 Issue Type: Refund###Return - refund pending###Time Taken for Refund
-No: As per SA logs depending on whether the item has reached WH or not, raise the below task & share task TAT
+No: As per SA logs depending on whether the item has reached WH or not, raise the below task &amp; share task TAT
 Reached WH:
 [IMPORTANT GUIDELINE: use SMART Assist screen (by selecting 3 levels of Incident Categories) to create an Incident]
 Issue Type: Refund###Picked up - refund pending###WH/DC status update pending
@@ -995,7 +1115,7 @@ Not Reached WH
 IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
 Scenario 3: Customer claims item has been picked, but as per SA, pick up has failed
-Raise task & share task TAT
+Raise task &amp; share task TAT
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
 Issue Type: Refund###Picked up - refund pending###Picked up QC pending/Status not updated
 
@@ -1011,27 +1131,27 @@ Information: Share the task TAT
 
 Scenario 1: Extra Myntra Item Picked-Up with actual return
 Action/Information:
-1. Raise the task & share the Task TAT. Also, capture the below details in the INC/Task notes.
+1. Raise the task &amp; share the Task TAT. Also, capture the below details in the INC/Task notes.
 2. Acknowledge the cx-concern regarding the extra Myntra item being picked up. Assure the cx about the complaint being registered and share Task TAT for an update. Also inform the cx to check the items before handing them over to the pickup agent in the future
 3. AWB, if available (For 3PL, probe the tracking number on the pick up confirmation message)
-4. Collect the RID against which the product was picked & Item ID of the product picked
-5. Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact..
+4. Collect the RID against which the product was picked &amp; Item ID of the product picked
+5. Politely inform the customer to ensure that the item which is with him/her is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact..
 .
 Information:
-I understand your concern regarding the Extra Myntra item being handed over to the pickup agent. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+I understand your concern regarding the Extra Myntra item being handed over to the pickup agent. Please don&#x27;t worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact.
 ______________________________________________________________________________
 .
 Scenario 2: Exchange product handed over instead of Actual Return item
-Action: Raise the task and share the Task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+Action: Raise the task and share the Task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact.
 Information:
-I understand your concern regarding the Exchange item being handed over to the pickup agent instead of the actual return item. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact..
+I understand your concern regarding the Exchange item being handed over to the pickup agent instead of the actual return item. Please don&#x27;t worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact..
 .
 _______________________________________________________________________________
 .
 Scenario 3: Main Item Picked-Up + Exchange Item Not Delivered + Exchange Order Status is updated as RTO/Shipped
-Acton: Raise a task and share the task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+Acton: Raise a task and share the task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact.
 Information:
-I understand your concern regarding the main item has been picked up, the exchange item has not been delivered, and the exchange order status is updated as RTO/Shipped. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT) Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+I understand your concern regarding the main item has been picked up, the exchange item has not been delivered, and the exchange order status is updated as RTO/Shipped. Please don&#x27;t worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT) Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact.
 .
 The Incident/Task category is same across all the three scenarios
 Issue Type: Refund###Picked Up-Refund Pending###Wrong/Extra/Non Ret item picked up
@@ -1045,9 +1165,9 @@ SA Level: Return/Item
 ________________________________________________________________________________
 .
 Scenario 4: Return product handed over at the time of Exchange Delivery
-Acton: Raise a task and share the task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+Acton: Raise a task and share the task TAT || Add the clear notes in the INC || Politely inform the customer to ensure that the item which is with him/her is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact.
 Information:
-I understand that you did not intend to hand over the item you were planning to return. Please don't worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused & unwashed] with all [Price Tags, Seal Tags & stickers] intact.
+I understand that you did not intend to hand over the item you were planning to return. Please don&#x27;t worry, I will raise a complaint regarding this. Rest assured, you can expect an update by (Task TAT). Future, please check the items before handing them over to the pickup agent. I also urge you to ensure that the item which is with you is [unused &amp; unwashed] with all [Price Tags, Seal Tags &amp; stickers] intact.
 .
 Issue Type: Refund###Picked Up-Refund Pending###Wrong/Extra/Non Ret item picked up
 Queue: Outbound
@@ -1057,7 +1177,7 @@ SA Level: Return/Item
 Success:
 
 Within tat- Tat provide or else share ref number
-> Within TAT
+&gt; Within TAT
 Case A: [ARN NOT available]
 IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 - Action: Share the Refund TAT. Update relevant Notes.
@@ -1066,7 +1186,7 @@ IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 _
 Case B: [ARN available]
 IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
-- Action: Share the Refund TAT & the ARN number. Update relevant Notes.
+- Action: Share the Refund TAT &amp; the ARN number. Update relevant Notes.
 - Issue type: Refund###Return - refund pending###Refunded-Shared Bank ref#
 - SA Level: Return
 
@@ -1097,13 +1217,13 @@ Outside TAT - auto task creation failed
 
 CHECK 1: Within 48 hours or Post 48 hours?
 _
-> Within 48 hrs
+&gt; Within 48 hrs
 IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 Issue Type: Refund###Order not processed/Multiple Debits/POS###Order-Declined- Payment not received
 SA Level: Order
 Communication: Inform the customer that within 48 hours the order will be declined, meanwhile, you can place a fresh order.
 _
-> Outside 48 hrs
+&gt; Outside 48 hrs
 IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
 Issue type: Refund###Return - refund pending###Auto task - Creation Failed
 SA Level: Item
@@ -1117,18 +1237,18 @@ Note:
 
 Go to order level and check payment details first
 Check the payment instrument and check transaction type and transaction status
-AA_Declined Orders | [D=Success & V=Failure] - Global (All LOBs
+AA_Declined Orders | [D=Success &amp; V=Failure] - Global (All LOBs
 AA_Declined Orders | [D=Success/V=Not Executed] - Global (All LOBs)
 AA_Declined Orders | [D=3DS-Redirect] - Global (All LOBs)
-AA_Declined Orders | [D/V=<Fail/Fail> or <Success/Pending> or <no-clarity/pps log>] - Global (All LOBs)
-AA_Declined Orders | [D=Fail & V=Void Not executed] - Global (All LOBs)
+AA_Declined Orders | [D/V=&lt;Fail/Fail&gt; or &lt;Success/Pending&gt; or &lt;no-clarity/pps log&gt;] - Global (All LOBs)
+AA_Declined Orders | [D=Fail &amp; V=Void Not executed] - Global (All LOBs)
 AA_Declined Orders | [D/V=Success] - Global (All LOBs)
 
 Below image is just for the reference
 
 Go to the order level of declined order and check in the payment details tab:
 
-> Within TAT
+&gt; Within TAT
 Case A: [ARN NOT available]
 IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 - Action: Share the Refund TAT. Update relevant Notes.
@@ -1137,21 +1257,21 @@ IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 _
 Case B: [ARN available]
 IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
-- Action: Share the Refund TAT & the ARN number. Update relevant Notes.
+- Action: Share the Refund TAT &amp; the ARN number. Update relevant Notes.
 - Issue type: Refund###Return - refund pending###Refunded-Shared Bank ref#
 - SA Level: Return
 _
-> Outside TAT
-- Refer Article: AA_OR [PPS_Success] <CC/DC/UPI> RID - outside TAT (L1/L1.5/Highcare) (Check at Return Level)
+&gt; Outside TAT
+- Refer Article: AA_OR [PPS_Success] &lt;CC/DC/UPI&gt; RID - outside TAT (L1/L1.5/Highcare) (Check at Return Level)
 - SA Level- Return
  If ARN is available, share the refund TAT and ARN
 IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
-- Action: Share the Refund TAT & the ARN number. Update relevant Notes.
+- Action: Share the Refund TAT &amp; the ARN number. Update relevant Notes.
 - Issue type: Refund###Return - refund pending###Refunded-Shared Bank ref#
 - SA Level: Return
 If the reference number is not updated, please raise the task.
 _
-- Action/Information: Create a task, update the notes in IN/Task, & share the Task TAT with the customer.
+- Action/Information: Create a task, update the notes in IN/Task, &amp; share the Task TAT with the customer.
 _
 Click on the following link for the ARN process and SOP
 _
@@ -1165,9 +1285,9 @@ Action: Fill the form along with the error screenshot.
 Check if customer has contacted within 104 hours from the Transaction Time:
 [Return level → Refund Details tab → Refer Issue Refund to calculate the Transaction Time. DO NOT REFER TO TRANSACTION DATE. Click here for screenshot]
 _
-> Within 104 hours
+&gt; Within 104 hours
 _
-- Info: Inform customer that we are validating the refund status with our payment partners & advise to wait for 104 hours
+- Info: Inform customer that we are validating the refund status with our payment partners &amp; advise to wait for 104 hours
 - Issue type: Refund###Return - refund pending###Refunded-TAT Provided IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 - SA Level: Return
 
@@ -1187,7 +1307,7 @@ Within 24 hours of the Refund Transaction Date in the PPS Log
 _
 Action/Information:
 - Auto task should be raised for: Tx_Failure || TX_Not_Attempted || No PPS log
-- Create the below Incident, update Note(s), & request the customer to wait 24 hours.
+- Create the below Incident, update Note(s), &amp; request the customer to wait 24 hours.
 [IMPORTANT GUIDELINE: Use Agent Assist screen to Create Incident]
 - Issue Type: Refund###Return - refund pending###Time Taken for Refund
 - SA Level: Return
@@ -1197,8 +1317,8 @@ Outside Tat
 Outside 24 hours of the Refund Transaction Date in the PPS Log
 - Check if the Auto PPS - Refund task has been raised.
 .
-> No:
-- Action/Information: Create the below task, update Note(s), & share the Task TAT with the cx
+&gt; No:
+- Action/Information: Create the below task, update Note(s), &amp; share the Task TAT with the cx
 - Issue Type: Refund###Return - refund pending###Auto task - Creation Failed
 - Refund Instrument: Select as per the payment mode of the order
 - SA Level: Return
@@ -1210,16 +1330,16 @@ Action/Information:
 - Probe the customer to understand if he/she is referring to the same account from which the amount was debited (Use Payment log for your reference)
 - Check if the customer is referring to the transaction from the sale date to the current date.
 - Check if the customer has contacted the bank support team and not the bank/branch.
-- In case, the bank support team is unable to locate the refund with the reference number provided, request the customer to dispute the transaction with the bsnk support team as 'Refund Not Processed'.
+- In case, the bank support team is unable to locate the refund with the reference number provided, request the customer to dispute the transaction with the bsnk support team as &#x27;Refund Not Processed&#x27;.
 - Bank support team will be printed on the flip side of the debit/credit card issued
 IMPORTANT GUIDELINE: [use Agent Assist screen to create an Incident]
 Issue type: Refund###Return - refund pending###Disputing-Refund/Bank ref#/UTR
 SA Level: Return
 
 Note:
-- If a customer still disputes then ask TL/TC to reopen the ARN number required task's incident and move that incident to ED.
+- If a customer still disputes then ask TL/TC to reopen the ARN number required task&#x27;s incident and move that incident to ED.
 - Please do not reopen the ARN task, change the incident status to pending and incident queue to Escalation.
-If Ref number was already available and ARN task was not raised champ should ask TL to change the queue "Disputing-Refund/Bank ref#/UTR" incident to escalation and status as pending.
+If Ref number was already available and ARN task was not raised champ should ask TL to change the queue &quot;Disputing-Refund/Bank ref#/UTR&quot; incident to escalation and status as pending.
 Communication: L1 can inform the customer that we have taken the complaint and the customer will get a callback within 24-48 hours.
 
 WRONG :
@@ -1227,19 +1347,19 @@ Proactive cx: Guide Steps, if cx unable to create return ask for images and crea
 Reactive: auto task
 
 Steps to Create a Return on App:
-- Profile > Orders > Go to the item level of the product that the customer wants to return > Click  on return >Select a different product that was delivered > Select sub-reason as "Received a completely different product" > Upload Images > Select refund method > Click on Done.
+- Profile &gt; Orders &gt; Go to the item level of the product that the customer wants to return &gt; Click  on return &gt;Select a different product that was delivered &gt; Select sub-reason as &quot;Received a completely different product&quot; &gt; Upload Images &gt; Select refund method &gt; Click on Done.
 - Once the RID is created an auto task will be generated in the system.
-If cx doesn't want to create a return on the call then follow this- The customer will be notified about the ticket creation and will provide a resolution within 48 hours.
+If cx doesn&#x27;t want to create a return on the call then follow this- The customer will be notified about the ticket creation and will provide a resolution within 48 hours.
 
 SEALTAG:
 Proactive cx :Guide steps, if cx unable to create return complain raise tat shared, ret/exc-how do return this item-seal tag missing
-PRICE TAG':
+PRICE TAG&#x27;:
 Proactive cx: Guide Steps, if cx unable to create return complain raise tat shared-ret/exc-how do return this item-price tag missing
 
 Guided Return Creation on-call help:
-1. Open the Myntra App > Profile > Orders > Go to the relevant item > Click on return > Select Primary and Secondary reasons.
+1. Open the Myntra App &gt; Profile &gt; Orders &gt; Go to the relevant item &gt; Click on return &gt; Select Primary and Secondary reasons.
 - For example:
-> Primary Reason: Size fit Issue || Secondary Reason: I did not like the fit || In 'Any other issues' section: select <Seal tag Missing> <Price tag missing>
+&gt; Primary Reason: Size fit Issue || Secondary Reason: I did not like the fit || In &#x27;Any other issues&#x27; section: select &lt;Seal tag Missing&gt; &lt;Price tag missing&gt;
 Return Reasons -Click Here
 Click Here for In-App template and Scripts.
 [IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
@@ -1249,15 +1369,15 @@ SA Level: item
 Tagloop missing Or Tagloop Wrong/Mismatch
 Reactive:
 
-> Check A: Customer's Maturity -
+&gt; Check A: Customer&#x27;s Maturity -
 Early/New - [Follow Action A]
 Mature- Move to Check B
 
-> Check B: Customer Cohort
+&gt; Check B: Customer Cohort
 A1 → Proceed to Check C
 A2 or A3 → [Follow Action A]
 
-> Check C: Customer belong to a flagged pincode?
+&gt; Check C: Customer belong to a flagged pincode?
 Yes →Follow below SOP and raise task and share task tat
 Issue Type: Return/Exchange - Why is my return rejected/put on hold? - Tag Loop Missing
 SA Level: Return
@@ -1265,18 +1385,18 @@ Task: RETURN - Return/Exchange Request - Tag Loop Missing
 
 No → Approval
 
->Check the Exception Log on SA --> Profile> Exception logs> ROH Complaints Approved
->Count total ROH approvals for respective category:
->If ≤ 3:
+&gt;Check the Exception Log on SA --&gt; Profile&gt; Exception logs&gt; ROH Complaints Approved
+&gt;Count total ROH approvals for respective category:
+&gt;If ≤ 3:
 -Approve the claim.
--Task is already available, close the task. If task is unavailable, raise respective task for documentation & close it.
+-Task is already available, close the task. If task is unavailable, raise respective task for documentation &amp; close it.
 -RID on Hold or RID Created - Approve it
--RID not created - Create return & approve.
--Share pickup TAT & refund TAT. Refer DT 0002.
->If >3 → Raise the respective task & share task TAT
+-RID not created - Create return &amp; approve.
+-Share pickup TAT &amp; refund TAT. Refer DT 0002.
+&gt;If &gt;3 → Raise the respective task &amp; share task TAT
 
 AA_Defective Post Usage [BPC] - [L1 (C,E,IB),HC,SM,L1.5]
-AA_Defective Post Usage [Wearables, SAFARI trolleys & Backpacks] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Wearables, SAFARI trolleys &amp; Backpacks] - [L1 (C,E,IB),HC,SM,L1.5]
 AA_Defective Post Usage [Nike] - [L1 (C,E,IB),HC,SM,L1.5]
 AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]
 
@@ -1285,10 +1405,10 @@ AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]
 Other Products
 Important: It is important that the care tips mentioned on PDP are followed so that the product lasts for long. If not, the product will be prone to develop defects post usage
 
-Check 1: Verify how the defect occurred & if the caretips were followed.
+Check 1: Verify how the defect occurred &amp; if the caretips were followed.
 
-Scenario 1: Due to customer's attribute (Rough usage, Care tips on PDP not followed)
-Information: The defect occurred because the care tips on the PDP were not followed, so we can't accommodate the request
+Scenario 1: Due to customer&#x27;s attribute (Rough usage, Care tips on PDP not followed)
+Information: The defect occurred because the care tips on the PDP were not followed, so we can&#x27;t accommodate the request
 IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
 Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
 Queue: Inbound
@@ -1314,10 +1434,10 @@ Status: Awaiting Customer information
 SA Level: Item, Return
 
 Note:
->If 'Adidas' or 'Reebok', Images of the 'Tongue Label' ( for footwear ) and 'Factory Label'( for apparel ) is mandatory
->If 'Vogue, Ray-Ban, Oakley Brand sunglasses', request customer to share 2/3 images of the product highlighting the defect and one image of the left side of the temple.
+&gt;If &#x27;Adidas&#x27; or &#x27;Reebok&#x27;, Images of the &#x27;Tongue Label&#x27; ( for footwear ) and &#x27;Factory Label&#x27;( for apparel ) is mandatory
+&gt;If &#x27;Vogue, Ray-Ban, Oakley Brand sunglasses&#x27;, request customer to share 2/3 images of the product highlighting the defect and one image of the left side of the temple.
 
-Scenario 4: The issue is genuine, not due to customer error and outside warranty / The issue is genuine, not due to customer error and Exclusively 'No Warranty' mentioned on the PDP
+Scenario 4: The issue is genuine, not due to customer error and outside warranty / The issue is genuine, not due to customer error and Exclusively &#x27;No Warranty&#x27; mentioned on the PDP
 Information: Decline the claim
 IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
 Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
@@ -1338,15 +1458,15 @@ When Asking cx to share images tag: Return/Exchange###Pickup/Exchange serviceabi
 Level: Item
 
 Within Window :-
-Redirect the customer to create a return in the "My-Order" section.
+Redirect the customer to create a return in the &quot;My-Order&quot; section.
  Note: If the customer needs assistance in creating a return, stay on the call and help them complete the return process.
 Steps to Create a Return on App:
-- Profile > Orders > Go to the item level of the product that the customer wants to return > Click   on return >Select a different product that was delivered > Select sub-reason as "Received a completely different product" > Upload Images > Select refund method > Click on Done.
+- Profile &gt; Orders &gt; Go to the item level of the product that the customer wants to return &gt; Click   on return &gt;Select a different product that was delivered &gt; Select sub-reason as &quot;Received a completely different product&quot; &gt; Upload Images &gt; Select refund method &gt; Click on Done.
 - Once the RID is created an auto task will be generated in the system.
- If cx doesn't want to create a return on the call then follow this- The customer will be notified about the ticket creation and will provide a resolution within 48 hours.
+ If cx doesn&#x27;t want to create a return on the call then follow this- The customer will be notified about the ticket creation and will provide a resolution within 48 hours.
 If customer creates the return on call and the task is generated:-
 Champ need to communicate an exact task TAT timeline from the moment complaint is raised ,
- Example:- If the task TAT is showing as 21st Aug'26 6.15 PM, then mention the exact tat with the time to the customer
+ Example:- If the task TAT is showing as 21st Aug&#x27;26 6.15 PM, then mention the exact tat with the time to the customer
 Issue Type: Return/Exchange###How do I return/exchange this item?###Incorrect Reason selected while Return creation
 
 Outside Window:-
@@ -1356,7 +1476,7 @@ Check with Cx if product/ product images are available
     * Action - Send communication requesting the customer to share clear images - Help Text.
         * PPMP Product: C Agent Assist screen to Create Incident]
     * Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
-* After Receiving Images from Customer: (Do NOT select the 'Create Incident' button in Agent Assist)
+* After Receiving Images from Customer: (Do NOT select the &#x27;Create Incident&#x27; button in Agent Assist)
     * Create a return by selecting the following reason and sub-reason:
     * Reason for return: A different product was delivered, DPWD, 9
     * Subreason: Different: product was delivered, DPD, 7
@@ -1370,7 +1490,7 @@ Check with Cx if product/ product images are available
     * IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
     * Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
     * While requesting the images, inform the customer that we will provide the resolution within 48 hours after receiving the images.
-After Receiving Images from Customer: (Do NOT select the 'Create Incident' button in Agent Assist)
+After Receiving Images from Customer: (Do NOT select the &#x27;Create Incident&#x27; button in Agent Assist)
 * Create a return by selecting the following reason and sub-reason:
     * Reason for return: A different product was delivered, DPWD, 9
     * Subreason: Different: product was delivered, DPD, 7
@@ -1398,7 +1518,7 @@ IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 Issue Type: Return/Exchange###Pickup/Exchange serviceability/policy###ROH Cases - Probed for more information
 While requesting the images, inform the customer that we will provide the resolution within 48 hours after receiving the images.
 
-After Receiving Images from Customer: (Do NOT select the 'Create Incident' button in Agent Assist)
+After Receiving Images from Customer: (Do NOT select the &#x27;Create Incident&#x27; button in Agent Assist)
 Create a return by selecting the following reason and sub-reason:
 - Reason for return: A different product was delivered, DPWD, 9
 - Subreason: Different: product was delivered, DPD, 7
@@ -1406,7 +1526,7 @@ An auto task will be generated.
 Share Task TAT once the auto task is created.
 In task notes, add the incident ID where the customer has shared images.
 Note:- Champ need to communicate an exact TAT timeline (For WPR auto task) from the moment complaint is raised.
-Example:- If the task TAT is showing as 21st Aug'26 6.15 PM, then mention the exact tat with the time to the customer
+Example:- If the task TAT is showing as 21st Aug&#x27;26 6.15 PM, then mention the exact tat with the time to the customer
 
 Invoice interchange Case:- Follow WPR SOP
 
@@ -1432,7 +1552,7 @@ Click on this: Form link
 Check 1: Check the order status:
 
 Packed/Processing status:
-Fill out the form and share 24 hours TAT for order cancellation. Here's the response for V4 , for the old response sheet click G-Sheet.
+Fill out the form and share 24 hours TAT for order cancellation. Here&#x27;s the response for V4 , for the old response sheet click G-Sheet.
 Issue Type: Cancel###I want to cancel my order###Order cancellation Request
 SA level: Item/Packet
 
@@ -1455,9 +1575,9 @@ Issue Type: Cancel###I want to cancel my order###Order cancellation Request
 SA level: Packet
 AA_Customer Initiated/Requested Order Cancellation - Incident Found - [L1 (C,E,IB),HC,SM,L1.5]
 
-> Action:
+&gt; Action:
 - Update Note(s) on the Incident/Task
-> Incident/Task:
+&gt; Incident/Task:
 - Within 24 hours TAT: Share the TAT
 - Outside TAT: Share the extended TAT (48 hours). If the extended TAT is crossed then request for another 24 hours TAT
 
@@ -1477,24 +1597,24 @@ Scenario 2: Return assigned to 3PL + On Hold + customer wants to cancel the retu
 Action/information: Refer to scenario 3
 
 Scenario 3: Return in LPI Status + Not On Hold + Neither we nor the cx can cancel the return
-> Action/Information: Raise the Task and share the Task TAT
+&gt; Action/Information: Raise the Task and share the Task TAT
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
 Incident Category: Return/Exchange###Cancel my Return/Exchange###Unable to Cancel Return
 SA Level: Return
 Scenario 4: Return in RFR + Neither we nor the cx can cancel the return
-> Action/Information: Raise the Task and share the Task TAT.
+&gt; Action/Information: Raise the Task and share the Task TAT.
 [IMPORTANT GUIDELINE: use Agent Assist screen to Create Incident]
 Incident Category: Return/Exchange###Cancel my Return/Exchange###Unable to Cancel Return
 SA Level: Return
 .
 Note:
 Please follow the return cancellation request Policy article (Check at the Return level) for the remaining scenarios:
-> Return is in Queued Status + 24 hours NOT breached since return creations
-> Return assigned to ML/FKL + On Hold + customer wants to cancel the return
-> Self Ship return is already Shipped by the customer + customer wants to cancel the return
-> Self Ship return NOT yet Shipped by the customer + customer wants to cancel the return
+&gt; Return is in Queued Status + 24 hours NOT breached since return creations
+&gt; Return assigned to ML/FKL + On Hold + customer wants to cancel the return
+&gt; Self Ship return is already Shipped by the customer + customer wants to cancel the return
+&gt; Self Ship return NOT yet Shipped by the customer + customer wants to cancel the return
 
- Issue Type: Account###OTP SA Authentication Failure###Unable to verify. [USE THE "Create Incident" BUTTON ON THE AGENT ASSIST SCREEN]
+ Issue Type: Account###OTP SA Authentication Failure###Unable to verify. [USE THE &quot;Create Incident&quot; BUTTON ON THE AGENT ASSIST SCREEN]
 - SA Level: Non-Registered [probe for the regd. contact number of the account that the cx is referring to]
 
 OTP Authentication at L1-Inbound/Call, HighCare inbound
@@ -1511,20 +1631,20 @@ SA Level: Item.
 Task Selector Logic: Return post return window
 
 ow
-AA_Seal tag missing Pro-active (for return) [All customers A1, A2 & A3 ] - (L1(C,E,IB,HC,SM,L1.5)
+AA_Seal tag missing Pro-active (for return) [All customers A1, A2 &amp; A3 ] - (L1(C,E,IB,HC,SM,L1.5)
 
 Returnable Product and Single Issue with the product
 
-> Guide customer to create return using self-serve option on the call proactively
-> If the customer prefers not to create the return on the call, provide them with the necessary information (check below). Instruct the customer to select the Primary and secondary reason followed by the Seal tag issue. Inform the customer that once the return is created, they will receive an update within 24 hours.
-> (For SM): Send out a help-tect via InApp and respond to cx on SM to check the InApp for guided help
+&gt; Guide customer to create return using self-serve option on the call proactively
+&gt; If the customer prefers not to create the return on the call, provide them with the necessary information (check below). Instruct the customer to select the Primary and secondary reason followed by the Seal tag issue. Inform the customer that once the return is created, they will receive an update within 24 hours.
+&gt; (For SM): Send out a help-tect via InApp and respond to cx on SM to check the InApp for guided help
 .
 Guided Return Creation on-call help:
-1. Open the Myntra App > Profile > Orders > Go to the relevant item > Click on return > Select Primary and Secondary reasons.
+1. Open the Myntra App &gt; Profile &gt; Orders &gt; Go to the relevant item &gt; Click on return &gt; Select Primary and Secondary reasons.
 - For example:
-> Primary Reason: Size fit Issue || Secondary Reason: I did not like the fit || In 'Any other issues' section: select <Seal tag Missing>
->Return Reasons -Click Here
-> Click Here for In-App template and Scripts
+&gt; Primary Reason: Size fit Issue || Secondary Reason: I did not like the fit || In &#x27;Any other issues&#x27; section: select &lt;Seal tag Missing&gt;
+&gt;Return Reasons -Click Here
+&gt; Click Here for In-App template and Scripts
 .
 [IMPORTANT GUIDELINE: [use Agent Assist screen to Create Incident]
 Issue type: Return/Exchange###How do I return/exchange this item?###Incorrect Reason selected while Return creation
@@ -1533,15 +1653,15 @@ SA Level: item
 Tagloop missing Or Tagloop Wrong/Mismatch
 Reactive:
 
-> Check A: Customer's Maturity -
+&gt; Check A: Customer&#x27;s Maturity -
 Early/New - [Follow Action A]
 Mature- Move to Check B
 
-> Check B: Customer Cohort
+&gt; Check B: Customer Cohort
 A1 → Proceed to Check C
 A2 or A3 → [Follow Action A]
 
-> Check C: Customer belong to a flagged pincode?
+&gt; Check C: Customer belong to a flagged pincode?
 Yes →Follow below SOP and raise task and share task tat
 Issue Type: Return/Exchange - Why is my return rejected/put on hold? - Tag Loop Missing
 SA Level: Return
@@ -1549,18 +1669,18 @@ Task: RETURN - Return/Exchange Request - Tag Loop Missing
 
 No → Approval
 
->Check the Exception Log on SA --> Profile> Exception logs> ROH Complaints Approved
->Count total ROH approvals for respective category:
->If ≤ 3:
+&gt;Check the Exception Log on SA --&gt; Profile&gt; Exception logs&gt; ROH Complaints Approved
+&gt;Count total ROH approvals for respective category:
+&gt;If ≤ 3:
 -Approve the claim.
--Task is already available, close the task. If task is unavailable, raise respective task for documentation & close it.
+-Task is already available, close the task. If task is unavailable, raise respective task for documentation &amp; close it.
 -RID on Hold or RID Created - Approve it
--RID not created - Create return & approve.
--Share pickup TAT & refund TAT. Refer DT 0002.
->If >3 → Raise the respective task & share task TAT
+-RID not created - Create return &amp; approve.
+-Share pickup TAT &amp; refund TAT. Refer DT 0002.
+&gt;If &gt;3 → Raise the respective task &amp; share task TAT
 
 AA_Defective Post Usage [BPC] - [L1 (C,E,IB),HC,SM,L1.5]
-AA_Defective Post Usage [Wearables, SAFARI trolleys & Backpacks] - [L1 (C,E,IB),HC,SM,L1.5]
+AA_Defective Post Usage [Wearables, SAFARI trolleys &amp; Backpacks] - [L1 (C,E,IB),HC,SM,L1.5]
 AA_Defective Post Usage [Nike] - [L1 (C,E,IB),HC,SM,L1.5]
 AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]
 
@@ -1570,11 +1690,11 @@ Other Products
 _
 Important: It is important that the care tips mentioned on PDP are followed so that the product lasts for long. If not, the product will be prone to develop defects post usage
 _
-Check 1: Verify how the defect occurred & if the caretips were followed.
+Check 1: Verify how the defect occurred &amp; if the caretips were followed.
 _
-Scenario 1: Due to customer's attribute (Rough usage, Care tips on PDP not followed)
+Scenario 1: Due to customer&#x27;s attribute (Rough usage, Care tips on PDP not followed)
 _
-Information: The defect occurred because the care tips on the PDP were not followed, so we can't accommodate the request
+Information: The defect occurred because the care tips on the PDP were not followed, so we can&#x27;t accommodate the request
 _
 IMPORTANT GUIDELINE: [use SMART Assist screen (by selecting 3 levels of Incident Categories) to create Incident]
 Issue Type: Return/Exchange###Pickup/Exchange Serviceability/Policy###Return/Exchange Serviceability/Policy
@@ -1605,10 +1725,10 @@ Status: Awaiting Customer information
 SA Level: Item, Return
 _
 Note:
->If 'Adidas' or 'Reebok', Images of the 'Tongue Label' ( for footwear ) and 'Factory Label'( for apparel ) is mandatory
->If 'Vogue, Ray-Ban, Oakley Brand sunglasses', request customer to share 2/3 images of the product highlighting the defect and one image of the left side of the temple.
+&gt;If &#x27;Adidas&#x27; or &#x27;Reebok&#x27;, Images of the &#x27;Tongue Label&#x27; ( for footwear ) and &#x27;Factory Label&#x27;( for apparel ) is mandatory
+&gt;If &#x27;Vogue, Ray-Ban, Oakley Brand sunglasses&#x27;, request customer to share 2/3 images of the product highlighting the defect and one image of the left side of the temple.
 _
-Scenario 4: The issue is genuine, not due to customer error and outside warranty / The issue is genuine, not due to customer error and Exclusively 'No Warranty' mentioned on the PDP
+Scenario 4: The issue is genuine, not due to customer error and outside warranty / The issue is genuine, not due to customer error and Exclusively &#x27;No Warranty&#x27; mentioned on the PDP
 _
 Information: Decline the claim
 _
@@ -1717,236 +1837,367 @@ Defective post usage
 UPR
 
 Order Address chang
-`;
-document.getElementById('sourceText').textContent = SOURCE;
-</script>
+</div>
+      </details>
+    </div>
+  </section>
+</div>
+
+<div id="palette">
+  <div id="paletteBox">
+    <input id="paletteInput" placeholder="Search SOPs, scripts, incidents…" />
+    <div id="paletteResults"></div>
+    <div id="paletteHint">↑↓ navigate · Enter open · Esc close · ⌘K toggle</div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
 <script>
-// Build nav from sections
-const cats = {
-  delivery: {title:'Delivery Concern', color:'delivery'},
-  return: {title:'Return Concern', color:'return'},
-  refund: {title:'Refund Concern', color:'refund'},
-  general: {title:'General', color:'general'}
-};
-const sections = Array.from(document.querySelectorAll('section.topic'));
-const nav = document.getElementById('nav');
-const groups = {};
-sections.forEach(s=>{
+// ---- State ----
+const STORAGE_KEY = 'myntra-sop-os';
+function loadState(){ try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');}catch{return {};} }
+function saveState(s){ localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
+let state = loadState();
+state.bookmarks = state.bookmarks || [];
+state.recent = state.recent || [];
+state.theme = state.theme || 'light';
+
+// ---- Theme ----
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', state.theme);
+  const btn = document.getElementById('themeBtn');
+  btn.innerHTML = state.theme==='dark' ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+  lucide.createIcons();
+}
+document.getElementById('themeBtn').addEventListener('click', ()=>{
+  state.theme = state.theme==='dark'?'light':'dark';
+  saveState(state); applyTheme();
+});
+applyTheme();
+
+// ---- Data model from DOM sections ----
+const sectionEls = Array.from(document.querySelectorAll('#sopStore section.topic'));
+const sops = sectionEls.map(s=>{
+  const title = s.querySelector('h2.section-title').textContent.trim();
   const cat = s.dataset.cat || 'general';
-  (groups[cat]=groups[cat]||[]).push(s);
+  const id = s.id;
+  return {id,title,cat,el:s};
 });
-Object.keys(cats).forEach(cat=>{
-  if(!groups[cat]) return;
-  const g = document.createElement('div'); g.className='nav-group';
-  const h = document.createElement('h4'); h.textContent = cats[cat].title; g.appendChild(h);
-  groups[cat].forEach(s=>{
-    const a = document.createElement('a');
-    const title = s.querySelector('h2.section-title').textContent.trim();
-    a.href = '#'+s.id;
-    a.innerHTML = '<span class="dot '+cats[cat].color+'"></span>'+title;
-    a.dataset.id = s.id;
-    g.appendChild(a);
-  });
-  nav.appendChild(g);
+const catMeta = {
+  delivery:{name:'Delivery', icon:'truck', color:'#ea580c'},
+  return:{name:'Return & Exchange', icon:'rotate-ccw', color:'#2563eb'},
+  refund:{name:'Refund', icon:'wallet', color:'#16a34a'},
+  general:{name:'General', icon:'file-text', color:'#7c3aed'}
+};
+const catCounts = {};
+sops.forEach(s=>{ catCounts[s.cat]=(catCounts[s.cat]||0)+1; });
+
+// ---- Nav counts ----
+document.getElementById('navAllCount').textContent = sops.length;
+document.getElementById('navDel').textContent = catCounts.delivery||0;
+document.getElementById('navRet').textContent = catCounts.return||0;
+document.getElementById('navRef').textContent = catCounts.refund||0;
+document.getElementById('navBmCount').textContent = state.bookmarks.length;
+document.getElementById('navRecentCount').textContent = state.recent.length;
+
+// Category cards
+const catCards = document.getElementById('catCards');
+Object.keys(catMeta).forEach(cat=>{
+  if(!catCounts[cat]) return;
+  const m = catMeta[cat];
+  const d = document.createElement('div');
+  d.className = 'cat-card '+cat;
+  d.innerHTML = `<div class="icon"><i data-lucide="${m.icon}"></i></div><h3>${m.name}</h3><div class="count">${catCounts[cat]}</div><div class="desc">${cat==='delivery'?'Delivery delays, missing items, IMD, status updates.':cat==='return'?'Pickup, disputing, QC pending, RID declined.':'Refunds, cancellations, ROH, WPR, defective usage.'}</div>`;
+  d.addEventListener('click', ()=>navigate('/cat/'+cat));
+  catCards.appendChild(d);
 });
-document.getElementById('statTopics').textContent = sections.length;
-document.getElementById('statSections').textContent = sections.length;
+lucide.createIcons();
 
-// Active highlight on scroll
-const links = Array.from(document.querySelectorAll('.nav-group a'));
-const obs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      links.forEach(l=>l.classList.toggle('active', l.dataset.id===e.target.id));
-    }
-  });
-},{rootMargin:'-20% 0px -70% 0px'});
-sections.forEach(s=>obs.observe(s));
-
-// Scroll reveal
-const revObs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); }});
-},{threshold:.08});
-sections.forEach(s=>revObs.observe(s));
-
-// Progress bar
-const progress = document.getElementById('progress');
-window.addEventListener('scroll', ()=>{
-  const h = document.documentElement;
-  const pct = (h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
-  progress.style.width = pct+'%';
-  const topBtn = document.getElementById('topBtn');
-  topBtn.classList.toggle('show', h.scrollTop > 400);
-}, {passive:true});
-
-document.getElementById('topBtn').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
-
-// Search (sidebar)
-const search = document.getElementById('search');
-function doSearch(q){
-  q = q.trim().toLowerCase();
-  sections.forEach(s=>{
-    const text = s.textContent.toLowerCase();
-    const match = !q || text.includes(q);
-    s.classList.toggle('hidden', !match);
-  });
-  // highlight
-  document.querySelectorAll('mark').forEach(m=>{const t=document.createTextNode(m.textContent);m.replaceWith(t);});
-  if(q){
-    sections.forEach(s=>{
-      if(s.classList.contains('hidden')) return;
-      highlight(s,q);
-    });
-  }
-  updatePalette(q);
-}
-function highlight(root,q){
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
-  const nodes=[];
-  while(walker.nextNode()) nodes.push(walker.currentNode);
-  nodes.forEach(n=>{
-    if(!n.parentElement || n.parentElement.tagName==='SCRIPT' || n.parentElement.tagName==='STYLE' || n.parentElement.tagName==='MARK') return;
-    const idx = n.nodeValue.toLowerCase().indexOf(q);
-    if(idx>=0){
-      const span = document.createElement('span');
-      const before = n.nodeValue.slice(0,idx);
-      const match = n.nodeValue.slice(idx, idx+q.length);
-      const after = n.nodeValue.slice(idx+q.length);
-      const m = document.createElement('mark'); m.textContent = match;
-      if(before) span.appendChild(document.createTextNode(before));
-      span.appendChild(m);
-      if(after) span.appendChild(document.createTextNode(after));
-      n.parentNode.replaceChild(span,n);
-    }
-  });
-}
-search.addEventListener('input', e=>doSearch(e.target.value));
-document.addEventListener('keydown', e=>{
-  if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='k'){e.preventDefault();openPalette();}
-  if(e.key==='Escape'){closePalette();}
+// Frequent SOPs
+const freqIds = ['del-delay','del-imd','del-full-missing','del-disputing-delivery','ret-disputing-pickup','ret-time-taken-pickup','ref-refund-simplified','ref-roh','ref-order-cancellation','del-faster','del-order-status','ref-return-window'];
+const freqList = document.getElementById('freqList');
+freqIds.forEach(id=>{
+  const s = sops.find(x=>x.id===id);
+  if(!s) return;
+  const item = document.createElement('div');
+  item.className='freq-item';
+  item.innerHTML = `<div class="fi-icon"><i data-lucide="file-text"></i></div><div><div class="fi-title">${s.title}</div><div class="fi-cat">${catMeta[s.cat].name}</div></div>`;
+  item.addEventListener('click', ()=>navigate('/sop/'+s.id));
+  freqList.appendChild(item);
 });
+lucide.createIcons();
 
-// Filter chips
-let activeFilter='all';
-document.querySelectorAll('.chip').forEach(chip=>{
-  chip.addEventListener('click', ()=>{
-    document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
-    chip.classList.add('active');
-    activeFilter = chip.dataset.filter;
-    applyFilter();
+// All list renderer
+function renderList(container, list){
+  container.innerHTML='';
+  if(!list.length){ container.innerHTML='<p style="color:var(--muted)">No items.</p>'; return; }
+  list.forEach(s=>{
+    const item = document.createElement('div');
+    item.className='all-item';
+    const bm = state.bookmarks.includes(s.id);
+    item.innerHTML = `<div style="flex:1"><div class="ai-title">${s.title}</div><div class="ai-cat">${catMeta[s.cat].name}</div></div><button class="icon-btn bm-btn" title="Bookmark" style="width:28px;height:28px"><i data-lucide="${bm?'bookmark-check':'bookmark'}"></i></button>`;
+    item.addEventListener('click', (e)=>{ if(e.target.closest('.bm-btn')) return; navigate('/sop/'+s.id); });
+    item.querySelector('.bm-btn').addEventListener('click', (e)=>{ e.stopPropagation(); toggleBookmark(s.id); renderList(container,list); });
+    container.appendChild(item);
   });
+  lucide.createIcons();
+}
+function allSopsSorted(){ return [...sops].sort((a,b)=>a.title.localeCompare(b.title)); }
+
+// Navigation
+function navigate(route){
+  location.hash = route;
+}
+function showView(id){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function showDashboard(){
+  showView('viewDashboard');
+  document.getElementById('breadcrumb').innerHTML = 'Overview';
+  updateNavActive('/dashboard');
+}
+function showAll(){
+  renderList(document.getElementById('allList'), allSopsSorted());
+  showView('viewAll');
+  document.getElementById('breadcrumb').innerHTML = 'All SOPs';
+  updateNavActive('/all');
+}
+function showRecent(){
+  const items = state.recent.map(id=>sops.find(s=>s.id===id)).filter(Boolean);
+  renderList(document.getElementById('recentList'), items);
+  showView('viewRecent');
+  document.getElementById('breadcrumb').innerHTML = 'Recently Viewed';
+  updateNavActive('/recent');
+}
+function showBookmarks(){
+  const items = state.bookmarks.map(id=>sops.find(s=>s.id===id)).filter(Boolean);
+  renderList(document.getElementById('bookmarkList'), items);
+  showView('viewBookmarks');
+  document.getElementById('breadcrumb').innerHTML = 'Bookmarked';
+  updateNavActive('/bookmarks');
+}
+function showCat(cat){
+  const items = sops.filter(s=>s.cat===cat);
+  document.getElementById('catTitle').textContent = catMeta[cat].name;
+  renderList(document.getElementById('catList'), items);
+  showView('viewCat');
+  document.getElementById('breadcrumb').innerHTML = catMeta[cat].name;
+  updateNavActive('/cat/'+cat);
+}
+function showSOP(id){
+  const s = sops.find(x=>x.id===id);
+  if(!s) { showDashboard(); return; }
+  // recent
+  state.recent = [id, ...state.recent.filter(x=>x!==id)].slice(0,12);
+  saveState(state);
+  document.getElementById('navRecentCount').textContent = state.recent.length;
+  // header
+  const header = document.getElementById('sopHeader');
+  const bm = state.bookmarks.includes(id);
+  header.innerHTML = `
+    <div class="crumbs">${catMeta[s.cat].name} · SOP</div>
+    <h1>${s.title}</h1>
+    <div class="meta">
+      <span class="tag cat-${s.cat}">${catMeta[s.cat].name}</span>
+    </div>
+    <div class="sop-actions">
+      <button class="btn" id="bmBtn"><i data-lucide="${bm?'bookmark-check':'bookmark'}"></i> ${bm?'Bookmarked':'Bookmark'}</button>
+      <button class="btn" id="copyAllBtn"><i data-lucide="copy"></i> Copy SOP</button>
+      <button class="btn" id="backBtn"><i data-lucide="arrow-left"></i> Back</button>
+    </div>`;
+  // body: show only this section
+  const body = document.getElementById('sopBody');
+  body.innerHTML='';
+  const clone = s.el.cloneNode(true);
+  clone.classList.add('active');
+  body.appendChild(clone);
+  // toc from h3
+  const toc = document.getElementById('toc');
+  const hs = clone.querySelectorAll('h3,h4');
+  let tocHtml = '<h5>On this page</h5>';
+  hs.forEach(h=>{
+    const anchor = h.textContent.trim().replace(/\s+/g,'-').toLowerCase();
+    h.id = anchor;
+    tocHtml += `<a href="#${anchor}">${h.textContent.trim()}</a>`;
+  });
+  if(hs.length===0) tocHtml += '<span style="color:var(--muted)">No subsections</span>';
+  toc.innerHTML = tocHtml;
+  // wire copy all
+  document.getElementById('copyAllBtn').addEventListener('click', async ()=>{
+    try{ await navigator.clipboard.writeText(clone.textContent); toast('SOP copied'); }
+    catch{ toast('Copy failed'); }
+  });
+  document.getElementById('bmBtn').addEventListener('click', ()=>{ toggleBookmark(id); showSOP(id); });
+  document.getElementById('backBtn').addEventListener('click', ()=>history.back());
+  lucide.createIcons();
+  showView('viewSop');
+  document.getElementById('breadcrumb').innerHTML = `${catMeta[s.cat].name} <span style="color:var(--muted)">/</span> <b>${s.title}</b>`;
+  updateNavActive('/sop/'+id);
+  window.scrollTo({top:0});
+  // copy buttons on pre
+  clone.querySelectorAll('pre').forEach(pre=>{
+    if(pre.querySelector('.copybtn')) return;
+    const btn = document.createElement('button');
+    btn.className='copybtn'; btn.textContent='Copy';
+    btn.addEventListener('click', async ()=>{ try{ await navigator.clipboard.writeText(pre.textContent.replace('Copy','').trim()); btn.textContent='Copied!'; setTimeout(()=>btn.textContent='Copy',1500);}catch{} });
+    pre.style.position='relative'; pre.appendChild(btn);
+  });
+  // reading progress
+  setupReadProgress();
+}
+function toggleBookmark(id){
+  if(state.bookmarks.includes(id)) state.bookmarks = state.bookmarks.filter(x=>x!==id);
+  else state.bookmarks.unshift(id);
+  saveState(state);
+  document.getElementById('navBmCount').textContent = state.bookmarks.length;
+  toast(state.bookmarks.includes(id)?'Bookmarked':'Removed bookmark');
+}
+function updateNavActive(route){
+  document.querySelectorAll('.nav-item').forEach(n=>{
+    const r = n.dataset.route;
+    let active = false;
+    if(route==='/dashboard' && r==='/dashboard') active=true;
+    if(route==='/all' && r==='/all') active=true;
+    if(route==='/recent' && r==='/recent') active=true;
+    if(route==='/bookmarks' && r==='/bookmarks') active=true;
+    if(route.startsWith('/cat/') && r==='/cat/'+route.split('/')[2]) active=true;
+    n.classList.toggle('active', active);
+  });
+}
+function route(){
+  const hash = (location.hash||'').replace(/^#/,'') || '/dashboard';
+  if(hash==='/dashboard' || hash==='/') showDashboard();
+  else if(hash==='/all') showAll();
+  else if(hash==='/recent') showRecent();
+  else if(hash==='/bookmarks') showBookmarks();
+  else if(hash.startsWith('/cat/')) showCat(hash.split('/')[2]);
+  else if(hash.startsWith('/sop/')) showSOP(hash.split('/')[2]);
+  else showDashboard();
+}
+window.addEventListener('hashchange', route);
+route();
+
+// Nav item clicks
+document.querySelectorAll('.nav-item').forEach(n=>{
+  n.addEventListener('click', ()=>{ navigate(n.dataset.route); closeSidebar(); });
 });
-function applyFilter(){
-  sections.forEach(s=>{
-    const cat = s.dataset.cat || 'general';
-    const show = activeFilter==='all' || cat===activeFilter;
-    // respect search hidden too
-    if(show && !s.dataset.searchHidden){ s.classList.remove('hidden'); }
-    else if(!show){ s.classList.add('hidden'); }
-  });
-  // re-run search to keep consistent
-  doSearch(search.value);
-}
-// override doSearch hidden logic to also respect filter
-const origDoSearch = doSearch;
-// patch: in doSearch, after computing match, also check filter
-function doSearch2(q){
-  q = q.trim().toLowerCase();
-  sections.forEach(s=>{
-    const text = s.textContent.toLowerCase();
-    const match = !q || text.includes(q);
-    const cat = s.dataset.cat || 'general';
-    const catOk = activeFilter==='all' || cat===activeFilter;
-    s.classList.toggle('hidden', !(match && catOk));
-  });
-  document.querySelectorAll('mark').forEach(m=>{const t=document.createTextNode(m.textContent);m.replaceWith(t);});
-  if(q){
-    sections.forEach(s=>{
-      if(s.classList.contains('hidden')) return;
-      highlight(s,q);
-    });
-  }
-  updatePalette(q);
-}
-search.removeEventListener('input', ()=>{});
-search.addEventListener('input', e=>doSearch2(e.target.value));
-// replace references
-window.doSearch = doSearch2;
+document.querySelectorAll('[data-route]').forEach(el=>{
+  el.addEventListener('click', ()=>navigate(el.dataset.route));
+});
+document.getElementById('focusSearch').addEventListener('click', openPalette);
 
-// Command palette
+// Sidebar collapse
+document.getElementById('collapseBtn').addEventListener('click', ()=>{
+  document.getElementById('sidebar').classList.toggle('collapsed');
+});
+// mobile menu
+const menuBtn = document.getElementById('menuBtn');
+function checkMobile(){ menuBtn.style.display = window.innerWidth<=900?'flex':'none'; }
+checkMobile(); window.addEventListener('resize', checkMobile);
+menuBtn.addEventListener('click', ()=>document.getElementById('sidebar').classList.toggle('open'));
+function closeSidebar(){ if(window.innerWidth<=900) document.getElementById('sidebar').classList.remove('open'); }
+
+// Search palette
 const palette = document.getElementById('palette');
 const paletteInput = document.getElementById('paletteInput');
 const paletteResults = document.getElementById('paletteResults');
-let paletteIdx = 0;
-function openPalette(){
-  palette.classList.add('open');
-  paletteInput.value = search.value;
-  paletteInput.focus();
-  updatePalette(paletteInput.value);
-}
+let paletteIdx=0;
+function openPalette(){ palette.classList.add('open'); paletteInput.value=''; paletteInput.focus(); updatePalette(''); }
 function closePalette(){ palette.classList.remove('open'); }
+document.getElementById('searchTrigger').addEventListener('click', openPalette);
 palette.addEventListener('click', e=>{ if(e.target===palette) closePalette(); });
+document.addEventListener('keydown', e=>{
+  if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='k'){ e.preventDefault(); openPalette(); }
+  if(e.key==='Escape') closePalette();
+});
 paletteInput.addEventListener('input', e=>updatePalette(e.target.value));
 paletteInput.addEventListener('keydown', e=>{
   const items = paletteResults.querySelectorAll('a');
-  if(e.key==='ArrowDown'){ e.preventDefault(); paletteIdx=Math.min(paletteIdx+1,items.length-1); paintPaletteActive(items);}
-  else if(e.key==='ArrowUp'){ e.preventDefault(); paletteIdx=Math.max(paletteIdx-1,0); paintPaletteActive(items);}
+  if(e.key==='ArrowDown'){ e.preventDefault(); paletteIdx=Math.min(paletteIdx+1,items.length-1); paintActive(items);}
+  else if(e.key==='ArrowUp'){ e.preventDefault(); paletteIdx=Math.max(paletteIdx-1,0); paintActive(items);}
   else if(e.key==='Enter'){ e.preventDefault(); if(items[paletteIdx]) items[paletteIdx].click(); }
 });
-function paintPaletteActive(items){
-  items.forEach((a,i)=>a.classList.toggle('active', i===paletteIdx));
-  if(items[paletteIdx]) items[paletteIdx].scrollIntoView({block:'nearest'});
+function paintActive(items){ items.forEach((a,i)=>a.classList.toggle('active',i===paletteIdx)); if(items[paletteIdx]) items[paletteIdx].scrollIntoView({block:'nearest'}); }
+function score(s,q){
+  const t = (s.title+' '+s.el.textContent).toLowerCase();
+  const title = s.title.toLowerCase();
+  let sc=0;
+  if(title.includes(q)) sc+=10;
+  if(title.startsWith(q)) sc+=5;
+  if(t.includes(q)) sc+=3;
+  // word match
+  q.split(/\s+/).forEach(w=>{ if(w && t.includes(w)) sc+=1; });
+  return sc;
 }
 function updatePalette(q){
-  q = (q||'').trim().toLowerCase();
-  const res = [];
-  sections.forEach(s=>{
-    const cat = s.dataset.cat || 'general';
-    if(activeFilter!=='all' && cat!==activeFilter) return;
-    const title = s.querySelector('h2.section-title').textContent.trim();
-    const text = s.textContent.toLowerCase();
-    if(!q || title.toLowerCase().includes(q) || text.includes(q)){
-      res.push({id:s.id,title,cat});
-    }
-  });
-  paletteResults.innerHTML = res.map((r,i)=>`<a href="#${r.id}" data-idx="${i}"><div>${r.title}</div><div class="cat">${cats[r.cat].title}</div></a>`).join('');
+  q = q.trim().toLowerCase();
+  let res = sops.map(s=>({s,sc: q?score(s,q):1})).filter(x=>!q||x.sc>0).sort((a,b)=>b.sc-a.sc).slice(0,12).map(x=>x.s);
+  if(!res.length){
+    paletteResults.innerHTML = '<div style="padding:16px;color:var(--muted);text-align:center">No results. Try different keywords.</div>';
+    return;
+  }
+  paletteResults.innerHTML = res.map((s,i)=>`<a href="#/sop/${s.id}" data-idx="${i}"><div class="pr-title">${highlightText(s.title,q)}</div><div class="pr-cat">${catMeta[s.cat].name}</div><div class="pr-preview">${highlightText(s.el.textContent.slice(0,140),q)}…</div></a>`).join('');
   paletteIdx=0;
   const items = paletteResults.querySelectorAll('a');
-  paintPaletteActive(items);
+  paintActive(items);
   items.forEach(a=>{
-    a.addEventListener('click', e=>{
-      e.preventDefault();
-      closePalette();
-      const t = document.getElementById(a.getAttribute('href').slice(1));
-      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
-    });
+    a.addEventListener('click', e=>{ e.preventDefault(); closePalette(); navigate(a.getAttribute('href').slice(1)); });
   });
 }
+function highlightText(text,q){
+  if(!q) return escapeHtml(text);
+  const i = text.toLowerCase().indexOf(q);
+  if(i<0) return escapeHtml(text);
+  return escapeHtml(text.slice(0,i)) + '<mark>'+escapeHtml(text.slice(i,i+q.length))+'</mark>' + escapeHtml(text.slice(i+q.length));
+}
+function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-// Copy buttons on <pre> and code blocks
+// Reading progress
+function setupReadProgress(){
+  const rp = document.getElementById('readProgress');
+  const handler = ()=>{
+    const h = document.documentElement;
+    const pct = (h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+    rp.style.width = (isNaN(pct)?0:pct)+'%';
+  };
+  window.removeEventListener('scroll', window._rpHandler);
+  window._rpHandler = handler;
+  window.addEventListener('scroll', handler, {passive:true});
+  handler();
+}
+
+// Toast
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 1800);
+}
+
+// Copy buttons on pre (global)
 document.querySelectorAll('pre').forEach(pre=>{
+  if(pre.querySelector('.copybtn')) return;
   const btn = document.createElement('button');
-  btn.className='copybtn';
-  btn.textContent='Copy';
+  btn.className='copybtn'; btn.textContent='Copy';
   btn.addEventListener('click', async ()=>{
-    try{ await navigator.clipboard.writeText(pre.textContent); btn.textContent='Copied!'; setTimeout(()=>btn.textContent='Copy',1500);}
+    try{ await navigator.clipboard.writeText(pre.textContent.replace('Copy','').trim()); btn.textContent='Copied!'; setTimeout(()=>btn.textContent='Copy',1500);}
     catch{ btn.textContent='Failed'; }
   });
-  pre.style.position='relative';
-  pre.appendChild(btn);
+  pre.style.position='relative'; pre.appendChild(btn);
 });
 
-// Chip filter initial apply
-applyFilter();
-</script>
 
-<button id="topBtn" title="Back to top">↑</button>
-<div id="palette">
-  <div id="paletteBox">
-    <input id="paletteInput" placeholder="Search topics, scripts, SOP… (Esc to close)" />
-    <div id="paletteResults"></div>
-    <div id="paletteHint">↑↓ navigate · Enter to jump · Esc to close · Ctrl/Cmd+K to open</div>
-  </div>
-</div>
+// Click-to-copy for inline code
+document.querySelectorAll('code').forEach(c=>{
+  c.style.cursor='pointer';
+  c.title='Click to copy';
+  c.addEventListener('click', async ()=>{
+    try{ await navigator.clipboard.writeText(c.textContent); toast('Copied: '+c.textContent.slice(0,40)); }
+    catch{}
+  });
+});
+lucide.createIcons();
+</script>
 </body>
 </html>
