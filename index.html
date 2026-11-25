@@ -205,6 +205,7 @@ li{margin:.25em 0}
       <div class="nav-item" data-route="/all"><i data-lucide="book-open" class="icon"></i>All SOPs<span class="count" id="navAllCount">0</span></div>
       <div class="nav-item" data-route="/recent"><i data-lucide="clock" class="icon"></i>Recently Viewed<span class="count" id="navRecentCount">0</span></div>
       <div class="nav-item" data-route="/bookmarks"><i data-lucide="bookmark" class="icon"></i>Bookmarked<span class="count" id="navBmCount">0</span></div>
+      <div class="nav-item" data-route="/agentassist"><i data-lucide="search-check" class="icon"></i>Agent Assist<span class="count" id="navAaCount">0</span></div>
     </div>
     <div class="nav-section">
       <h5>Categories</h5>
@@ -282,6 +283,28 @@ li{margin:.25em 0}
         <h1 style="font-size:1.5rem;margin-bottom:6px" id="catTitle">Category</h1>
         <p style="color:var(--muted);margin-bottom:16px">Topics in this category.</p>
         <div class="all-list" id="catList"></div>
+      </div>
+
+      <!-- Agent Assist view -->
+      <div class="view" id="viewAgentAssist">
+        <h1 style="font-size:1.5rem;margin-bottom:6px">Agent Assist Finder</h1>
+        <p style="color:var(--muted);margin-bottom:16px">Find the correct Agent Assist article and SA Level in seconds. Search by complaint, process group or article name.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+          <input id="aaSearch" class="search" style="flex:1;min-width:240px;margin:0" placeholder="Search complaint, process group, article…" />
+          <select id="aaCatFilter" class="search" style="width:auto;min-width:160px;margin:0"><option value="">All categories</option></select>
+          <select id="aaLevelFilter" class="search" style="width:auto;min-width:140px;margin:0"><option value="">All SA levels</option><option>Item</option><option>Packet</option><option>Order</option><option>Return</option><option>Non-Order</option><option>Global</option></select>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+          <button class="qa-btn" id="aaImportBtn"><i data-lucide="upload"></i> Import index (TSV/JSON)</button>
+          <button class="qa-btn" id="aaExportBtn"><i data-lucide="download"></i> Export</button>
+          <button class="qa-btn" id="aaFavFilter"><i data-lucide="star"></i> Favorites</button>
+          <span style="color:var(--muted);font-size:.8rem;align-self:center" id="aaCountLabel"></span>
+        </div>
+        <div class="all-list" id="aaResults"></div>
+        <h2 class="section-title" style="margin-top:24px">Favorites <span class="sub">saved articles</span></h2>
+        <div class="all-list" id="aaFavs"></div>
+        <h2 class="section-title">Recently viewed <span class="sub">articles</span></h2>
+        <div class="all-list" id="aaRecent"></div>
       </div>
 
       <!-- SOP detail view -->
@@ -1985,6 +2008,12 @@ function showCat(cat){
   document.getElementById('breadcrumb').innerHTML = catMeta[cat].name;
   updateNavActive('/cat/'+cat);
 }
+function showAgentAssist(){
+  showView('viewAgentAssist');
+  document.getElementById('breadcrumb').innerHTML = 'Agent Assist';
+  updateNavActive('/agentassist');
+  if(typeof renderAA==='function') renderAA();
+}
 function showSOP(id){
   const s = sops.find(x=>x.id===id);
   if(!s) { showDashboard(); return; }
@@ -2072,6 +2101,7 @@ function route(){
   else if(hash==='/recent') showRecent();
   else if(hash==='/bookmarks') showBookmarks();
   else if(hash.startsWith('/cat/')) showCat(hash.split('/')[2]);
+  else if(hash==='/agentassist') showAgentAssist();
   else if(hash.startsWith('/sop/')) showSOP(hash.split('/')[2]);
   else showDashboard();
 }
@@ -2199,5 +2229,433 @@ document.querySelectorAll('code').forEach(c=>{
 });
 lucide.createIcons();
 </script>
+<input type="file" id="aaFileInput" accept=".tsv,.csv,.json,.txt" style="display:none" />
+<script>
+// ---- Agent Assist data ----
+const AA_SEED = [
+  {pg:"Delayed Delivery", article:"AA_Delayed Delivery - [L1, L1.5, SM]", level:"Packet", cat:"Delivery"},
+  {pg:"Delayed Delivery", article:"AA_Delayed Delivery - High Care", level:"", cat:"Delivery"},
+  {pg:"Delayed Packaging", article:"AA_Delayed Packaging - [SM]", level:"Item", cat:"Delivery"},
+  {pg:"Delayed Shipping", article:"AA_Delayed Shipping - [L1 (C,E,IB)]", level:"Packet", cat:"Delivery"},
+  {pg:"Disputing Delivery Attempt", article:"AA_Disputing Delivery Attempt - [L1 (C,E,IB), L1.5, SM]", level:"Packet", cat:"Delivery"},
+  {pg:"Incorrectly marked delivered", article:"AA_Incorrectly marked delivered - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Delivery"},
+  {pg:"Reinvestigation - Incorrectly marked delivered", article:"AA_Re-investigation Incorrectly Marked Delivered - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Delivery"},
+  {pg:"Courier asking extra money", article:"AA_Courier asking extra money - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Delivery"},
+  {pg:"Full item Missing", article:"AA_Full Item Missing - Complaint - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Delivery"},
+  {pg:"Partial item Missing", article:"AA_Partial Item Missing - Complaint - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Delivery"},
+  {pg:"Free item missing", article:"AA_Missing component - Free item missing - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Delivery"},
+  {pg:"Faster/schedule delivery", article:"AA_Faster/Scheduled Delivery - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Delivery"},
+  {pg:"Order Status Update", article:"AA_Order Status Update - Packed to Delivered - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Delivery"},
+  {pg:"OTP based delivery", article:"AA_OTP Based Deliveries - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Delivery"},
+  {pg:"Time taken for pickup", article:"AA_Time taken for pickup - Global (All LOBs)", level:"Return", cat:"Return"},
+  {pg:"Delayed pickup", article:"AA_Delayed pickup - Global (All LOBs)", level:"Return", cat:"Return"},
+  {pg:"Disputing Pickup Attempt", article:"AA_Disputing Pickup Attempt [High Care]", level:"Return", cat:"Return"},
+  {pg:"Extra/Wrong Item Picked up", article:"AA_Extra/Wrong Item Picked up - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Return"},
+  {pg:"Return Cancellation Request/Complaint", article:"AA_Return Cancellation Request-[L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Return"},
+  {pg:"Picked Up Refund Pending", article:"AA_Picked Up Refund Pending_Global [3PL & Closed Box]", level:"", cat:"Return"},
+  {pg:"Declined Order (Refund)", article:"AA_Declined Orders | [D=Success & V=Failure] - Global (All LOBs)", level:"Order", cat:"Refund"},
+  {pg:"Preprocessed Order (Refund)", article:"AA_Preprocessed Orders - [Debit/Void != Success] - Global (All LOBs)", level:"Order", cat:"Refund"},
+  {pg:"OR [PPS_Success] Return", article:"AA_OR [PPS_Success] <CC/DC/UPI> RID - within TAT - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Refund"},
+  {pg:"OR Return Related Refund - Tx Pending", article:"AA_OR | Tx_Pending | Return - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Refund"},
+  {pg:"OR Return Related Refund - Tx Failure", article:"AA_OR [Tx_Failure/No PPS Log] Return [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Refund"},
+  {pg:"Refund Follow up SOP", article:"AA_Refund Tasks follow-up SOP - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Refund"},
+  {pg:"Wrong Product Received", article:"WPR_Customer Guided to Create Return", level:"Item", cat:"Return"},
+  {pg:"UPR/DPR", article:"UPR/DPR - Return is not created/created incorrect return/return on-hold/non returnable - ALL LOBs (Including L2)", level:"Item", cat:"Return"},
+  {pg:"Seal Tags/Tag Loop", article:"AA_Seal tag missing Pro-active (for return) [All customers A1, A2 & A3 ] - (L1(C,E,IB,HC,SM,L1.5)", level:"Item", cat:"Return"},
+  {pg:"Tagloop", article:"AA_Reactive Return || Tag Loop Damaged/Detached/Missing - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Return"},
+  {pg:"Defective post usage", article:"AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Order Cancellation", article:"AA_Customer Initiated/Requested Order Cancellation - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Refund"},
+  {pg:"Return Cancellation", article:"AA_Return Cancellation Request-[L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Return"},
+  {pg:"SA Authentication", article:"OTP Authentication at L1-Inbound/Call, HighCare inbound", level:"Non-Order", cat:"General"},
+  {pg:"Return Window", article:"AA_Ret/Exc creation on SA - Outside Window - [ALL LOBs]", level:"Item", cat:"Return"},
+  {pg:"Reinvestigation", article:"AA_USED P.R. [Re-investigation] new_IMVT - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Scheduled Pick Up Availibility", article:"AA_Scheduled Pick Up Availibility - [L1 (C,E,IB),HC,SM]", level:"Return", cat:"Return"},
+  {pg:"Phone Number/Address Change Request", article:"AA_Phone Number/Address Change/Size or Color change[Post placing order] Request - Global (All LOBs)", level:"Order", cat:"General"},
+  {pg:"Unable to place order", article:"AA_Unable to place order - Global (All LOBs)", level:"Non-Order", cat:"General"},
+  {pg:"Myntra Account password issues", article:"AA_Myntra Account-Password Reset Link - [L1 (C,E,IB),HC,SM,L1.5]", level:"Non-Order", cat:"General"},
+  {pg:"Myntra account issues", article:"AA_Myntra Account-Do not remember email address/password - [L1 (C,E,IB),HC,SM,L1.5]", level:"Non-Order", cat:"General"},
+  {pg:"OTP/2FA issue", article:"AA_Myntra Account-OTP Issue/Two factor Authentication & 2FA OTP - [L1 (C,E,IB),HC,SM,L1.5]", level:"Non-Order", cat:"General"},
+  {pg:"Unable to verify OTP", article:"AA_Myntra Account-Unable to verify OTP - [L1 (C,E,IB),HC,SM,L1.5]", level:"Non-Order", cat:"General"},
+  {pg:"Extra Item Delivered", article:"AA_Extra Item Delivered - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Delivery"},
+  {pg:"Active/Declined RID disputing", article:"AA_Active RID | Customer disputing on the Pickup Attempt - Global (All LOBs)", level:"Return", cat:"Return"},
+  {pg:"Wrong Size received", article:"AA_Wrong Size (RID created/non-created || Flagged || A1/A2) - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Wrong Color received", article:"AA_Wrong Color received - Non_Assorted (Flagged Pincode || A1/A2) - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"MRP Mismatch", article:"AA_MRP Mismatch (Flagged PIN - A1/A2) - [L1(C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Price Tag Missing (Return)", article:"AA_Proactive Price tag missing (for return) - (L1(C,E,IB,HC,SM,L1.5)", level:"Item", cat:"Return"},
+  {pg:"Health and Safety", article:"AA_Health and Safety - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Magnetic Tag", article:"AA_Product received with Magnetic Tag - Global (All LOBs)", level:"Item", cat:"Return"},
+  {pg:"OBD - ROH/Missing Component", article:"AA_OBD_ Missing Component (Full/Partial)-Decline - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Delivery"},
+  {pg:"BPC - Post Return", article:"AA_BPC_Issue [Post Ret. creation] - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Return"},
+  {pg:"BPC - Pre Return/Post Usage", article:"AA_BPC [Post Usage Scenario] - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Gourmet/H.S. Issue", article:"AA_Gourmet/H.S._Issue [Post Return creation] - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Self-Ship Policy", article:"AA_Self ship Policy and Return desk details - Global (All LOBs)", level:"Item", cat:"Return"},
+  {pg:"Self-Ship No update from WH", article:"AA_Selfship - No update from WH - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"QA failed by DC/WH", article:"AA_QA failed by DC/WH for self-ship returns - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Return"},
+  {pg:"Reshipment", article:"AA_Reshipment of Ret. Issue || ML/FKL - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Return"},
+  {pg:"Pickup Address change Request", article:"AA_Change of Pickup Address - Global (All LOBs)", level:"Return", cat:"Return"},
+  {pg:"Change request Policy - Refund Mode", article:"AA_Policy for Changing the Refund Mode, Types of Return - Global (All LOBs)", level:"Return", cat:"Return"},
+  {pg:"Ret/Ex Policy Guidelines", article:"AA_Guidelines - Return/Exchange Policy - Global (All LOBs)", level:"", cat:"Return"},
+  {pg:"Self-Serve Ret/Ex creation", article:"AA_Self-Serve Ret/Exc creation on App/Website - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Ret/Ex creation on SA outside window", article:"AA_Ret/Exc creation on SA - Outside Window - [ALL LOBs]", level:"Item", cat:"Return"},
+  {pg:"Active RID Not getting picked up", article:"AA_Approved RID Not getting picked up 1st Instance - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Non Approved RID Not getting picked up", article:"AA_Non-Approved RID - [L1 (C,E,IB),HC,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Goodwill - Coupon Process", article:"AA_Goodwill Coupon process - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Coupon Policy", article:"AA_Customer awareness_coupon policy - Global (All LOBs)", level:"", cat:"General"},
+  {pg:"Unable to use coupon", article:"AA_Unable to use coupon - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Invoice Request", article:"AA_Myntra Account Invoice Request - Global (All LOBs)", level:"", cat:"General"},
+  {pg:"Giftwrap Queries/Disputes", article:"AA_Gift Wrap Queries/Dispute - [L1(C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Gift card related", article:"AA_Gift Card not received - [L1 (C,E,IB),HC,SM,L1.5]", level:"Order", cat:"Refund"},
+  {pg:"Unable to use Gifcard", article:"AA_Unable to use Gifcard - [L1 (C,E,IB),HC,SM,L1.5]", level:"Order", cat:"Refund"},
+  {pg:"Bank Details Updation SOP", article:"AA_Bank Details Updation SOP - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Refund"},
+  {pg:"COD/NEFT Refund SOP", article:"AA_COD/NEFT Refund SOP - [L1 (C,E,IB),HC,SM,L1.5]", level:"Global", cat:"Refund"},
+  {pg:"Myntra Credits Return", article:"AA_MC [PPS Success] Return - [L1(C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Refund"},
+  {pg:"Goodwill ICB Myntra credits Order", article:"AA_Goodwill request ICB - Myntra credits - Order Level - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Refund"},
+  {pg:"Goodwill ICB Myntra credits Return", article:"AA_Goodwill request ICB - Myntra credits - Return Level - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Refund"},
+  {pg:"Fraudulent Online Txn", article:"AA_fraudulent activity_Online Txn - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Fake Job Offers", article:"AA_fake job offers/Prize offers - Global (All LOBs)", level:"", cat:"General"},
+  {pg:"Phishing/Anydesk fraud", article:"AA_Phishing/Anydesk app fraud - Global (All LOBs)", level:"", cat:"General"},
+  {pg:"Self ship dispute", article:"AA_Self-ship Dispute - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"Return"},
+  {pg:"Cx data principle", article:"AA_Customer Data Principle Rights - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Advertisement & legal issue", article:"AA_Advertisement and Legal Issues - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Myntra Insider Programme", article:"AA_Myntra Insider Loyalty Program & Dispute handling-[L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"FWD Pass", article:"AA_FWD Pass - Inquiry - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"POS card swipe", article:"AA_POS-Card Swiped Twice/More_3PL - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"General"},
+  {pg:"ARN dispute - Return refund", article:"AA_ARN Dispute (Return refund) SOP - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Refund"},
+  {pg:"ARN dispute - Order canceled", article:"AA_ARN Dispute (Order canceled refund) SOP - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Refund"},
+  {pg:"Shipped to RTO", article:"AA_Shipped to RTO - ML & FKL - [L1 (C,E,IB),HC,SM,L1.5]", level:"Packet", cat:"Delivery"},
+  {pg:"Active RID/Exchange", article:"AA_Active Return/Exchange available - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"Re-order SOP", article:"AA_Re-order - [L1(C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Customer Awareness & Anxiety", article:"AA_Customer Awareness & Anxiety - Global (All LOBs)", level:"", cat:"Delivery"},
+  {pg:"Dope order", article:"AA_DOPE Orders - Global (All LOBs)", level:"", cat:"General"},
+  {pg:"Gift card related", article:"AA_Gift Card Order stuck in Processing - [L1 (C,E,IB),HC,SM,L1.5]", level:"Order", cat:"Refund"},
+  {pg:"Flipkart Pay Later", article:"Flipkart Pay later_ All LOBs", level:"", cat:"General"},
+  {pg:"Pan Card Verification", article:"AA_Pan Card Verification_Orders Above 2Lac [ALL LOBs]", level:"", cat:"General"},
+  {pg:"Blacklisted account", article:"AA_Unable to Login [Blacklisted] - [L1 (C,E,IB),HC,L1.5, SM]", level:"Global", cat:"General"},
+  {pg:"Myntra account deactivated", article:"AA_Unable to Login [Not BL - but Deactivated] - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Cx initiated account deactivation", article:"AA_Cx wants to Delete/Deactivate Myntra acc -[L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Myntra account temporary blocked", article:"AA_Myntra Account-Temporary Blocked - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Myntra account inactive locked", article:"AA_Myntra Account-Inactive Locked - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Unable to login task creation SOP", article:"AA_Myntra Account-Unable to login - Task Creation SOP - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Unable to login (non-task)", article:"AA_Myntra Account-Unable to login using either Mbl # or \"A/c login Credentials\"- [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Supercoin Redemption OTP issue", article:"AA_Myntra Account Supercoin Redemtion OTP issue - [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Myntra account no access with reg.phone", article:"AA_Myntra Account-No Access with Reg.phone# or emaild- [L1 (C,E,IB),HC,SM,L1.5]", level:"", cat:"General"},
+  {pg:"Sell with us", article:"AA_ Sell with US - Global (All LOBs)", level:"", cat:"General"},
+  {pg:"Myntra Account Influencer", article:"AA_Myntra Account-Influencer Account/Creator Profile Programme - Global (All LOBs)", level:"", cat:"General"},
+  {pg:"Gold Coin/Fine Jewellery", article:"AA_Gold Coin - [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"General"},
+  {pg:"Installation Related Query", article:"AA_​Installation Related Query for Cycles and Treadmill [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"General"},
+  {pg:"Grievance officer call transfer", article:"AA_ Grievance officer SOP [L1 (C,E,IB),HC,SM,L1.5]", level:"Global", cat:"General"},
+  {pg:"Dermatologist-Consultation", article:"AA_Dermatologist-Consultation [L1 (C,E,IB),HC,SM,L1.5,L2]", level:"Non-Order", cat:"General"},
+  {pg:"Damaged product received- NON physical defect", article:"AA_Damaged product received (Non-Physical defect) - Global", level:"Global", cat:"General"},
+  {pg:"Goods and Transport Charges", article:"Goods and Transport Charges (GT Charges)", level:"Packet", cat:"General"},
+  {pg:"APP/Website Features", article:"AA_App/Website-Features/Self serve options-GLOBAL", level:"Global", cat:"General"},
+  {pg:"Coupon and Bank Offer", article:"AA_Coupon and Bank Offer (Global)", level:"Global", cat:"General"},
+  {pg:"Big fashion festival (BFF)-2025", article:"Big fashion festival (BFF)- Sep'25-Oct'25", level:"Global", cat:"General"},
+  {pg:"EORS Dec'25", article:"EORS - December'25 - Global (All LOBs)", level:"Global", cat:"General"},
+  {pg:"B2B GSTIN", article:"B2B GSTIN Process- [L1(C,IB),HC,SM, L2]", level:"Global", cat:"General"},
+  {pg:"Ray-Ban & Oakley Smart Glasses Returns", article:"AA_Ray-Ban Smart Glasses/Meta Glasses_Returns", level:"Global", cat:"General"},
+  {pg:"REDIAL FEATURE", article:"REDIAL FEATURE - L1-Inbound, HighCare, Luxe", level:"Global", cat:"General"},
+  {pg:"CM requesting sda contact", article:"AA_cx requesting for SDA contact number - [L1 (C,E,IB),HC,SM,L1.5]", level:"Global", cat:"General"},
+  {pg:"Luxe", article:"AA_LUXE - ASSISTED SELLING/BUYING [L1 (C,E,IB),HC,SM,L1.5]", level:"Global", cat:"General"},
+  {pg:"Darveys x Luxe", article:"Darveys x Luxe [L1/L1.5/HC/SM]", level:"Global", cat:"General"},
+  {pg:"Ubona Call Transfer Process", article:"AA_Ubona Call Transfer Process", level:"Global", cat:"General"},
+  {pg:"Flipkart SBI Credit Card Launch", article:"Flipkart SBI Credit Card Launch", level:"Global", cat:"General"},
+  {pg:"Exchange On-hold", article:"AA_Exchange on Hold Guidelines || L2 Approved the ROH Task for Exchange order BUT did NOT approve the Exchange order - FKL - [L1 (C,E,IB),SM,L1.5]", level:"Item", cat:"Return"},
+  {pg:"ALTERATION SOP", article:"AA_Alteration SOP for non-Alteration teams [L1 (C,E,IB),HC,SM,L1.5]", level:"Item", cat:"General"},
+  {pg:"NEFT/IMPS [PPS-pending/tx failure]", article:"AA_NEFT/IMPS [PPS_Pending] RID <RRN_PendingCxAction/BankAccUpdated> - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Refund"},
+  {pg:"NEFT/IMPS (UTR/RRN) Dispute", article:"AA_NEFT/IMPS (UTR/RRN) Dispute - [L1 (C,E,IB),HC,SM,L1.5]", level:"Return", cat:"Refund"},
+  {pg:"Myntra Bank Accounts Linkage", article:"AA_Myntra Bank Accounts Linkage - [L1 (C,E,IB),HC,SM,L1.5]", level:"Global", cat:"Refund"},
+  {pg:"FK Axis Bank Credit Card", article:"Existing Cardholders-FK Axis Bank Credit Card", level:"Global", cat:"General"}
+];
+
+// synonyms for search
+const AA_SYNONYMS = {
+  "order not delivered":["delayed delivery","disputing delivery","where is my order"],
+  "parcel marked delivered":["incorrectly marked delivered","imd"],
+  "customer anxious":["customer awareness","anxiety"],
+  "ofd after 8 pm":["delayed delivery","order not ofd"],
+  "refund not received":["refund pending","refund follow up","arn"],
+  "pickup not attempted":["disputing pickup","time taken for pickup"],
+  "otp verified":["incorrectly marked delivered","otp"],
+  "wrong product":["wrong product received","wpr"],
+  "arn number":["arn dispute"],
+  "wrong size":["wrong size received"],
+  "wrong color":["wrong color received"],
+  "missing item":["full missing","missing component"],
+  "damaged":["damaged product","defective"],
+  "used product":["defective post usage","upr"],
+  "seal tag":["seal tag missing","tagloop"],
+  "price tag":["price tag missing"],
+  "return not picked":["approved rid not getting picked up"],
+  "cancel order":["order cancellation"],
+  "cancel return":["return cancellation"],
+  "address change":["phone number/address change"],
+  "password":["myntra account password issues"],
+  "login":["unable to login"],
+  "otp issue":["otp/2fa issue","unable to verify otp"],
+  "coupon":["unable to use coupon","coupon policy"],
+  "gift card":["gift card related"],
+  "neft":["neft/imps"],
+  "wallet":["myntra credits"],
+  "cod":["cod/neft refund"],
+  "fraud":["fraudulent online txn","fraud order mc"],
+  "fake product":["authenticity","fake product received"]
+};
+
+// SOP link mapping by keyword
+const SOP_LINKS = {
+  "delayed delivery":"del-delay",
+  "incorrectly marked delivered":"del-imd",
+  "full item missing":"del-full-missing",
+  "missing component":"del-full-missing",
+  "disputing delivery":"del-disputing-delivery",
+  "faster/scheduled":"del-faster",
+  "order status":"del-order-status",
+  "customer awareness":"del-customer-anxiety",
+  "time taken for pickup":"ret-time-taken-pickup",
+  "disputing pickup":"ret-disputing-pickup",
+  "extra/wrong item picked":"ret-extra-wrong",
+  "declined rid":"ret-declined-rid",
+  "rid declined":"ret-rid-declined",
+  "return cancellation":"ref-return-cancellation",
+  "order cancellation":"ref-order-cancellation",
+  "refund":"ref-refund-simplified",
+  "declined order":"ref-declined-orders",
+  "preprocessed":"ref-preprocessed",
+  "wrong product":"ref-roh",
+  "wpr":"ref-wpr-return",
+  "tagloop":"ref-tagloop",
+  "defective post usage":"ref-defective",
+  "return window":"ref-return-window",
+  "seal tag":"ref-upr",
+  "upr":"ref-upr",
+  "reinvestigation":"ref-reinvestigation",
+  "sa authentication":"ref-sa-auth",
+  "order address":"ref-order-address",
+  "arn dispute":"ref-arn-dispute",
+  "roh":"ref-roh"
+};
+
+function linkSop(pg, article){
+  const text = (pg+' '+article).toLowerCase();
+  for(const k in SOP_LINKS){
+    if(text.includes(k)) return SOP_LINKS[k];
+  }
+  return null;
+}
+
+// state
+const AA_STORAGE = 'myntra-aa';
+function loadAA(){ try{return JSON.parse(localStorage.getItem(AA_STORAGE)||'{}');}catch{return {};} }
+function saveAA(s){ localStorage.setItem(AA_STORAGE, JSON.stringify(s)); }
+let aaState = loadAA();
+aaState.favs = aaState.favs || [];
+aaState.recent = aaState.recent || [];
+// load data: seed + imported
+let aaData = [];
+function seedData(){
+  const imported = aaState.imported;
+  if(imported && Array.isArray(imported) && imported.length){ aaData = imported; }
+  else { aaData = AA_SEED.map(x=>({...x})); }
+}
+seedData();
+// attach sop links
+aaData.forEach(d=>{ d.sop = linkSop(d.pg, d.article); });
+
+// categories
+const aaCats = [...new Set(aaData.map(d=>d.cat))].sort();
+
+function renderAA(){
+  const q = (document.getElementById('aaSearch').value||'').trim().toLowerCase();
+  const catF = document.getElementById('aaCatFilter').value;
+  const lvlF = document.getElementById('aaLevelFilter').value;
+  const favOnly = document.getElementById('aaFavFilter').classList.contains('active');
+
+  // populate category filter once
+  const catSel = document.getElementById('aaCatFilter');
+  if(catSel.options.length<=1){
+    aaCats.forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c; catSel.appendChild(o); });
+  }
+
+  let res = aaData.filter(d=>{
+    if(catF && d.cat!==catF) return false;
+    if(lvlF && d.level!==lvlF) return false;
+    if(favOnly && !aaState.favs.includes(d.article)) return false;
+    if(!q) return true;
+    // expand synonyms
+    let terms = [q];
+    for(const k in AA_SYNONYMS){ if(q.includes(k)){ terms = terms.concat(AA_SYNONYMS[k]); } }
+    const hay = (d.pg+' '+d.article+' '+(d.level||'')).toLowerCase();
+    return terms.some(t=> hay.includes(t));
+  });
+  // sort: favs first, then relevance
+  if(q){
+    res.sort((a,b)=>{
+      const sa = (a.pg+' '+a.article).toLowerCase().includes(q)?1:0;
+      const sb = (b.pg+' '+b.article).toLowerCase().includes(q)?1:0;
+      return sb-sa;
+    });
+  }
+
+  const container = document.getElementById('aaResults');
+  container.innerHTML = '';
+  if(!res.length){ container.innerHTML = '<p style="color:var(--muted)">No results. Try different keywords or import the full index.</p>'; }
+  res.forEach(d=>{
+    const item = document.createElement('div');
+    item.className='all-item';
+    const isFav = aaState.favs.includes(d.article);
+    item.innerHTML = `<div style="flex:1">
+      <div class="ai-title">${escapeHtml(d.pg)}</div>
+      <div style="font-size:.82rem;color:var(--text2);margin-top:2px">${escapeHtml(d.article)}</div>
+      <div style="margin-top:4px;display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+        <span class="tag">${escapeHtml(d.cat)}</span>
+        ${d.level?`<span class="tag" style="font-weight:600;color:var(--accent)">${escapeHtml(d.level)}</span>`:'<span class="tag" style="color:var(--muted)">No level</span>'}
+        ${d.sop?`<a href="#/sop/${d.sop}" style="font-size:.75rem">Open SOP →</a>`:'<span style="font-size:.72rem;color:var(--muted)">No linked SOP</span>'}
+      </div>
+    </div>
+    <div style="display:flex;gap:6px">
+      <button class="icon-btn" title="Copy article name" style="width:30px;height:30px" data-copy="${escapeAttr(d.article)}"><i data-lucide="copy"></i></button>
+      <button class="icon-btn" title="Favorite" style="width:30px;height:30px" data-fav="${escapeAttr(d.article)}"><i data-lucide="${isFav?'star':'star'}" style="${isFav?'color:var(--amber);fill:var(--amber)':''}"></i></button>
+    </div>`;
+    container.appendChild(item);
+  });
+  // wire copy/fav
+  container.querySelectorAll('[data-copy]').forEach(b=>{
+    b.addEventListener('click', async (e)=>{ e.stopPropagation(); try{ await navigator.clipboard.writeText(b.dataset.copy); toast('Article name copied'); }catch{} });
+  });
+  container.querySelectorAll('[data-fav]').forEach(b=>{
+    b.addEventListener('click', (e)=>{ e.stopPropagation(); const art=b.dataset.fav; if(aaState.favs.includes(art)) aaState.favs=aaState.favs.filter(x=>x!==art); else aaState.favs.unshift(art); saveAA(aaState); renderAA(); renderAAFavs(); });
+  });
+  lucide.createIcons();
+  document.getElementById('aaCountLabel').textContent = res.length + ' of ' + aaData.length + ' articles';
+  document.getElementById('navAaCount').textContent = aaData.length;
+
+  // favs list
+  renderAAFavs();
+  // recent
+  const recentItems = aaState.recent.map(a=>aaData.find(d=>d.article===a)).filter(Boolean);
+  renderAAList(document.getElementById('aaRecent'), recentItems);
+}
+
+function renderAAFavs(){
+  const items = aaState.favs.map(a=>aaData.find(d=>d.article===a)).filter(Boolean);
+  renderAAList(document.getElementById('aaFavs'), items);
+}
+function renderAAList(container, list){
+  container.innerHTML='';
+  if(!list.length){ container.innerHTML='<p style="color:var(--muted)">None yet.</p>'; return; }
+  list.forEach(d=>{
+    const item=document.createElement('div');
+    item.className='all-item';
+    item.innerHTML=`<div style="flex:1"><div class="ai-title">${escapeHtml(d.pg)}</div><div style="font-size:.82rem;color:var(--text2)">${escapeHtml(d.article)}</div></div><span class="tag" style="font-weight:600;color:var(--accent)">${escapeHtml(d.level||'—')}</span>`;
+    item.addEventListener('click', ()=>{ aaState.recent=[d.article,...aaState.recent.filter(x=>x!==d.article)].slice(0,12); saveAA(aaState); });
+    container.appendChild(item);
+  });
+}
+
+function escapeAttr(s){ return (s||'').replace(/"/g,'&quot;'); }
+
+// track recent on result click
+document.addEventListener('click', e=>{
+  const a = e.target.closest('#aaResults a');
+  if(a){ const art = a.dataset.art; if(art){ aaState.recent=[art,...aaState.recent.filter(x=>x!==art)].slice(0,12); saveAA(aaState); } }
+});
+
+// import
+document.getElementById('aaImportBtn').addEventListener('click', ()=>document.getElementById('aaFileInput').click());
+document.getElementById('aaFileInput').addEventListener('change', (e)=>{
+  const file = e.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev)=>{
+    const text = ev.target.result;
+    let data = null;
+    // try JSON
+    try { data = JSON.parse(text); } catch{}
+    if(!data){
+      // parse TSV/CSV
+      const lines = text.split(/\r?\n/).filter(l=>l.trim());
+      // detect header
+      let start = 0;
+      if(lines[0].toLowerCase().includes('process') || lines[0].toLowerCase().includes('article')) start=1;
+      data = [];
+      lines.slice(start).forEach(line=>{
+        // split by tab or multiple spaces
+        const parts = line.split(/\t/);
+        if(parts.length>=2){
+          data.push({pg:parts[0].trim(), article:parts[1].trim(), level:(parts[2]||'').trim(), cat: guessCat(parts[0]+' '+parts[1])});
+        } else {
+          // try 2+ spaces
+          const p2 = line.split(/\s{2,}/);
+          if(p2.length>=2) data.push({pg:p2[0].trim(), article:p2[1].trim(), level:(p2[2]||'').trim(), cat: guessCat(p2[0]+' '+p2[1])});
+        }
+      });
+    }
+    if(!Array.isArray(data) || !data.length){ toast('Could not parse file'); return; }
+    // normalize
+    data = data.map(d=>({pg:d.pg||d.processGroup||d['Process Group Name']||'', article:d.article||d.articleName||d['Article Name']||'', level:d.level||d.saLevel||d['SA Level']||'', cat:d.cat||guessCat((d.pg||'')+' '+(d.article||''))}));
+    data = data.filter(d=>d.pg && d.article);
+    data.forEach(d=>{ d.sop = linkSop(d.pg, d.article); });
+    aaState.imported = data;
+    saveAA(aaState);
+    seedData();
+    aaData.forEach(d=>{ d.sop = linkSop(d.pg, d.article); });
+    // rebuild cat filter
+    document.getElementById('aaCatFilter').innerHTML = '<option value="">All categories</option>';
+    [...new Set(aaData.map(d=>d.cat))].sort().forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c; document.getElementById('aaCatFilter').appendChild(o); });
+    renderAA();
+    toast('Imported '+data.length+' articles');
+  };
+  reader.readAsText(file);
+  e.target.value='';
+});
+function guessCat(text){
+  const t = text.toLowerCase();
+  if(/refund|arn|preprocess|declined order|cod\/neft|myntra credit|wallet|gift card/.test(t)) return 'Refund';
+  if(/return|pickup|rid|tag|seal|wpr|upr|dpr|exchange/.test(t)) return 'Return';
+  if(/deliver|ofd|imd|missing|order status|otp|courier|packag|ship/.test(t)) return 'Delivery';
+  return 'General';
+}
+
+// export
+document.getElementById('aaExportBtn').addEventListener('click', ()=>{
+  const blob = new Blob([JSON.stringify(aaData,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href=url; a.download='agentassist.json'; a.click();
+  URL.revokeObjectURL(url);
+});
+
+// filters
+document.getElementById('aaSearch').addEventListener('input', renderAA);
+document.getElementById('aaCatFilter').addEventListener('change', renderAA);
+document.getElementById('aaLevelFilter').addEventListener('change', renderAA);
+document.getElementById('aaFavFilter').addEventListener('click', ()=>{ document.getElementById('aaFavFilter').classList.toggle('active'); renderAA(); });
+
+// navigation hook: show view on route
+const origRoute = window.route;
+// patch route to handle /agentassist
+const _route = route;
+window.route = function(){ 
+  const hash = (location.hash||'').replace(/^#/,'') || '/dashboard';
+  if(hash==='/agentassist'){ showAgentAssist(); return; }
+  _route();
+};
+// redefine showAgentAssist
+function showAgentAssist(){
+  showView('viewAgentAssist');
+  document.getElementById('breadcrumb').innerHTML = 'Agent Assist';
+  updateNavActive('/agentassist');
+  renderAA();
+}
+// update nav active for agentassist
+const _updateNavActive = updateNavActive;
+updateNavActive = function(route){
+  _updateNavActive(route);
+  document.querySelectorAll('.nav-item').forEach(n=>{
+    if(n.dataset.route==='/agentassist') n.classList.toggle('active', route==='/agentassist');
+  });
+};
+
+// initial render when view shown
+</script>
+
 </body>
 </html>
