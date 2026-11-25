@@ -186,6 +186,92 @@ li{margin:.25em 0}
 [data-theme="dark"] .dt-label.yes{background:#052e16;color:#86efac;border-color:#14532d}
 [data-theme="dark"] .dt-label.no{background:#450a0a;color:#fca5a5;border-color:#7f1d1d}
 .dt-outcome{background:var(--accent-soft);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:.85rem;color:var(--text);margin-top:4px}
+
+/* ---- Agent Assist premium launch ---- */
+.aa-hero{position:relative;overflow:hidden;border-radius:20px;padding:48px 32px;margin-bottom:24px;background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 40%,#2563eb 100%);color:#fff;box-shadow:0 20px 60px rgba(79,70,229,.35)}
+.aa-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.18),transparent 50%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.12),transparent 50%);pointer-events:none}
+.aa-particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.aa-particle{position:absolute;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.6);animation:aaFloat 6s ease-in-out infinite}
+@keyframes aaFloat{0%,100%{transform:translateY(0) translateX(0);opacity:.6}50%{transform:translateY(-40px) translateX(20px);opacity:1}}
+.aa-hero-inner{position:relative;z-index:2;max-width:720px}
+.aa-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);font-size:.7rem;font-weight:700;letter-spacing:.12em;margin-bottom:14px;border:1px solid rgba(255,255,255,.25)}
+.aa-title{font-size:2.4rem;margin-bottom:8px;color:#fff;background:none;-webkit-text-fill-color:#fff}
+.aa-sub{color:rgba(255,255,255,.85);font-size:1.05rem;margin-bottom:22px;max-width:560px}
+.aa-search-wrap{position:relative;max-width:640px}
+.aa-search{display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.95);box-shadow:0 12px 40px rgba(0,0,0,.2);transition:all .25s;border:2px solid transparent}
+.aa-search:focus-within{border-color:#fff;box-shadow:0 16px 50px rgba(0,0,0,.3),0 0 0 4px rgba(255,255,255,.25);transform:translateY(-2px)}
+.aa-search-icon{width:20px;height:20px;color:#6366f1;flex-shrink:0}
+.aa-search input{flex:1;border:none;background:transparent;font-size:1rem;color:#0f172a;outline:none;font-family:inherit}
+.aa-search input::placeholder{color:#94a3b8}
+.aa-clear{width:26px;height:26px;border-radius:8px;border:none;background:#f1f5f9;color:#64748b;cursor:pointer;display:none;align-items:center;justify-content:center;transition:all .15s}
+.aa-clear.show{display:flex}
+.aa-clear:hover{background:#e2e8f0;color:#0f172a}
+.aa-kbd{font-size:.7rem;padding:3px 7px;border-radius:6px;background:#f1f5f9;color:#64748b;border:1px solid #e2e8f0;font-family:var(--mono)}
+.aa-suggest{position:absolute;top:calc(100%+8px);left:0;right:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-lg);max-height:320px;overflow:auto;display:none;z-index:10}
+.aa-suggest.open{display:block;animation:aaSlide .2s ease}
+@keyframes aaSlide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.aa-suggest-item{padding:10px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;transition:background .12s}
+.aa-suggest-item:hover,.aa-suggest-item.active{background:var(--accent-soft)}
+.aa-suggest-item .asi-title{font-weight:500;font-size:.9rem}
+.aa-suggest-item .asi-cat{font-size:.72rem;color:var(--muted)}
+.aa-popular{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.aa-popular span{font-size:.78rem;color:rgba(255,255,255,.75)}
+.aa-popular-chip{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:.78rem;cursor:pointer;transition:all .15s;backdrop-filter:blur(6px)}
+.aa-popular-chip:hover{background:rgba(255,255,255,.25);transform:translateY(-1px)}
+
+.aa-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.aa-select{padding:8px 12px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:.85rem;cursor:pointer}
+.aa-chip{padding:8px 14px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;font-size:.85rem;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.aa-chip:hover{border-color:var(--accent);color:var(--accent)}
+.aa-chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.aa-count{color:var(--muted);font-size:.8rem;margin-left:auto}
+
+.aa-results{display:grid;gap:10px}
+.aa-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;cursor:pointer;transition:all .2s;box-shadow:var(--shadow);opacity:0;transform:translateY(12px);animation:aaCardIn .4s ease forwards}
+@keyframes aaCardIn{to{opacity:1;transform:translateY(0)}}
+.aa-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.aa-card .aac-pg{font-weight:600;font-size:.95rem;color:var(--text);margin-bottom:2px}
+.aa-card .aac-article{font-size:.82rem;color:var(--text2);margin-bottom:8px;font-family:var(--mono)}
+.aa-card .aac-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.aa-card .aac-level{font-size:.72rem;padding:3px 9px;border-radius:999px;font-weight:600}
+.aa-card .aac-level.item{background:#dbeafe;color:#1d4ed8}
+.aa-card .aac-level.packet{background:#fef3c7;color:#b45309}
+.aa-card .aac-level.order{background:#dcfce7;color:#15803d}
+.aa-card .aac-level.return{background:#ede9fe;color:#6d28d9}
+.aa-card .aac-level.non-order,.aa-card .aac-level.global{background:#f1f5f9;color:#475569}
+[data-theme="dark"] .aa-card .aac-level.item{background:#1e3a8a;color:#93c5fd}
+[data-theme="dark"] .aa-card .aac-level.packet{background:#78350f;color:#fcd34d}
+[data-theme="dark"] .aa-card .aac-level.order{background:#14532d;color:#86efac}
+[data-theme="dark"] .aa-card .aac-level.return{background:#4c1d95;color:#c4b5fd}
+[data-theme="dark"] .aa-card .aac-level.non-order,[data-theme="dark"] .aa-card .aac-level.global{background:#1e293b;color:#94a3b8}
+.aa-card .aac-actions{display:flex;gap:6px;margin-left:auto}
+.aa-card .aac-btn{width:28px;height:28px;border-radius:7px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.aa-card .aac-btn:hover{color:var(--accent);border-color:var(--accent)}
+.aa-card .aac-sop{font-size:.75rem;color:var(--accent)}
+.aa-card .aac-nosop{font-size:.72rem;color:var(--muted)}
+
+.aa-section{margin-top:28px}
+.aa-section-title{font-size:1.1rem;font-weight:600;margin-bottom:12px}
+.aa-states{padding:16px;color:var(--muted);font-size:.9rem}
+
+.aa-hero .aa-title{animation:aaFadeUp .6s ease .1s both}
+.aa-hero .aa-sub{animation:aaFadeUp .6s ease .2s both}
+.aa-search-wrap{animation:aaFadeUp .6s ease .3s both}
+@keyframes aaFadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* confetti */
+.aa-confetti{position:fixed;pointer-events:none;z-index:1000}
+.aa-confetti-piece{position:absolute;width:8px;height:8px;opacity:0;animation:aaConfetti 1.6s ease-out forwards}
+@keyframes aaConfetti{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(720deg)}}
+
+@media(max-width:900px){
+  .aa-hero{padding:32px 20px}
+  .aa-title{font-size:1.8rem}
+  .aa-search{padding:12px 14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .aa-card,.aa-hero *,.aa-particle,.aa-confetti-piece{animation:none!important}
+}
 </style>
 </head>
 <body>
@@ -287,24 +373,45 @@ li{margin:.25em 0}
 
       <!-- Agent Assist view -->
       <div class="view" id="viewAgentAssist">
-        <h1 style="font-size:1.5rem;margin-bottom:6px">Agent Assist Finder</h1>
-        <p style="color:var(--muted);margin-bottom:16px">Find the correct Agent Assist article and SA Level in seconds. Search by complaint, process group or article name.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
-          <input id="aaSearch" class="search" style="flex:1;min-width:240px;margin:0" placeholder="Search complaint, process group, article…" />
-          <select id="aaCatFilter" class="search" style="width:auto;min-width:160px;margin:0"><option value="">All categories</option></select>
-          <select id="aaLevelFilter" class="search" style="width:auto;min-width:140px;margin:0"><option value="">All SA levels</option><option>Item</option><option>Packet</option><option>Order</option><option>Return</option><option>Non-Order</option><option>Global</option></select>
+        <div class="aa-hero" id="aaHero">
+          <div class="aa-particles" id="aaParticles"></div>
+          <div class="aa-hero-inner">
+            <span class="aa-badge"><i data-lucide="sparkles"></i> JUST LAUNCHED</span>
+            <h1 class="aa-title">Agent Assist Finder</h1>
+            <p class="aa-sub">Find the exact Agent Assist article and SA Level in seconds — while you're still on the call.</p>
+            <div class="aa-search-wrap" id="aaSearchWrap">
+              <div class="aa-search" id="aaSearchBox">
+                <i data-lucide="search" class="aa-search-icon"></i>
+                <input id="aaSearch" type="text" placeholder="Search customer issues, processes, or Agent Assist articles…" autocomplete="off" />
+                <button class="aa-clear" id="aaClear" aria-label="Clear"><i data-lucide="x"></i></button>
+                <kbd class="aa-kbd">⌘K</kbd>
+              </div>
+              <div class="aa-suggest" id="aaSuggest"></div>
+            </div>
+            <div class="aa-popular" id="aaPopular"></div>
+          </div>
         </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-          <button class="qa-btn" id="aaImportBtn"><i data-lucide="upload"></i> Import index (TSV/JSON)</button>
-          <button class="qa-btn" id="aaExportBtn"><i data-lucide="download"></i> Export</button>
-          <button class="qa-btn" id="aaFavFilter"><i data-lucide="star"></i> Favorites</button>
-          <span style="color:var(--muted);font-size:.8rem;align-self:center" id="aaCountLabel"></span>
+
+        <div class="aa-toolbar">
+          <select id="aaCatFilter" class="aa-select"><option value="">All categories</option></select>
+          <select id="aaLevelFilter" class="aa-select"><option value="">All SA levels</option><option>Item</option><option>Packet</option><option>Order</option><option>Return</option><option>Non-Order</option><option>Global</option></select>
+          <button class="aa-chip" id="aaFavFilter"><i data-lucide="star"></i> Favorites</button>
+          <button class="aa-chip" id="aaImportBtn"><i data-lucide="upload"></i> Import</button>
+          <button class="aa-chip" id="aaExportBtn"><i data-lucide="download"></i> Export</button>
+          <span class="aa-count" id="aaCountLabel"></span>
         </div>
-        <div class="all-list" id="aaResults"></div>
-        <h2 class="section-title" style="margin-top:24px">Favorites <span class="sub">saved articles</span></h2>
-        <div class="all-list" id="aaFavs"></div>
-        <h2 class="section-title">Recently viewed <span class="sub">articles</span></h2>
-        <div class="all-list" id="aaRecent"></div>
+
+        <div class="aa-states" id="aaStates"></div>
+        <div class="aa-results" id="aaResults"></div>
+
+        <div class="aa-section">
+          <h2 class="aa-section-title">Favorites</h2>
+          <div class="aa-results" id="aaFavs"></div>
+        </div>
+        <div class="aa-section">
+          <h2 class="aa-section-title">Recently viewed</h2>
+          <div class="aa-results" id="aaRecent"></div>
+        </div>
       </div>
 
       <!-- SOP detail view -->
@@ -2470,24 +2577,25 @@ function renderAA(){
   const lvlF = document.getElementById('aaLevelFilter').value;
   const favOnly = document.getElementById('aaFavFilter').classList.contains('active');
 
-  // populate category filter once
   const catSel = document.getElementById('aaCatFilter');
   if(catSel.options.length<=1){
     aaCats.forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c; catSel.appendChild(o); });
   }
+
+  // toggle clear button
+  const clearBtn = document.getElementById('aaClear');
+  clearBtn.classList.toggle('show', q.length>0);
 
   let res = aaData.filter(d=>{
     if(catF && d.cat!==catF) return false;
     if(lvlF && d.level!==lvlF) return false;
     if(favOnly && !aaState.favs.includes(d.article)) return false;
     if(!q) return true;
-    // expand synonyms
     let terms = [q];
     for(const k in AA_SYNONYMS){ if(q.includes(k)){ terms = terms.concat(AA_SYNONYMS[k]); } }
     const hay = (d.pg+' '+d.article+' '+(d.level||'')).toLowerCase();
     return terms.some(t=> hay.includes(t));
   });
-  // sort: favs first, then relevance
   if(q){
     res.sort((a,b)=>{
       const sa = (a.pg+' '+a.article).toLowerCase().includes(q)?1:0;
@@ -2498,43 +2606,106 @@ function renderAA(){
 
   const container = document.getElementById('aaResults');
   container.innerHTML = '';
-  if(!res.length){ container.innerHTML = '<p style="color:var(--muted)">No results. Try different keywords or import the full index.</p>'; }
-  res.forEach(d=>{
+  if(!res.length){
+    container.innerHTML = '<div class="aa-states">No results found. Try different keywords or import the full index.</div>';
+  }
+  res.forEach((d,i)=>{
     const item = document.createElement('div');
-    item.className='all-item';
+    item.className='aa-card';
+    item.style.animationDelay = (i*40)+'ms';
     const isFav = aaState.favs.includes(d.article);
-    item.innerHTML = `<div style="flex:1">
-      <div class="ai-title">${escapeHtml(d.pg)}</div>
-      <div style="font-size:.82rem;color:var(--text2);margin-top:2px">${escapeHtml(d.article)}</div>
-      <div style="margin-top:4px;display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+    const levelClass = (d.level||'').toLowerCase().replace(/[^a-z-]/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'') || 'global';
+    item.innerHTML = `<div class="aac-pg">${escapeHtml(d.pg)}</div>
+      <div class="aac-article">${escapeHtml(d.article)}</div>
+      <div class="aac-row">
         <span class="tag">${escapeHtml(d.cat)}</span>
-        ${d.level?`<span class="tag" style="font-weight:600;color:var(--accent)">${escapeHtml(d.level)}</span>`:'<span class="tag" style="color:var(--muted)">No level</span>'}
-        ${d.sop?`<a href="#/sop/${d.sop}" style="font-size:.75rem">Open SOP →</a>`:'<span style="font-size:.72rem;color:var(--muted)">No linked SOP</span>'}
-      </div>
-    </div>
-    <div style="display:flex;gap:6px">
-      <button class="icon-btn" title="Copy article name" style="width:30px;height:30px" data-copy="${escapeAttr(d.article)}"><i data-lucide="copy"></i></button>
-      <button class="icon-btn" title="Favorite" style="width:30px;height:30px" data-fav="${escapeAttr(d.article)}"><i data-lucide="${isFav?'star':'star'}" style="${isFav?'color:var(--amber);fill:var(--amber)':''}"></i></button>
-    </div>`;
+        <span class="aac-level ${levelClass}">${escapeHtml(d.level||'Unavailable')}</span>
+        ${d.sop?`<a class="aac-sop" href="#/sop/${d.sop}">Open SOP →</a>`:'<span class="aac-nosop">No linked SOP</span>'}
+        <div class="aac-actions">
+          <button class="aac-btn" title="Copy article name" data-copy="${escapeAttr(d.article)}"><i data-lucide="copy"></i></button>
+          <button class="aac-btn" title="Favorite" data-fav="${escapeAttr(d.article)}"><i data-lucide="star" style="${isFav?'color:var(--amber);fill:var(--amber)':''}"></i></button>
+        </div>
+      </div>`;
     container.appendChild(item);
   });
-  // wire copy/fav
   container.querySelectorAll('[data-copy]').forEach(b=>{
     b.addEventListener('click', async (e)=>{ e.stopPropagation(); try{ await navigator.clipboard.writeText(b.dataset.copy); toast('Article name copied'); }catch{} });
   });
   container.querySelectorAll('[data-fav]').forEach(b=>{
     b.addEventListener('click', (e)=>{ e.stopPropagation(); const art=b.dataset.fav; if(aaState.favs.includes(art)) aaState.favs=aaState.favs.filter(x=>x!==art); else aaState.favs.unshift(art); saveAA(aaState); renderAA(); renderAAFavs(); });
   });
+  // sop links
+  container.querySelectorAll('a.aac-sop').forEach(a=>{
+    a.addEventListener('click', (e)=>{ e.preventDefault(); const id=a.getAttribute('href').slice(6); if(id){ aaState.recent=[aaData.find(d=>d.sop===id)?.article||'',...aaState.recent].filter(Boolean).slice(0,12); saveAA(aaState); navigate('/sop/'+id); } });
+  });
   lucide.createIcons();
   document.getElementById('aaCountLabel').textContent = res.length + ' of ' + aaData.length + ' articles';
   document.getElementById('navAaCount').textContent = aaData.length;
 
-  // favs list
   renderAAFavs();
-  // recent
   const recentItems = aaState.recent.map(a=>aaData.find(d=>d.article===a)).filter(Boolean);
   renderAAList(document.getElementById('aaRecent'), recentItems);
+
+  // suggestions dropdown
+  updateSuggest(q);
 }
+
+function updateSuggest(q){
+  const box = document.getElementById('aaSuggest');
+  if(!q){ box.classList.remove('open'); box.innerHTML=''; return; }
+  let terms=[q]; for(const k in AA_SYNONYMS){ if(q.includes(k)) terms=terms.concat(AA_SYNONYMS[k]); }
+  const res = aaData.filter(d=>{ const hay=(d.pg+' '+d.article).toLowerCase(); return terms.some(t=>hay.includes(t)); }).slice(0,6);
+  if(!res.length){ box.classList.remove('open'); return; }
+  box.innerHTML = res.map((d,i)=>`<div class="aa-suggest-item" data-idx="${i}" data-art="${escapeAttr(d.article)}"><div><div class="asi-title">${escapeHtml(d.pg)}</div><div class="asi-cat">${escapeHtml(d.article)} · ${escapeHtml(d.level||'Unavailable')}</div></div></div>`).join('');
+  box.classList.add('open');
+  box.querySelectorAll('.aa-suggest-item').forEach(it=>{
+    it.addEventListener('click', ()=>{ document.getElementById('aaSearch').value = it.querySelector('.asi-title').textContent; box.classList.remove('open'); renderAA(); });
+  });
+}
+// clear button
+document.getElementById('aaClear').addEventListener('click', ()=>{ document.getElementById('aaSearch').value=''; document.getElementById('aaClear').classList.remove('show'); document.getElementById('aaSuggest').classList.remove('open'); renderAA(); document.getElementById('aaSearch').focus(); });
+document.getElementById('aaSearch').addEventListener('input', (e)=>{ document.getElementById('aaClear').classList.toggle('show', e.target.value.length>0); renderAA(); });
+// close suggest on outside click
+document.addEventListener('click', e=>{ if(!e.target.closest('#aaSearchWrap')) document.getElementById('aaSuggest').classList.remove('open'); });
+
+// popular chips
+const popularTerms = ['Order not delivered','Wrong product received','Refund pending','Pickup not attempted','OTP verified','Wrong size','Seal tag missing','Order cancellation'];
+const popWrap = document.getElementById('aaPopular');
+popWrap.innerHTML = '<span>Popular:</span>' + popularTerms.map(t=>`<button class="aa-popular-chip" data-term="${escapeAttr(t)}">${escapeHtml(t)}</button>`).join('');
+popWrap.querySelectorAll('.aa-popular-chip').forEach(b=>{ b.addEventListener('click', ()=>{ document.getElementById('aaSearch').value=b.dataset.term; document.getElementById('aaClear').classList.add('show'); renderAA(); }); });
+
+// particles
+const pWrap = document.getElementById('aaParticles');
+for(let i=0;i<18;i++){
+  const p=document.createElement('div'); p.className='aa-particle';
+  p.style.left = Math.random()*100+'%';
+  p.style.top = Math.random()*100+'%';
+  p.style.animationDelay = (Math.random()*6)+'s';
+  p.style.animationDuration = (4+Math.random()*4)+'s';
+  pWrap.appendChild(p);
+}
+
+// confetti on first open
+let confettiShown = sessionStorage.getItem('aaConfetti');
+function launchConfetti(){
+  if(confettiShown) return;
+  sessionStorage.setItem('aaConfetti','1');
+  const colors=['#ffffff','#fbbf24','#a78bfa','#60a5fa','#34d399'];
+  for(let i=0;i<60;i++){
+    const el=document.createElement('div'); el.className='aa-confetti-piece';
+    el.style.left = (Math.random()*100)+'vw';
+    el.style.top = '-10px';
+    el.style.background = colors[Math.floor(Math.random()*colors.length)];
+    el.style.setProperty('--x', (Math.random()*200-100)+'px');
+    el.style.setProperty('--y', (200+Math.random()*400)+'px');
+    el.style.animationDelay = (Math.random()*0.4)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(), 2000);
+  }
+}
+// trigger confetti when view shown
+const origShowAA = showAgentAssist;
+showAgentAssist = function(){ origShowAA(); launchConfetti(); };
 
 function renderAAFavs(){
   const items = aaState.favs.map(a=>aaData.find(d=>d.article===a)).filter(Boolean);
@@ -2624,7 +2795,6 @@ document.getElementById('aaExportBtn').addEventListener('click', ()=>{
 });
 
 // filters
-document.getElementById('aaSearch').addEventListener('input', renderAA);
 document.getElementById('aaCatFilter').addEventListener('change', renderAA);
 document.getElementById('aaLevelFilter').addEventListener('change', renderAA);
 document.getElementById('aaFavFilter').addEventListener('click', ()=>{ document.getElementById('aaFavFilter').classList.toggle('active'); renderAA(); });
