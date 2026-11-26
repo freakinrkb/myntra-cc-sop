@@ -6,16 +6,12 @@
 <meta name="theme-color" content="#f7f8fa" />
 <meta name="description" content="Myntra CC SOP Operating System - Delivery, Return & Refund agent workflows." />
 <title>Myntra CC SOP OS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
 <style>
 :root{
   --bg:#f7f8fa;--bg2:#ffffff;--surface:#ffffff;--surface2:#f1f3f7;--border:#e3e6ec;--border2:#d6dae2;--text:#0f172a;--text2:#334155;--muted:#64748b;--accent:#6366f1;--accent2:#8b5cf6;--accent-soft:#eef2ff;--blue:#2563eb;--green:#16a34a;--red:#dc2626;--amber:#d97706;--pink:#db2777;
   --radius:12px;--radius-lg:16px;--shadow:0 1px 2px rgba(15,23,42,.04),0 4px 12px rgba(15,23,42,.06);--shadow-lg:0 8px 24px rgba(15,23,42,.10);
-  --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+  --font:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
 }
 [data-theme="dark"]{
   --bg:#0b1020;--bg2:#111827;--surface:#151d2e;--surface2:#1e293b;--border:#2a3446;--border2:#3b4660;--text:#e5e7eb;--text2:#cbd5e1;--muted:#94a3b8;--accent:#818cf8;--accent2:#a78bfa;--accent-soft:#1e293b;--blue:#60a5fa;--green:#4ade80;--red:#f87171;--amber:#fbbf24;--pink:#f472b6;
@@ -289,30 +285,30 @@ li{margin:.25em 0}
     </div>
     <div class="nav-section">
       <h5>Workspace</h5>
-      <div class="nav-item active" data-route="/dashboard"><i data-lucide="layout-dashboard" class="icon"></i>Overview</div>
-      <div class="nav-item" data-route="/all"><i data-lucide="book-open" class="icon"></i>All SOPs<span class="count" id="navAllCount">0</span></div>
-      <div class="nav-item" data-route="/recent"><i data-lucide="clock" class="icon"></i>Recently Viewed<span class="count" id="navRecentCount">0</span></div>
-      <div class="nav-item" data-route="/bookmarks"><i data-lucide="bookmark" class="icon"></i>Bookmarked<span class="count" id="navBmCount">0</span></div>
-      <div class="nav-item" data-route="/agentassist"><i data-lucide="search-check" class="icon"></i>Agent Assist<span class="count" id="navAaCount">0</span></div>
+      <div class="nav-item active" data-route="/dashboard">Overview</div>
+      <div class="nav-item" data-route="/all">All SOPs<span class="count" id="navAllCount">0</span></div>
+      <div class="nav-item" data-route="/recent">Recently Viewed<span class="count" id="navRecentCount">0</span></div>
+      <div class="nav-item" data-route="/bookmarks">Bookmarked<span class="count" id="navBmCount">0</span></div>
+      <div class="nav-item" data-route="/agentassist">Agent Assist<span class="count" id="navAaCount">0</span></div>
     </div>
     <div class="nav-section">
       <h5>Categories</h5>
-      <div class="nav-item" data-route="/cat/delivery"><i data-lucide="truck" class="icon"></i>Delivery<span class="count" id="navDel">0</span></div>
-      <div class="nav-item" data-route="/cat/return"><i data-lucide="rotate-ccw" class="icon"></i>Return & Exchange<span class="count" id="navRet">0</span></div>
-      <div class="nav-item" data-route="/cat/refund"><i data-lucide="wallet" class="icon"></i>Refund<span class="count" id="navRef">0</span></div>
+      <div class="nav-item" data-route="/cat/delivery">Delivery<span class="count" id="navDel">0</span></div>
+      <div class="nav-item" data-route="/cat/return">Return & Exchange<span class="count" id="navRet">0</span></div>
+      <div class="nav-item" data-route="/cat/refund">Refund<span class="count" id="navRef">0</span></div>
     </div>
     <div class="nav-bottom">
-      <button class="collapse-btn" id="collapseBtn"><i data-lucide="panel-left-close" class="icon"></i> Collapse</button>
+      <button class="collapse-btn" id="collapseBtn"> Collapse</button>
     </div>
   </aside>
 
   <div>
     <div class="topbar">
-      <button class="icon-btn" id="menuBtn" style="display:none"><i data-lucide="menu"></i></button>
+      <button class="icon-btn" id="menuBtn" style="display:none"></button>
       <div class="breadcrumb" id="breadcrumb">Overview</div>
-      <div class="search-trigger" id="searchTrigger"><i data-lucide="search" style="width:16px;height:16px"></i> Search SOPs, scripts, incidents… <kbd>⌘K</kbd></div>
+      <div class="search-trigger" id="searchTrigger"> Search SOPs, scripts, incidents… <kbd>⌘K</kbd></div>
       <div class="actions">
-        <button class="icon-btn" id="themeBtn" title="Toggle theme"><i data-lucide="moon"></i></button>
+        <button class="icon-btn" id="themeBtn" title="Toggle theme"></button>
       </div>
     </div>
 
@@ -324,10 +320,10 @@ li{margin:.25em 0}
           <p>Find the right SOP in seconds. Follow documented workflows, copy scripts, and navigate between related scenarios — all from one place.</p>
         </div>
         <div class="quick-actions">
-          <button class="qa-btn" data-route="/all"><i data-lucide="list"></i> Browse all SOPs</button>
-          <button class="qa-btn" data-route="/recent"><i data-lucide="clock"></i> Recent</button>
-          <button class="qa-btn" data-route="/bookmarks"><i data-lucide="bookmark"></i> Bookmarks</button>
-          <button class="qa-btn" id="focusSearch"><i data-lucide="search"></i> Search (⌘K)</button>
+          <button class="qa-btn" data-route="/all"> Browse all SOPs</button>
+          <button class="qa-btn" data-route="/recent"> Recent</button>
+          <button class="qa-btn" data-route="/bookmarks"> Bookmarks</button>
+          <button class="qa-btn" id="focusSearch"> Search (⌘K)</button>
         </div>
         <div class="dash-grid" id="catCards"></div>
 
@@ -378,14 +374,14 @@ li{margin:.25em 0}
         <div class="aa-hero" id="aaHero">
           <div class="aa-particles" id="aaParticles"></div>
           <div class="aa-hero-inner">
-            <span class="aa-badge"><i data-lucide="sparkles"></i> JUST LAUNCHED</span>
+            <span class="aa-badge"> JUST LAUNCHED</span>
             <h1 class="aa-title">Agent Assist Finder</h1>
             <p class="aa-sub">Find the exact Agent Assist article and SA Level in seconds — while you're still on the call.</p>
             <div class="aa-search-wrap" id="aaSearchWrap">
               <div class="aa-search" id="aaSearchBox">
-                <i data-lucide="search" class="aa-search-icon"></i>
+                
                 <input id="aaSearch" type="text" placeholder="Search customer issues, processes, or Agent Assist articles…" autocomplete="off" />
-                <button class="aa-clear" id="aaClear" aria-label="Clear"><i data-lucide="x"></i></button>
+                <button class="aa-clear" id="aaClear" aria-label="Clear"></button>
                 <kbd class="aa-kbd">⌘K</kbd>
               </div>
               <div class="aa-suggest" id="aaSuggest"></div>
@@ -397,9 +393,9 @@ li{margin:.25em 0}
         <div class="aa-toolbar">
           <select id="aaCatFilter" class="aa-select"><option value="">All categories</option></select>
           <select id="aaLevelFilter" class="aa-select"><option value="">All SA levels</option><option>Item</option><option>Packet</option><option>Order</option><option>Return</option><option>Non-Order</option><option>Global</option></select>
-          <button class="aa-chip" id="aaFavFilter"><i data-lucide="star"></i> Favorites</button>
-          <button class="aa-chip" id="aaImportBtn"><i data-lucide="upload"></i> Import</button>
-          <button class="aa-chip" id="aaExportBtn"><i data-lucide="download"></i> Export</button>
+          <button class="aa-chip" id="aaFavFilter"> Favorites</button>
+          <button class="aa-chip" id="aaImportBtn"> Import</button>
+          <button class="aa-chip" id="aaExportBtn"> Export</button>
           <span class="aa-count" id="aaCountLabel"></span>
         </div>
 
@@ -938,8 +934,7 @@ state.theme = state.theme || 'light';
 function applyTheme(){
   document.documentElement.setAttribute('data-theme', state.theme);
   const btn = document.getElementById('themeBtn');
-  btn.innerHTML = state.theme==='dark' ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
-	 if(window.lucide) lucide.createIcons();
+  btn.innerHTML = state.theme==='dark' ? '' : '';
 }
 document.getElementById('themeBtn').addEventListener('click', ()=>{
   state.theme = state.theme==='dark'?'light':'dark';
@@ -979,12 +974,10 @@ Object.keys(catMeta).forEach(cat=>{
   const m = catMeta[cat];
   const d = document.createElement('div');
   d.className = 'cat-card '+cat;
-  d.innerHTML = `<div class="icon"><i data-lucide="${m.icon}"></i></div><h3>${m.name}</h3><div class="count">${catCounts[cat]}</div><div class="desc">${cat==='delivery'?'Delivery delays, missing items, IMD, status updates.':cat==='return'?'Pickup, disputing, QC pending, RID declined.':'Refunds, cancellations, ROH, WPR, defective usage.'}</div>`;
+  d.innerHTML = `<div class="icon"></div><h3>${m.name}</h3><div class="count">${catCounts[cat]}</div><div class="desc">${cat==='delivery'?'Delivery delays, missing items, IMD, status updates.':cat==='return'?'Pickup, disputing, QC pending, RID declined.':'Refunds, cancellations, ROH, WPR, defective usage.'}</div>`;
   d.addEventListener('click', ()=>navigate('/cat/'+cat));
   catCards.appendChild(d);
 });
-	 if(window.lucide) lucide.createIcons();
-
 // Frequent SOPs
 const freqIds = ['del-delay','del-imd','del-full-missing','del-disputing-delivery','ret-disputing-pickup','ret-time-taken-pickup','ref-refund-simplified','ref-roh','ref-order-cancellation','del-faster','del-order-status','ref-return-window'];
 const freqList = document.getElementById('freqList');
@@ -993,12 +986,10 @@ freqIds.forEach(id=>{
   if(!s) return;
   const item = document.createElement('div');
   item.className='freq-item';
-  item.innerHTML = `<div class="fi-icon"><i data-lucide="file-text"></i></div><div><div class="fi-title">${s.title}</div><div class="fi-cat">${catMeta[s.cat].name}</div></div>`;
+  item.innerHTML = `<div class="fi-icon"></div><div><div class="fi-title">${s.title}</div><div class="fi-cat">${catMeta[s.cat].name}</div></div>`;
   item.addEventListener('click', ()=>navigate('/sop/'+s.id));
   freqList.appendChild(item);
 });
-	 if(window.lucide) lucide.createIcons();
-
 // All list renderer
 function renderList(container, list){
   container.innerHTML='';
@@ -1007,12 +998,11 @@ function renderList(container, list){
     const item = document.createElement('div');
     item.className='all-item';
     const bm = state.bookmarks.includes(s.id);
-    item.innerHTML = `<div style="flex:1"><div class="ai-title">${s.title}</div><div class="ai-cat">${catMeta[s.cat].name}</div></div><button class="icon-btn bm-btn" title="Bookmark" style="width:28px;height:28px"><i data-lucide="${bm?'bookmark-check':'bookmark'}"></i></button>`;
+    item.innerHTML = `<div style="flex:1"><div class="ai-title">${s.title}</div><div class="ai-cat">${catMeta[s.cat].name}</div></div><button class="icon-btn bm-btn" title="Bookmark" style="width:28px;height:28px"></button>`;
     item.addEventListener('click', (e)=>{ if(e.target.closest('.bm-btn')) return; navigate('/sop/'+s.id); });
     item.querySelector('.bm-btn').addEventListener('click', (e)=>{ e.stopPropagation(); toggleBookmark(s.id); renderList(container,list); });
     container.appendChild(item);
   });
-	 if(window.lucide) lucide.createIcons();
 }
 function allSopsSorted(){ return [...sops].sort((a,b)=>a.title.localeCompare(b.title)); }
 
@@ -1082,9 +1072,9 @@ function showSOP(id){
       <span class="tag cat-${s.cat}">${catMeta[s.cat].name}</span>
     </div>
     <div class="sop-actions">
-      <button class="btn" id="bmBtn"><i data-lucide="${bm?'bookmark-check':'bookmark'}"></i> ${bm?'Bookmarked':'Bookmark'}</button>
-      <button class="btn" id="copyAllBtn"><i data-lucide="copy"></i> Copy SOP</button>
-      <button class="btn" id="backBtn"><i data-lucide="arrow-left"></i> Back</button>
+      <button class="btn" id="bmBtn"> ${bm?'Bookmarked':'Bookmark'}</button>
+      <button class="btn" id="copyAllBtn"> Copy SOP</button>
+      <button class="btn" id="backBtn"> Back</button>
     </div>`;
   // body: show only this section
   const body = document.getElementById('sopBody');
@@ -1110,8 +1100,7 @@ function showSOP(id){
   });
   document.getElementById('bmBtn').addEventListener('click', ()=>{ toggleBookmark(id); showSOP(id); });
   document.getElementById('backBtn').addEventListener('click', ()=>history.back());
-	 if(window.lucide) lucide.createIcons();
-  showView('viewSop');
+showView('viewSop');
   document.getElementById('breadcrumb').innerHTML = `${catMeta[s.cat].name} <span style="color:var(--muted)">/</span> <b>${s.title}</b>`;
   updateNavActive('/sop/'+id);
   window.scrollTo({top:0});
@@ -1278,7 +1267,6 @@ document.querySelectorAll('code').forEach(c=>{
     catch{}
   });
 });
-	 if(window.lucide) lucide.createIcons();
 </script>
 <input type="file" id="aaFileInput" accept=".tsv,.csv,.json,.txt" style="display:none" />
 <script>
@@ -1484,8 +1472,8 @@ function renderAA(){
         <span class="aac-level ${levelClass}">${escapeHtml(d.level||'Unavailable')}</span>
         ${d.sop?`<a class="aac-sop" href="#/sop/${d.sop}">Open SOP →</a>`:'<span class="aac-nosop">No linked SOP</span>'}
         <div class="aac-actions">
-          <button class="aac-btn" title="Copy article name" data-copy="${escapeAttr(d.article)}"><i data-lucide="copy"></i></button>
-          <button class="aac-btn" title="Favorite" data-fav="${escapeAttr(d.article)}"><i data-lucide="star" style="${isFav?'color:var(--amber);fill:var(--amber)':''}"></i></button>
+          <button class="aac-btn" title="Copy article name" data-copy="${escapeAttr(d.article)}"></button>
+          <button class="aac-btn" title="Favorite" data-fav="${escapeAttr(d.article)}"></button>
         </div>
       </div>`;
     container.appendChild(item);
@@ -1506,8 +1494,7 @@ function renderAA(){
     more.addEventListener('click', ()=>{ aaLimit += 24; renderAA(); });
     container.appendChild(more);
   }
-	 if(window.lucide) lucide.createIcons();
-  document.getElementById('aaCountLabel').textContent = res.length + ' of ' + aaData.length + ' articles';
+document.getElementById('aaCountLabel').textContent = res.length + ' of ' + aaData.length + ' articles';
   document.getElementById('navAaCount').textContent = aaData.length;
 
   renderAAFavs();
@@ -1706,7 +1693,6 @@ updateNavActive = function(route){
 // initial render when view shown
 </script>
 
-<script>window.addEventListener("load",()=>{if(window.lucide)lucide.createIcons();});</script>
 <script>
 document.addEventListener('DOMContentLoaded', ()=>{
   const d = document.querySelector('#source-notes details');
