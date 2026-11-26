@@ -8,7 +8,8 @@
 <title>Myntra CC SOP OS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 <style>
 :root{
@@ -275,6 +276,7 @@ li{margin:.25em 0}
 </style>
 </head>
 <body>
+<noscript><div style="padding:24px;font-family:system-ui;text-align:center">This site requires JavaScript to run. Please enable JavaScript in your browser.</div></noscript>
 <div id="readProgress"></div>
 <div class="shell">
   <aside class="sidebar" id="sidebar">
@@ -282,7 +284,7 @@ li{margin:.25em 0}
       <div class="logo">M</div>
       <div>
         <div class="name">Myntra CC SOP</div>
-        <div class="sub">Agent Operating System</div>
+        <div class="sub">Agent Operating System · v1.5</div>
       </div>
     </div>
     <div class="nav-section">
@@ -937,7 +939,7 @@ function applyTheme(){
   document.documentElement.setAttribute('data-theme', state.theme);
   const btn = document.getElementById('themeBtn');
   btn.innerHTML = state.theme==='dark' ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
-  lucide.createIcons();
+	 if(window.lucide) lucide.createIcons();
 }
 document.getElementById('themeBtn').addEventListener('click', ()=>{
   state.theme = state.theme==='dark'?'light':'dark';
@@ -981,7 +983,7 @@ Object.keys(catMeta).forEach(cat=>{
   d.addEventListener('click', ()=>navigate('/cat/'+cat));
   catCards.appendChild(d);
 });
-lucide.createIcons();
+	 if(window.lucide) lucide.createIcons();
 
 // Frequent SOPs
 const freqIds = ['del-delay','del-imd','del-full-missing','del-disputing-delivery','ret-disputing-pickup','ret-time-taken-pickup','ref-refund-simplified','ref-roh','ref-order-cancellation','del-faster','del-order-status','ref-return-window'];
@@ -995,7 +997,7 @@ freqIds.forEach(id=>{
   item.addEventListener('click', ()=>navigate('/sop/'+s.id));
   freqList.appendChild(item);
 });
-lucide.createIcons();
+	 if(window.lucide) lucide.createIcons();
 
 // All list renderer
 function renderList(container, list){
@@ -1010,7 +1012,7 @@ function renderList(container, list){
     item.querySelector('.bm-btn').addEventListener('click', (e)=>{ e.stopPropagation(); toggleBookmark(s.id); renderList(container,list); });
     container.appendChild(item);
   });
-  lucide.createIcons();
+	 if(window.lucide) lucide.createIcons();
 }
 function allSopsSorted(){ return [...sops].sort((a,b)=>a.title.localeCompare(b.title)); }
 
@@ -1108,7 +1110,7 @@ function showSOP(id){
   });
   document.getElementById('bmBtn').addEventListener('click', ()=>{ toggleBookmark(id); showSOP(id); });
   document.getElementById('backBtn').addEventListener('click', ()=>history.back());
-  lucide.createIcons();
+	 if(window.lucide) lucide.createIcons();
   showView('viewSop');
   document.getElementById('breadcrumb').innerHTML = `${catMeta[s.cat].name} <span style="color:var(--muted)">/</span> <b>${s.title}</b>`;
   updateNavActive('/sop/'+id);
@@ -1276,7 +1278,7 @@ document.querySelectorAll('code').forEach(c=>{
     catch{}
   });
 });
-lucide.createIcons();
+	 if(window.lucide) lucide.createIcons();
 </script>
 <input type="file" id="aaFileInput" accept=".tsv,.csv,.json,.txt" style="display:none" />
 <script>
@@ -1500,7 +1502,7 @@ function renderAA(){
     more.addEventListener('click', ()=>{ aaLimit += 24; renderAA(); });
     container.appendChild(more);
   }
-  lucide.createIcons();
+	 if(window.lucide) lucide.createIcons();
   document.getElementById('aaCountLabel').textContent = res.length + ' of ' + aaData.length + ' articles';
   document.getElementById('navAaCount').textContent = aaData.length;
 
