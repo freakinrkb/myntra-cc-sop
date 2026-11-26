@@ -1,0 +1,2030 @@
+[
+ {
+  "pg": "Delayed Delivery",
+  "article": "AA_Delayed Delivery - [L1, L1.5, SM]",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Delivery",
+  "article": "AA_Delayed Delivery - High Care",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Delivery",
+  "article": "Elixir_Delayed Delivery_All LOBs",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Packaging",
+  "article": "AA_Delayed Packaging - [SM]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Packaging",
+  "article": "AA_Delayed Packaging - L1.5",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Packaging",
+  "article": "AA_Delayed Packaging - High Care",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Packaging",
+  "article": "AA_Delayed Packaging - [L1 (C,E,IB)]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Shipping",
+  "article": "AA_Delayed Shipping - High Care",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Shipping",
+  "article": "AA_Delayed Shipping - L1.5",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Shipping",
+  "article": "AA_Delayed Shipping - [L1 (C,E,IB)]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Delayed Shipping",
+  "article": "AA_Delayed Shipping - [SM]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Disputing Delivery Attempt",
+  "article": "AA_Disputing Delivery Attempt - [L1 (C,E,IB), L1.5, SM]",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Disputing Delivery Attempt",
+  "article": "AA_Disputing Delivery Attempt - HighCare",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Scheduled Pick Up Availibility",
+  "article": "AA_Scheduled Pick Up Availibility - [L1 (C,E,IB),HC,SM]",
+  "level": "Return, Item, Non-Order",
+  "cat": "Return"
+ },
+ {
+  "pg": "Kotak Myntra Credit Card",
+  "article": "AA_Kotak Myntra Credit Card - General Query - [L1 (C,E,IB),HC,SM]",
+  "level": "Non-Order, Order, Packet",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Kotak Myntra Credit Card",
+  "article": "AA_Kotak Myntra Credit Card-Technical Issues - [L1 (C,E,IB),HC,SM]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Bank/Partner/Wallet Offers - Dispute Handling",
+  "article": "AA_Dispute Handling - Bank/Partner/Wallet Offers - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Reinvestigation - Missing Component",
+  "article": "AA_Reinvestigation Missing Component - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Incorrectly marked delivered",
+  "article": "AA_Incorrectly marked delivered - [SM]",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Incorrectly marked delivered",
+  "article": "AA_Incorrectly marked delivered - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Reinvestigation - Incorrectly marked delivered",
+  "article": "AA_Re-investigation Incorrectly Marked Delivered - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Courier asking extra money",
+  "article": "AA_Courier asking extra money - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "General ICB Queries",
+  "article": "AA_General ICB Queries - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "ICB Dispute - Ret/Pickup related",
+  "article": "AA_ICB - Dispute (Wrong Size-Post Return Pickup) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "ICB Dispute - Ret/Pickup related",
+  "article": "AA_ICB-Dispute (No Pick & Approved Returns related) - Global (All LOBs)",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "ICB Dispute - Other",
+  "article": "AA_ICB - Dispute (Other Disputes) - Global (All LOBs)",
+  "level": "Packet, Item, Order, Return",
+  "cat": "General"
+ },
+ {
+  "pg": "Convenience Charges Queries",
+  "article": "AA_Platform charges General query - Global (All LOBs)",
+  "level": "Order, Non-order",
+  "cat": "Return"
+ },
+ {
+  "pg": "Convenience Charges Dispute",
+  "article": "AA_Convenience charges Dispute - Global (All LOBs)",
+  "level": "Order, Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Return Fee Queries",
+  "article": "AA_Return fee enquiry - Global (All LOBs)",
+  "level": "Order, Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Return Fee Dispute/Goodwill",
+  "article": "AA_Return fee goodwill - Global (All LOBs)",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Return Fee Dispute/Goodwill",
+  "article": "AA_Return fee dispute - Global (All LOBs)",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Price Fluctuation (Pre/Post-Purchase)",
+  "article": "AA_Price Validation - Fluctuation - Global (All LOBs)",
+  "level": "Item, Non-order",
+  "cat": "General"
+ },
+ {
+  "pg": "Active/Declined RID || cx Disputing/Non-Disputing on SDA attempt",
+  "article": "AA_Incorrect Return On-Hold - [L1 (C,E,IB),HC,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Active/Declined RID || cx Disputing/Non-Disputing on SDA attempt",
+  "article": "AA_Active RID | Customer disputing on the Pickup Attempt - Global (All LOBs)",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Active/Declined RID || cx Disputing/Non-Disputing on SDA attempt",
+  "article": "AA_Active RID | Customer not-disputing on the Pickup Attempt - Global (All LOBs)",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Active/Declined RID || cx Disputing/Non-Disputing on SDA attempt",
+  "article": "AA_Declined RID | Customer disputing on the Pickup Attempt - Global (All LOBs)",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Active/Declined RID || cx Disputing/Non-Disputing on SDA attempt",
+  "article": "AA_Declined RID | Customer not-disputing on the Pickup Attempt - Global (All LOBs)",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Disputing Pickup Attempt - High Care",
+  "article": "AA_Disputing Pickup Attempt [High Care]",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Time taken for pickup",
+  "article": "AA_Time taken for pickup - Global (All LOBs)",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Delayed pickup",
+  "article": "AA_Delayed pickup - Global (All LOBs)",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Delayed pickup",
+  "article": "Elixir_Delayed Pickup_All LOBs",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Extra/Wrong Item Picked up",
+  "article": "AA_Extra/Wrong Item Picked up - Non-Myntra Item/Myntra Free Item - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return, Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Extra/Wrong Item Picked up",
+  "article": "AA_Extra/Wrong Item Picked up - Other Scenarios - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Extra/Wrong Item Picked up",
+  "article": "AA_Extra/Wrong Item Picked up - Ret. B is picked up along with/instead of the Ret. A/diff item is picked - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Picked Up Refund Pending (RID Active + RID not picked as per SA) (Task/Non-Task)",
+  "article": "AA_Picked Up Refund Pending_Global [EK_E2E/FKL/EK Logistics {Open Box}]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Picked Up Refund Pending (RID Active + RID not picked as per SA) (Task/Non-Task)",
+  "article": "AA_Picked Up Refund Pending_Global [3PL & Closed Box]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Picked Up Refund Pending (RID Declined + RID picked as per SA)",
+  "article": "AA_Picked Up Refund Pending_RID Declined_Global",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Enable/Disable Notification",
+  "article": "AA_Myntra Account Enable/Disable Notification - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Return Cancellation Request/Complaint",
+  "article": "AA_Return Cancellation Request-[L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "SDA Feedback (Non-critical)/(Critical || W/C/M Safety)",
+  "article": "AA_Critical SDA Feedback (Customer Safety - men/women/children) - Global (All LOBs)",
+  "level": "Packet, Return",
+  "cat": "General"
+ },
+ {
+  "pg": "SDA Feedback (Non-critical)/(Critical || W/C/M Safety)",
+  "article": "AA_Non-critical SDA Feedback - Global (All LOBs)",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Customer Support/Agent Feedback",
+  "article": "AA_Customer Support Agent Feedback - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "WH/Seller Feedback (Non-critical)/(Critical)",
+  "article": "AA_Non-Critical - WH/Seller Feedback - Global (All LOBs)",
+  "level": "Packet, Return",
+  "cat": "General"
+ },
+ {
+  "pg": "WH/Seller Feedback (Non-critical)/(Critical)",
+  "article": "AA_Critical WH/Seller Feedback - Global (All LOBs)",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Appreciation/Positive Feedback for SDA",
+  "article": "AA_Appreciation/Positive Feedback for SDA - Global (All LOBs)",
+  "level": "Packet, Return",
+  "cat": "General"
+ },
+ {
+  "pg": "Feedback (Content/MRP/Catalog/PDP/Sizing issues)",
+  "article": "AA_Feedback - Content - Global (All LOBs)",
+  "level": "Item, Return, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Feedback (Content/MRP/Catalog/PDP/Sizing issues)",
+  "article": "AA_Feedback Catalog/PDP/Sizing issues - Global (All LOBs)",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Feedback (Content/MRP/Catalog/PDP/Sizing issues)",
+  "article": "AA_Feedback - MRP - Global (All LOBs)",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Unable to place order (RTO Impact/Others)",
+  "article": "AA_Unable to place order - RTO Impact - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Unable to place order (RTO Impact/Others)",
+  "article": "AA_Unable to place order - Global (All LOBs)",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Job/Sponsor/Model/Franchis/Influencer/Fashion Blogger/PR/Sell with US",
+  "article": "AA_Job/Sponsor/Model/Franchis/Influencer/Fashion Blogger/PR - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "LOB/Tool Specific SOPs/Department-wise script",
+  "article": "AA_LOB/Tool Specific SOPs - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "LOB/Tool Specific SOPs/Department-wise script",
+  "article": "AA_Department-wise script - Global (All LOBs)",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Phone Number/Address Change Request",
+  "article": "AA_Phone Number/Address Change/Size or Color change[Post placing order] Request - Global (All LOBs)",
+  "level": "Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Personal Loan",
+  "article": "AA_Personal Loan - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Delivery/Payment Options",
+  "article": "AA_Delivery/Payment Options - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Unable to use coupon",
+  "article": "AA_Unable to use coupon - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Goodwill - Coupon Process",
+  "article": "AA_Goodwill Coupon process - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Packet",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Coupon Policy (cx awareness)",
+  "article": "AA_Customer awareness_coupon policy - Global (All LOBs)",
+  "level": "Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Ex-Only/No-Ret Coupon (Policy)",
+  "article": "AA_Exchange Only Coupon /Noreturn Coupon policy - Global (All LOBs)",
+  "level": "Order, Non-Order",
+  "cat": "Return"
+ },
+ {
+  "pg": "Ex-Only/No-Ret Coupon (Complaint)",
+  "article": "Exceptional Handling for \"No Return coupon or Exchange Only Items\"- All LOBs",
+  "level": "Order, Non-Order, Packet, Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Giftwrap - Queries/Disputes",
+  "article": "AA_Gift Wrap Queries/Dispute - [L1(C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "EORS/BFF",
+  "article": "AA_EORS/BFF - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Monthly Sale Events",
+  "article": "AA_Monthly Sale Events - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Flower Delivery (General)",
+  "article": "AA_Flower delivery - General Queries/Complaints - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order, Order, Packet, Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Flower Delivery (Post Delivery issues)",
+  "article": "AA_Flower delivery - Post delivery issues - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Invoice Request",
+  "article": "AA_Myntra Account Invoice Request - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Add/Modification of Email id /Mobile no#",
+  "article": "AA_Myntra account (MyMyntra)-Add/Modification of Email id /Mobile number - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "App Issue (Throttling/Sale Traffic)",
+  "article": "AA_Myntra App Issue-Unable to place order Cart Payment issue - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "App Issue (Unable pay via Myntra Credit/Online)",
+  "article": "AA_Myntra App Issue-Unable pay via Myntra Credit/Online - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "App Issue (Unable to select size for exchange)",
+  "article": "AA_Myntra App Issue-Unable to select the size while creating exchange - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "App Issue (Return/Exchange/Pick up option unavailable)",
+  "article": "AA_Myntra App Issue-Return/Exchange/Pick up option is not available - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "App Issue (APP Crash/Latency/Website)",
+  "article": "AA_Myntra App Issue-APP Crash/Latency/Website Issue - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "App Issue (Any app feature not available)",
+  "article": "AA_Myntra App Issue-Any of the app feature not available - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "PDP Review Incentivization Programme",
+  "article": "AA_Myntra Account-PDP Review Incentivization program & Review Deletion request handling SOP-Global(All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Device Login Restriction",
+  "article": "AA_Myntra Account - Device Login Restriction - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "MRP Mismatch",
+  "article": "AA_MRP Mismatch (Flagged PIN - A1/A2) - [L1(C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "MRP Mismatch",
+  "article": "AA_MRP Mismatch (Flagged PIN - A3/A4) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "MRP Mismatch",
+  "article": "AA_MRP Mismatch (Un-Flagged PIN) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Size received",
+  "article": "AA_Wrong Size (RID created/non-created || Flagged || A1/A2) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Size received",
+  "article": "AA_Wrong Size (RID O.H. || Flagged || A1/A2) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Size received",
+  "article": "AA_Wrong Size (received TWICE/More) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Size received",
+  "article": "AA_Wrong Size (Active RID O.H./Dec RID was O.H. || Flagged || A3/A4) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Size received",
+  "article": "AA_Wrong Size (Un Flagged) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Color received",
+  "article": "WPR_Wrong Color or Pattern Received",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Color received",
+  "article": "AA_Wrong Color received - Assorted - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Color received",
+  "article": "AA_Wrong Color received - Non_Assorted (Flagged Pincode || A1/A2) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Color received",
+  "article": "AA_Wrong Color received - Non_Assorted (Flagged Pincode || A3/A4) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Color received",
+  "article": "AA_Wrong Color received - Non_Assorted (Un-Flagged Pincode) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Price Tag Missing (Exchange)",
+  "article": "AA_ Reactive Price tag missing (for exchange) - (L1(C,E,IB,HC,SM,L1.5)",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Price Tag Missing (Exchange)",
+  "article": "AA_Price tag missing for proactive exchange - ALL LOBs - Including L2",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Price Tag Missing (Return)",
+  "article": "AA_Proactive Price tag missing (for return) - (L1(C,E,IB,HC,SM,L1.5)",
+  "level": "Item, Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Price Tag Missing (Return)",
+  "article": "AA_ Reactive Price tag missing (for return) - (L1(C,E,IB,HC,SM,L1.5)",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Return O.H. scenario(s) (Seal Tags included)",
+  "article": "AA_Ret. O.H. scenarios (Including Seal-Tag) - [Flagged PIN || A3, A4] - Ret Created/Not-Yet-Created - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Return O.H. scenario(s) (no Seal Tags)",
+  "article": "AA_Return O.H. scenario(s) - [Flagged PIN A1, A2] - RID Created/Not Yet Created - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Magnetic Tag",
+  "article": "AA_Product received with Magnetic Tag - Global (All LOBs)",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Health and Safety",
+  "article": "AA_Health and Safety - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "OBD - Queries",
+  "article": "AA_OBD_General Query - Global (All LOBs)",
+  "level": "Item, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "OBD - Missing Component (Decline)",
+  "article": "AA_OBD_ Missing Component (Full/Partial)-Decline - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "OBD - Missing Component (Approve)",
+  "article": "AA_OBD_ Missing Component (Full/Partial)-Approve - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "OBD - Damaged product",
+  "article": "AA_OBD_Damaged product received - [L1(E,IB,HC,L1.5,C,SM)]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "OBD - Wrong product",
+  "article": "AA_OBD - Wrong product received- [L1(E,IB,HC,L1.5,C,SM)]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "BPC - Post Return",
+  "article": "AA_BPC_Issue [Post Ret. creation] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "BPC - Pre Return/Post Usage",
+  "article": "AA_BPC [Post Usage Scenario] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "BPC - Warranty Concern",
+  "article": "AA_BPC [Warranty Concern] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Common Decline cases (BPC/Gourmet/H.S.)",
+  "article": "AA_Common Decline (BPC/Gourmet/H.S) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Gourmet/H.S. Issue (Post Return)",
+  "article": "AA_Gourmet/H.S._Issue [Post Return creation] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Gourmet/H.S. Issue (Pre Return)",
+  "article": "AA_Gourmet/H.S_Issue [Pre Return creation] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Gourmet/H.S. (Post Usage)",
+  "article": "AA_Gourmet/H.S. [Post Usage Scenario] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Gourmet/H.S. (Warranty)",
+  "article": "AA_Gourmet/H.S [Warranty Concern] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Brand SOP (BPC/Gourmet/H.S.)",
+  "article": "AA_Brand SOP (BPC/Gourmet/H.S) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Fraudulent - Online Txn",
+  "article": "AA_fraudulent activity_Online Txn - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order, Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Fake Job Offers/Prize Offers",
+  "article": "AA_fake job offers/Prize offers - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Fraudulent - Phishing/Anydesk App",
+  "article": "AA_Phishing/Anydesk app fraud - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Self-Ship Policy and Returns-Desk details",
+  "article": "AA_Self ship Policy and Return desk details - Global (All LOBs)",
+  "level": "Item, Order, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Self-Ship (No update from WH)",
+  "article": "AA_Selfship - No update from WH - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Self-Ship (courier receipt update)",
+  "article": "AA_Selfship-courier receipt update - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Self-Ship (courier charges)",
+  "article": "AA_Selfship - courier charges - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Ret/Ex Policy Guidelines",
+  "article": "AA_Guidelines - Return/Exchange Policy - Global (All LOBs)",
+  "level": "Item, Non-Order, Return, Order",
+  "cat": "Return"
+ },
+ {
+  "pg": "Self-Serve Ret/Ex creation on App/Website",
+  "article": "AA_Self-Serve Ret/Exc creation on App/Website - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Ret/Ex creation on SA (Outside window)",
+  "article": "AA_Ret/Exc creation on SA - Outside Window - [ALL LOBs]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Ret/Ex creation on SA (Non-Ret/Ex item)",
+  "article": "AA_Ret/Ex creation on SA | Non-Ret/Ex item within R/E window - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Pickup Address change Request",
+  "article": "AA_Change of Pickup Address - Global (All LOBs)",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Change request Policy - (Refund Mode/Types of Return)",
+  "article": "AA_Policy for Changing the Refund Mode, Types of Return - Global (All LOBs)",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Reshipment (ML/FKL)",
+  "article": "AA_Reshipment of Ret. Issue || ML/FKL - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Reshipment (3PL/Selfship)",
+  "article": "AA_Reshipment of Ret. Issue || 3PL/Selfship - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "QA failed by DC/WH",
+  "article": "AA_QA failed by DC/WH for self-ship returns - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return, Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Extra Item Delivered",
+  "article": "AA_Extra Item Delivered - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Order, Non-Order",
+  "cat": "Return"
+ },
+ {
+  "pg": "TWID Reward Points",
+  "article": "TWID Rewards Points - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Order Status Update (Packed to Delivered)",
+  "article": "AA_Order Status Update - Packed to Delivered - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Order Status Update (Shipped to Delivered)",
+  "article": "AA_Order Status Update - Shipped to Delivered - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Order Status Update (RTO/Lost to Delivered)",
+  "article": "AA_Order Status Update - RTO/Lost to Delivered - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Order Status Update (Cancelled to Delivered)",
+  "article": "AA_Order status updated as Cancelled, but Delivered - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Tag Loop (Proactive Return - Damaged/Detached)",
+  "article": "AA_Proactive Return || Tag Loop Damaged/Detached-[L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Proactive Return - Detached Not Broken)",
+  "article": "AA_Proactive Return || Detached Tag Loop Delivered (Not Broken) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Proactive Return - Damaged While Removing)",
+  "article": "AA_Proactive Return || Product Damaged While Removing the Tag Loop - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Proactive Return - Unable to Try)",
+  "article": "AA_Proactive Return || Unable to Try Product Due to Tag Loop - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Proactive Return - Wrong/Unreadable)",
+  "article": "AA_Proactive Return || Tag Loop Wrong(Mismatch)/Unreadable - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Return - Damaged/Detached/Missing)",
+  "article": "AA_Reactive Return || Tag Loop Damaged/Detached/Missing - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Return - Detached Not Broken)",
+  "article": "AA_Reactive Return || Detached Tag Loop Delivered (Not Broken) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Return - Wrong/Unreadable)",
+  "article": "AA_Reactive Return || Tag Loop Wrong(Mismatch)/Unreadable - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Return - Damaged While Removing)",
+  "article": "AA_Reactive Return || Product Damaged While Removing the Tag Loop - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Return - Unable to Try)",
+  "article": "AA_Reactive Return || Unable to try product due to Tag Loop - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Proactive Exchange - Damaged/Detached/Missing)",
+  "article": "AA_ Proactive Exchange || Tag Loop Damaged/Detached/Missing - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Proactive Exchange - Unable to Try)",
+  "article": "AA_ Proactive Exchange || Unable to try product due to Tag Loop - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Proactive Exchange - Detached Not Broken)",
+  "article": "AA_ Proactive Exchange || Detached Tag Loop Delivered (Not Broken) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Exchange - Damaged/Detached/Missing)",
+  "article": "AA_ Reactive Exchange || Tag Loop Damaged/Detached/Missing - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Exchange - Unable to Try)",
+  "article": "AA_ Reactive Exchange || Unable to try product due to Tag Loop - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Reactive Exchange - Detached Not Broken)",
+  "article": "AA_ Reactive Exchange || Detached Tag Loop Delivered (Not Broken) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Exchange - Wrong/Unreadable)",
+  "article": "AA_Exchange || Tag Loop Wrong(Mismatch)/Unreadable - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Tag Loop (Exchange - Damaged While Removing)",
+  "article": "AA_Exchange || Product damaged while removing the Tag Loop - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Seal Tags/Tag Loop (Seal tag Missing) for Return",
+  "article": "AA_Seal tag missing Pro-active (for return) [All customers A1, A2 & A3 ] - (L1(C,E,IB,HC,SM,L1.5)",
+  "level": "Item, Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Follow-up SOP (Parent Task Non-ROH)",
+  "article": "AA_Parent Task [Non-ROH] - Follow-UP SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "General"
+ },
+ {
+  "pg": "Follow-up SOP (Parent Task ROH)",
+  "article": "AA_Parent Task [ROH] Follow-UP SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Follow-up SOP (Reinvestigation Task)",
+  "article": "AA_Reinvestigation Task - Follow-UP SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "General"
+ },
+ {
+  "pg": "Reinvestigation (Used)",
+  "article": "AA_USED P.R. [Re-investigation] new_IMVT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "General"
+ },
+ {
+  "pg": "Reinvestigation (Wrong)",
+  "article": "AA_WRONG P.R. [Re-investigation] new_IMVT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Reinvestigation (Damaged)",
+  "article": "AA_DAMAGED P.R. [Re-investigation] new_IMVT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Reinvestigation (Price Tag Missing)",
+  "article": "AA_Pice Tag Missing [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Reinvestigation (Seal Tag/Tag Loop)",
+  "article": "AA_Seal Tag/Tag Loop [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Reinvestigation (Defective post usage)",
+  "article": "AA_Defective post usage [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Reinvestigation (Open Box Delivery)",
+  "article": "AA_Open Box Delivery [Re-investigation] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Reinvestigation - High Care",
+  "article": "AA_Reinvestigation ROH [HC]",
+  "level": "Item",
+  "cat": "General"
+ },
+ {
+  "pg": "High Care (Invoice Interchange)",
+  "article": "AA_Invoice Interchange - [High Care]",
+  "level": "Item",
+  "cat": "General"
+ },
+ {
+  "pg": "High Care (EOH)",
+  "article": "AA_EOH - [High Care]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "High Care (ROH Non-WPR)",
+  "article": "AA_ROH: Non-WPR - [High Care]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "High Care (ROH WPR)",
+  "article": "AA_ROH: WPR - [High Care]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Incorrect Return Reason Selected but SDA put On-Hold correctly",
+  "article": "WPR_Customer has selected incorrect reason while creating the return initially",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Exchange on Hold (L2 approved ROH but not Exchange - ML/FKL)",
+  "article": "AA_Exchange on Hold Guidelines || L2 Approved the ROH Task for Exchange order BUT did NOT approve the Exchange order - ML/FKL - [L1 (C,E,IB),SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Exchange on Hold (L2 approved ROH but not Exchange - 3PL)",
+  "article": "AA_Exchange on Hold Guidelines || L2 Approved the ROH Task for Exchange order BUT did NOT approve the 3PL Exchange order - [L1 (C,E,IB),SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Exchange on Hold (WPR)",
+  "article": "Guided Exchange WPR- Exchange not created || Exchange on hold || Incorrect reason selected while creating exchange || noreturn coupon used || Previous exchange ID is cancelled or RTO'ed || Exchange only item ALL LOBs (Including L2)",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "UPR/DPR (Exchange not created/incorrect/on-hold)",
+  "article": "UPR/DPR - Exchange not created/created incorrect exchange /exchange on-hold - ALL LOBs (Including L2)",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Customer Initiated/Requested Order Cancellation",
+  "article": "AA_Customer Initiated/Requested Order Cancellation - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra Initiated Cancellation",
+  "article": "AA_Myntra Initiated Cancellation (MIC) Scenarios - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet",
+  "cat": "General"
+ },
+ {
+  "pg": "Gold Coin/ Fine Jewellery",
+  "article": "AA_Gold Coin - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "General"
+ },
+ {
+  "pg": "Gold Coin/ Fine Jewellery",
+  "article": "AA_Fine Jewellery - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra Account password issues",
+  "article": "AA_Myntra Account-Password Reset Link - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra Account password issues",
+  "article": "AA_Myntra Account- Password reset failed - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra Account password issues",
+  "article": "AA_Myntra Account-Post Password Reset issues - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra Account password issues",
+  "article": "AA_Myntra Account-Forgot Password - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra account issues",
+  "article": "AA_Myntra Account-Do not remember email address/password - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Defective post usage",
+  "article": "AA_Defective Post Usage [BPC] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Defective post usage",
+  "article": "AA_Defective Post Usage [Wearables, SAFARI trolleys & Backpacks] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Defective post usage",
+  "article": "AA_Defective Post Usage [Nike] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Defective post usage",
+  "article": "AA_Defective Post Usage [Other] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Re-order SOP",
+  "article": "AA_Re-order - [L1(C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Item, Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Customer Awareness & Anxiety",
+  "article": "AA_Customer Awareness & Anxiety - Global (All LOBs)",
+  "level": "Packet, Item",
+  "cat": "General"
+ },
+ {
+  "pg": "Wrong Product Received (WPR)",
+  "article": "WPR_Customer Guided to Create Return",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Product Received (Invoice interchange)",
+  "article": "WPR_Invoice interchange-Customer has got wrong product and there is a mismatch in the quantity",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Product Received (Non-returnable/Exchangeable)",
+  "article": "WPR_[Non-returnable/Exchangeable (R/E) item || Noreturn/exchange-only coupon used || Return/ exchange created within return window but the return is decline and R/E period is crossed now || Cx is unable to create return]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Product Received (SDA failed to upload images)",
+  "article": "SDA failed to upload the images-Cx claims wrong product is delivered/ Cx claim correct product is delivered || As per the SDA uploaded image, the wrong product was handed over to the SDA || As per the SDA uploaded image, the product matches with PDP || WPR approved return is on hold",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Product Received (WPR Auto Task Closed)",
+  "article": "WPR/Price-Tag/Seal-tag Missing_Auto Task Closed - Resolved by Backend",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Wrong Product Received (WPR Auto Task Awaiting)",
+  "article": "WPR/Price-Tag/Seal-tag Missing _Auto task is created Awaiting Backend Resolution",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Free Item Wrong Delivered",
+  "article": "AA_Free Item Delivered Wrong - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Fake Product Received",
+  "article": "AA_Fake Product Received (Logo/Brand Spelling/Brand Packaging/Quality) - GLOBAL (All LOBs)",
+  "level": "Item, Return",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Used/Damaged Product Received",
+  "article": "UPR/DPR - Return is not created/created incorrect return/return on-hold/non returnable - ALL LOBs (Including L2)",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Free Item Used/Damaged Delivered",
+  "article": "AA_Free Item Delivered Used/Damaged- [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Myntra Insider Programme",
+  "article": "AA_Myntra Insider Loyalty Program & Dispute handling-[L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Self ship dispute",
+  "article": "AA_Self-ship Dispute - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Declined Order (Refund)",
+  "article": "AA_Declined Orders | [D=Success & V=Failure] - Global (All LOBs)",
+  "level": "Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Declined Order (Refund)",
+  "article": "AA_Declined Orders | [D=Success/V=Not Executed] - Global (All LOBs)",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Declined Order (Refund)",
+  "article": "AA_Declined Orders | [D=3DS-Redirect] - Global (All LOBs)",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Declined Order (Refund)",
+  "article": "AA_Declined Orders | [D/V=<Fail/Fail> or <Success/Pending> or <no-clarity/pps log>] - Global (All LOBs)",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Declined Order (Refund)",
+  "article": "AA_Declined Orders | [D=Fail & V=Void Not executed] - Global (All LOBs)",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Declined Order (Refund)",
+  "article": "AA_Declined Orders | [D/V=Success] - Global (All LOBs)",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Preprocessed Order (Refund)",
+  "article": "AA_Preprocessed Orders - [Debit/Void != Success] - Global (All LOBs)",
+  "level": "Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "FRAUD Orders (Refund)",
+  "article": "AA_FRAUD Orders - [Cx's Bank/Wallet is Used] - Global (All LOBs)",
+  "level": "Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Order Placed but NOT visible on SA (Refunds)",
+  "article": "AA_Order Placed but NOT visible on SA - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] <CC/DC/UPI> RID (Refund)",
+  "article": "AA_OR [PPS_Success] <CC/DC/UPI> RID - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] <CC/DC/UPI> RID (Refund)",
+  "article": "AA_OR [PPS_Success] <CC/DC/UPI> RID - outside TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] Canc. OID - Within TAT (Refund)",
+  "article": "AA_OR [PPS_Success] <CC/DC/UPI> Canc. OID - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Packet",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] Canc. OID - Outside TAT (Refund)",
+  "article": "AA_OR [PPS_Success] <CC/DC/UPI> Canc. OID - outside TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] <Wallets> RID (Refund)",
+  "article": "AA_OR [PPS_Success] <Wallets> RID - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] <Wallets> RID (Refund)",
+  "article": "AA_OR [PPS_Success] <Wallets> RID - outside TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] <Wallets> Canc. OID Within TAT (Refund)",
+  "article": "AA_OR [PPS_Success] <Wallets> Canc. OID - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Packet",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR [PPS_Success] <Wallets> Canc. OID Outside TAT (Refund)",
+  "article": "AA_OR [PPS_Success] <Wallets> Canc. OID - outside TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR - Cancellation Refund - Tx Pending",
+  "article": "AA_OR | Tx_Pending | Cancelled Order - [L1 (C,E,IB),HC,SM,L1.5",
+  "level": "Packet, Order, Item",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR Return Related Refund - Tx Pending",
+  "article": "AA_OR | Tx_Pending | Return - [L1 (C,E,IB),HC,SM,L1.5",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR - Cancellation Refund - Tx Failure/No PPS",
+  "article": "AA_OR [Tx_Failure/No PPS Log] Cancelled Order [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Order, Item",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR Return Related Refund - Tx Failure/No PPS",
+  "article": "AA_OR [Tx_Failure/No PPS Log] Return [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Bank Details Updation SOP (Refund)",
+  "article": "AA_Bank Details Updation SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Item, Order, Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OR Source account closed SOP (Refund)",
+  "article": "AA_OR Source account closed SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "COD/NEFT Refund SOP (Refund)",
+  "article": "AA_COD/NEFT Refund SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Global",
+  "cat": "Refund"
+ },
+ {
+  "pg": "NEFT/IMPS [PPS_Success/Pending/Failure] RID (Refund)",
+  "article": "AA_NEFT/IMPS [PPS_Success] RID - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "NEFT/IMPS (UTR/RRN) Dispute (Refund)",
+  "article": "AA_NEFT/IMPS (UTR/RRN) Dispute - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Bank Accounts Linkage (Refund)",
+  "article": "AA_Myntra Bank Accounts Linkage - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Global",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Goodwill request ICB - Myntra credits - Order Level (Refund)",
+  "article": "AA_Goodwill request ICB - Myntra credits - Order Level - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Item",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Goodwill request ICB - Myntra credits - Return Level (Refund)",
+  "article": "AA_Goodwill request ICB - Myntra credits - Return Level - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Item, Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Return (Success)",
+  "article": "AA_MC [PPS Success] Return - [L1(C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Return (Pending within TAT)",
+  "article": "AA_MC [PPS_Pending] Return - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Return (Pending outside TAT)",
+  "article": "AA_MC [PPS_Pending] Return - outside TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Return (Fail within TAT)",
+  "article": "AA_MC [PPS_Fail/NA/No PPS] RID - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Return (Fail outside TAT)",
+  "article": "AA_MC [PPS_Fail/NA/No PPS] RID - outside TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Cancellation (Success)",
+  "article": "AA_MC [PPS_Success] Canc. Order - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Cancellation (Pending within TAT)",
+  "article": "AA_MC [PPS_Pending] Canc. Order - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Cancellation (Pending outside TAT)",
+  "article": "AA_MC [PPS_Pending] Canc. Order - outside TAT (L1/L1.5/HC/SM)",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Cancellation (Fail within TAT)",
+  "article": "AA_MC [PPS_Fail/NA/No PPS] Canc. Order - within TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Myntra Credits Cancellation (Fail outside TAT)",
+  "article": "AA_MC [PPS_Fail/NA/No PPS] Canc. Order - Outside TAT - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Gifcard order stuck in WIP/GC not received",
+  "article": "AA_Gifcard order stuck in WIP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Unable to use Gifcard (Refund)",
+  "article": "AA_Unable to use Gifcard - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Item",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Fraud Order MC (Refund)",
+  "article": "AA_Fraud Order MC/COD- [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Refund Follow up SOP (Refund)",
+  "article": "AA_Refund Tasks follow-up SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Item, Order, Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "OTP based delivery",
+  "article": "AA_OTP Based Deliveries - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Out of Delivery Area (ODA)",
+  "article": "AA_Out of Delivery Area (ODA) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Seller issue",
+  "article": "AA_Seller Issue Reported - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Cx data principle",
+  "article": "AA_Customer Data Principle Rights - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Advertisement & legal issue",
+  "article": "AA_Advertisement and Legal Issues - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Faster/schedule delivery",
+  "article": "AA_Faster/Scheduled Delivery - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Order, Non-Order",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Throttling/Sale traffic",
+  "article": "AA_MyntraAppIssue-Throttling/Sale traffic - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Full item Missing (Task Creation SOP)",
+  "article": "AA_Full Item Missing - Complaint - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Partial item Missing (Task Creation SOP)",
+  "article": "AA_Partial Item Missing - Complaint - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Full & Partial Paid Item missing component task available - Task Follow-up SOP",
+  "article": "AA_Full &Partial Paid Item Missing Component Task Available/Followup SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Free item missing",
+  "article": "AA_Missing component - Free item missing - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Myntra account temporary blocked",
+  "article": "AA_Myntra Account-Temporary Blocked - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra account inactive locked",
+  "article": "AA_Myntra Account-Inactive Locked - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Unable to login to Myntra account (non-task)",
+  "article": "AA_Myntra Account-Unable to login using either Mbl # or \"A/c login Credentials\"- [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Unable to login task creation SOP",
+  "article": "AA_Myntra Account-Unable to login - Task Creation SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Blacklisted account",
+  "article": "AA_Unable to Login [Blacklisted] - [L1 (C,E,IB),HC,L1.5, SM]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra account deactivated",
+  "article": "AA_Unable to Login [Not BL - but Deactivated] - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Cx initiated Myntra account deactivation/deletion",
+  "article": "AA_Cx wants to Delete/Deactivate Myntra acc -[L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "OTP/2FA issue",
+  "article": "AA_Myntra Account-OTP Issue/Two factor Authentication & 2FA OTP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Unable to verify OTP",
+  "article": "AA_Myntra Account-Unable to verify OTP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Supercoin Redemption OTP issue",
+  "article": "AA_Myntra Account Supercoin Redemtion OTP issue - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Myntra account no access with reg.phone number",
+  "article": "AA_Myntra Account-No Access with Reg.phone# or emaild- [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Sell with us",
+  "article": "AA_ Sell with US - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Myntra Account Influencer",
+  "article": "AA_Myntra Account-Influencer Account/Creator Profile Programme - Global (All LOBs)",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Dope order",
+  "article": "AA_DOPE Orders - Global (All LOBs)",
+  "level": "Packet, Order, Item",
+  "cat": "General"
+ },
+ {
+  "pg": "Gift card related",
+  "article": "AA_Gift Card not received - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Order",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Gift card related",
+  "article": "AA_Gift Card Order stuck in Processing - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Gift card related",
+  "article": "AA_Unable to add GC - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Gift card related",
+  "article": "AA_GC used by someone - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Gift card related",
+  "article": "AA_GC expiry extention - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "NEFT/IMPS [PPS-pending/tx failure]",
+  "article": "AA_NEFT/IMPS [PPS_Pending] RID <RRN_PendingCxAction/BankAccUpdated> - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "NEFT/IMPS [PPS-pending/tx failure]",
+  "article": "AA_NEFT/IMPS [PPS_Pending] RID <RRN_Pending/Processing/INIT/No RRN> - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "NEFT/IMPS [PPS-pending/tx failure]",
+  "article": "AA_NEFT/IMPS [PPS- Tx_Failure] RID - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Nike Order Cancellation",
+  "article": "AA_MIC - Nike Order Cancellation - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Active RID/Exchange",
+  "article": "AA_Active Return/Exchange available - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "Shipped to RTO - ML/FKL/3PL",
+  "article": "AA_Shipped to RTO - ML & FKL - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Shipped to RTO - ML/FKL/3PL",
+  "article": "AA_Shipped to RTO - 3PL - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "ARN dispute - Order canceled",
+  "article": "AA_ARN Dispute (Order canceled refund) SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "Refund"
+ },
+ {
+  "pg": "ARN dispute - Return refund",
+  "article": "AA_ARN Dispute (Return refund) SOP - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Return",
+  "cat": "Refund"
+ },
+ {
+  "pg": "FWD Pass (Inquiry)",
+  "article": "AA_FWD Pass - Inquiry - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order, Order, Item",
+  "cat": "General"
+ },
+ {
+  "pg": "FWD Pass (Cancel membership & Refund)",
+  "article": "AA_FWD Pass - Cancel membership & Refund - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Refund"
+ },
+ {
+  "pg": "FWD Referral (Intro/FAQs/Cx Issues)",
+  "article": "AA_FWD Referral - Intro/FAQs/Cx Issues - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "FWD Pass (Return Abuser - Membership)",
+  "article": "AA_FWD Pass - Return Abuser - Membership - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "Return"
+ },
+ {
+  "pg": "FWD Pass (Coupon Related)",
+  "article": "AA_FWD Pass - Coupon Related - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet, Order, Item, Return",
+  "cat": "General"
+ },
+ {
+  "pg": "POS card swipe (Swiped Twice/More - 3PL)",
+  "article": "AA_POS-Card Swiped Twice/More_3PL - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Packet",
+  "cat": "General"
+ },
+ {
+  "pg": "POS card swipe (Swiped Twice/More - ML/FKL)",
+  "article": "AA_POS-Card Swiped Twice/More_ML/FKL - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "POS card swipe (Swiped & Cash collected - ML/FKL)",
+  "article": "AA_POS-Card Swiped & Cash collected_ML/FKL - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "POS card swipe (Swiped & Cash collected - 3PL)",
+  "article": "AA_POS-Card Swiped & Cash collected_3PL - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "General"
+ },
+ {
+  "pg": "Approved RID Not getting picked up (1st Instance)",
+  "article": "AA_Approved RID Not getting picked up 1st Instance - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Approved RID Not getting picked up (2nd Instance)",
+  "article": "AA_Approved RID Not getting picked up 2nd Instance - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Non Approved RID Not getting picked up",
+  "article": "AA_Non-Approved RID - [L1 (C,E,IB),HC,L1.5]",
+  "level": "Item, Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Non Approved RID Not getting picked up (SM)",
+  "article": "AA_Non-Approved RID - [SM]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "EORs Dec'24",
+  "article": "AA_EORS 21 Dec'24- Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Return not refunded for Cancelled/RTO/Lost to Delivered COD orders",
+  "article": "AA_Return not refunded for Canl/RTO/Lost to Delivered COD orders - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "Refund"
+ },
+ {
+  "pg": "Customer initiated chat/call/email from unregistered id",
+  "article": "AA_Email/Chat initiated from an unregistered ID || Calls from Unregistered/Different numbers for L1.5, or Supervisors-GLOBAL",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Incorrect return on hold and SDA update unusable or garbage images",
+  "article": "WPR_On Hold - unusable Images uploaded SDA",
+  "level": "Return",
+  "cat": "Return"
+ },
+ {
+  "pg": "Installation Related Query (Cycles and Treadmill)",
+  "article": "AA_Installation Related Query for Cycles and Treadmill [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "General"
+ },
+ {
+  "pg": "Grievance officer call transfer SOP",
+  "article": "AA_ Grievance officer SOP [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Dermatologist-Consultation",
+  "article": "AA_Dermatologist-Consultation [L1 (C,E,IB),HC,SM,L1.5,L2]",
+  "level": "Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "Damaged product received- NON physical defect",
+  "article": "AA_Damaged product received (Non-Physical defect) - Global",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Goods and Transport Charges (GT Charges)",
+  "article": "Goods and Transport Charges (GT Charges)",
+  "level": "Packet, Order, Non-Order",
+  "cat": "General"
+ },
+ {
+  "pg": "FK Axis Bank Credit Card",
+  "article": "Existing Cardholders-FK Axis Bank Credit Card",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "APP/Website Features",
+  "article": "AA_App/Website-Features/Self serve options-GLOBAL",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Coupon and Bank Offer",
+  "article": "AA_Coupon and Bank Offer (Global)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Order delivery & Payment Issue/ post delivery issues - Reported",
+  "article": "Order delivery & Payment Issue/ post delivery issues - Reported",
+  "level": "GLOBAL",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "Big fashion festival (BFF)-2025",
+  "article": "Big fashion festival (BFF)- Sep'25-Oct'25",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "EORS Dec'25",
+  "article": "EORS - December'25 - Global (All LOBs)",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Flipkart SBI Credit Card Launch",
+  "article": "Flipkart SBI Credit Card Launch",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "B2B GSTIN",
+  "article": "B2B GSTIN Process- [L1(C,IB),HC,SM, L2]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "B2B GSTIN (Email Team SOP)",
+  "article": "B2B GSTIN Process- Email Team SOP",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Ray-Ban & Oakley Smart Glasses Returns Process",
+  "article": "AA_Ray-Ban Smart Glasses/Meta Glasses_Returns",
+  "level": "GLOBAL",
+  "cat": "Return"
+ },
+ {
+  "pg": "REDIAL FEATURE",
+  "article": "REDIAL FEATURE - L1-Inbound, HighCare, Luxe",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "SA session authentication when cx calls from diff/non-reg numbers at L1",
+  "article": "OTP Authentication at L1-Inbound/Call, HighCare inbound",
+  "level": "GLOBAL",
+  "cat": "Delivery"
+ },
+ {
+  "pg": "CM requesting sda contact",
+  "article": "AA_cx requesting for SDA contact number - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Luxe",
+  "article": "AA_LUXE - ASSISTED SELLING/BUYING [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Darveys x Luxe [L1/L1.5/HC/SM]",
+  "article": "Darveys x Luxe [L1/L1.5/HC/SM]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Ubona Call Transfer Process",
+  "article": "AA_Ubona Call Transfer Process",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Flipkart Pay Later",
+  "article": "Flipkart Pay later_ All LOBs",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Pan Card Verification for Orders Above 2Lac",
+  "article": "AA_Pan Card Verification_Orders Above 2Lac [ALL LOBs]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "Exchange On-hold",
+  "article": "AA_Exchange on Hold Guidelines || L2 Approved the ROH Task for Exchange order BUT did NOT approve the Exchange order - FKL - [L1 (C,E,IB),SM,L1.5]",
+  "level": "Item",
+  "cat": "Return"
+ },
+ {
+  "pg": "New User benefit dispute",
+  "article": "New-User Benefits disputes (Recreated Accounts)-ALL LOBs",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "ALTERATION SOP [Alteration Team & non-Alteration Team]",
+  "article": "DT Name: [4010: ALTERATION - CloudTailor]",
+  "level": "GLOBAL",
+  "cat": "General"
+ },
+ {
+  "pg": "ALTERATION SOP [ONLY non-Alteration Team]",
+  "article": "AA_Alteration SOP for non-Alteration teams [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "Item",
+  "cat": "General"
+ },
+ {
+  "pg": "Price Tag Missing (for exchange) (Flagged PIN - A1/A2)",
+  "article": "AA_Price Tag Missing (for exchange) (Flagged PIN - A1/A2) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Price Tag Missing (for exchange) [Flagged PIN A3, A4]",
+  "article": "AA_Price Tag Missing (for exchange) [Flagged PIN A3, A4] - Active RID O.H./Dec RID was O.H. - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ },
+ {
+  "pg": "Price Tag Missing (Non-Flagged PIN)",
+  "article": "AA_Price Tag Missing (Non-Flagged PIN) - [L1 (C,E,IB),HC,SM,L1.5]",
+  "level": "",
+  "cat": "Return"
+ }
+]
