@@ -1728,7 +1728,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const params = new URLSearchParams(location.search);
   const dbg = params.get('debug') === '1';
   const panel = document.getElementById('dbgPanel');
-  window.__dbg = { errors: [], route: '', aaInit: 'pending', aaCount: 0 };
+  window.__dbg = window.__dbg || { errors: [], route: '', aaInit: 'pending', aaCount: 0 };
   if(dbg && panel){ panel.classList.add('show'); }
   window.addEventListener('error', (e)=>{ window.__dbg.errors.push(e.message); updateDbg(); });
   function updateDbg(){
