@@ -1486,7 +1486,7 @@ function renderAA(){
   });
   // sop links
   container.querySelectorAll('a.aac-sop').forEach(a=>{
-    a.addEventListener('click', (e)=>{ e.preventDefault(); const id=a.getAttribute('href').slice(6); if(id){ aaState.recent=[aaData.find(d=>d.sop===id)?.article||'',...aaState.recent].filter(Boolean).slice(0,12); saveAA(aaState); navigate('/sop/'+id); } });
+    a.addEventListener('click', (e)=>{ e.preventDefault(); const id=a.getAttribute('href').slice(6); if(id){ var _f=aaData.find(function(d){return d.sop===id;}); aaState.recent=[(_f&&_f.article)||'',...aaState.recent].filter(Boolean).slice(0,12); saveAA(aaState); navigate('/sop/'+id); } });
   });
   if(res.length > aaLimit){
     const more = document.createElement('button');
