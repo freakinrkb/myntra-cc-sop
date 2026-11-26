@@ -1067,6 +1067,7 @@ async function showAgentAssist(){
     if(c) c.innerHTML = '<div class="aa-states" style="color:var(--red)">No articles loaded. Embedded data missing. Use Import to load your index.</div>';
   }
   if(typeof renderAA==='function') renderAA();
+  try { launchConfetti(); } catch(e){}
 }
 function showSOP(id){
   const s = sops.find(x=>x.id===id);
@@ -1582,8 +1583,7 @@ function launchConfetti(){
   }
 }
 // trigger confetti when view shown
-const origShowAA = showAgentAssist;
-showAgentAssist = function(){ origShowAA(); launchConfetti(); };
+/* confetti now fired inside showAgentAssist */
 
 function renderAAFavs(){
   const items = aaState.favs.map(a=>aaData.find(d=>d.article===a)).filter(Boolean);
@@ -1689,12 +1689,22 @@ window.route = function(){
   if(hash==='/agentassist'){ showAgentAssist(); return; }
   _route();
 };
-// redefine showAgentAssist
-function showAgentAssist(){
+// redefine showAgentAssist (async, loads seed data)
+async function showAgentAssist(){
   showView('viewAgentAssist');
   document.getElementById('breadcrumb').innerHTML = 'Agent Assist';
   updateNavActive('/agentassist');
-  renderAA();
+  await loadSeed();
+  seedData();
+  window.__dbg = window.__dbg || { errors:[], route:'', aaInit:'pending', aaCount:0 };
+  window.__dbg.aaInit = aaData.length ? 'loaded' : 'EMPTY';
+  window.__dbg.aaCount = aaData.length;
+  if(typeof updateDbg==='function') updateDbg();
+  if(!aaData.length){
+    const c = document.getElementById('aaResults');
+    if(c) c.innerHTML = '<div class="aa-states" style="color:var(--red)">No articles loaded. Embedded data missing. Use Import to load your index.</div>';
+  }
+  if(typeof renderAA==='function') renderAA();
 }
 // update nav active for agentassist
 const _updateNavActive = updateNavActive;
