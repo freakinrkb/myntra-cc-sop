@@ -1602,24 +1602,23 @@ document.getElementById('aaFileInput').addEventListener('change', (e)=>{
   const file = e.target.files[0]; if(!file) return;
   const reader = new FileReader();
   reader.onload = (ev)=>{
-    const text = ev.target.result;
+    const text = ev.target.result.trim();
     let data = null;
-    // try JSON
-    try { data = JSON.parse(text); } catch{}
-    if(!data){
-      // parse TSV/CSV
+    const looksJson = text.startsWith('[') || text.startsWith('{');
+    if(looksJson){
+      try { data = JSON.parse(text); }
+      catch(e){ toast('Invalid JSON: ' + e.message); e.target && (e.target.value=''); return; }
+      if(!Array.isArray(data)){ if(data && Array.isArray(data.articles)) data=data.articles; else { toast('JSON must be an array of articles'); return; } }
+    } else {
       const lines = text.split(/\r?\n/).filter(l=>l.trim());
-      // detect header
       let start = 0;
-      if(lines[0].toLowerCase().includes('process') || lines[0].toLowerCase().includes('article')) start=1;
+      if(lines.length && (lines[0].toLowerCase().includes('process') || lines[0].toLowerCase().includes('article'))) start=1;
       data = [];
       lines.slice(start).forEach(line=>{
-        // split by tab or multiple spaces
         const parts = line.split(/\t/);
         if(parts.length>=2){
           data.push({pg:parts[0].trim(), article:parts[1].trim(), level:(parts[2]||'').trim(), cat: guessCat(parts[0]+' '+parts[1])});
         } else {
-          // try 2+ spaces
           const p2 = line.split(/\s{2,}/);
           if(p2.length>=2) data.push({pg:p2[0].trim(), article:p2[1].trim(), level:(p2[2]||'').trim(), cat: guessCat(p2[0]+' '+p2[1])});
         }
@@ -1628,6 +1627,9 @@ document.getElementById('aaFileInput').addEventListener('change', (e)=>{
     if(!Array.isArray(data) || !data.length){ toast('Could not parse file'); return; }
     // normalize
     data = data.map(d=>({pg:d.pg||d.processGroup||d['Process Group Name']||'', article:d.article||d.articleName||d['Article Name']||'', level:d.level||d.saLevel||d['SA Level']||'', cat:d.cat||guessCat((d.pg||'')+' '+(d.article||''))}));
+    // validate schema
+    const bad = data.filter(d=>!d.pg || !d.article);
+    if(bad.length){ toast('Invalid entries: ' + bad.length + ' missing process group/article'); return; }
     data = data.filter(d=>d.pg && d.article);
     data.forEach(d=>{ d.sop = linkSop(d.pg, d.article); });
     aaState.imported = data;
