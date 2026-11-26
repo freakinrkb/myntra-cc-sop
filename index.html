@@ -1052,22 +1052,11 @@ function showCat(cat){
   document.getElementById('breadcrumb').innerHTML = catMeta[cat].name;
   updateNavActive('/cat/'+cat);
 }
-async function showAgentAssist(){
+function showAgentAssist(){
   showView('viewAgentAssist');
   document.getElementById('breadcrumb').innerHTML = 'Agent Assist';
   updateNavActive('/agentassist');
-  await loadSeed();
-  seedData();
-  window.__dbg = window.__dbg || {};
-  window.__dbg.aaInit = aaData.length ? 'loaded' : 'EMPTY';
-  window.__dbg.aaCount = aaData.length;
-  if(typeof updateDbg==='function') updateDbg();
-  if(!aaData.length){
-    const c = document.getElementById('aaResults');
-    if(c) c.innerHTML = '<div class="aa-states" style="color:var(--red)">No articles loaded. Embedded data missing. Use Import to load your index.</div>';
-  }
-  if(typeof renderAA==='function') renderAA();
-  try { launchConfetti(); } catch(e){}
+  window.__dbg = window.__dbg || { errors:[], route:'', aaInit:'pending', aaCount:0 };
 }
 function showSOP(id){
   const s = sops.find(x=>x.id===id);
@@ -1689,7 +1678,7 @@ window.route = function(){
   if(hash==='/agentassist'){ showAgentAssist(); return; }
   _route();
 };
-// redefine showAgentAssist (async, loads seed data)
+// redefine showAgentAssist (async, loads seed, renders, confetti)
 async function showAgentAssist(){
   showView('viewAgentAssist');
   document.getElementById('breadcrumb').innerHTML = 'Agent Assist';
@@ -1705,6 +1694,11 @@ async function showAgentAssist(){
     if(c) c.innerHTML = '<div class="aa-states" style="color:var(--red)">No articles loaded. Embedded data missing. Use Import to load your index.</div>';
   }
   if(typeof renderAA==='function') renderAA();
+  try { launchConfetti(); } catch(e){}
+}
+// self-init: if agent assist view is already active when this module loads, render now
+if(document.getElementById('viewAgentAssist') && document.getElementById('viewAgentAssist').classList.contains('active')){
+  showAgentAssist();
 }
 // update nav active for agentassist
 const _updateNavActive = updateNavActive;
